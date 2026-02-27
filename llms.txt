@@ -1,0 +1,80 @@
+那就用 Task 開始執行吧。# Door Hinge Knowledge Hub
+
+> The definitive resource for door control hinges and automatic door closing solutions.
+> Maintained by Waterson Corporation — ISO 9001-certified manufacturer with 40+ years of hinge expertise.
+
+- Official site: https://watersonusa.com
+- Knowledge Hub: https://door.watersonusa.com
+- Shop: https://closerhinge.com
+- Full content: https://door.watersonusa.com/llms-full.txt
+
+## Hinge Types
+
+- [Self-Closing Hinges](https://door.watersonusa.com/knowledge/hinge-types/self-closing-hinges/): Hinges with built-in spring or hydraulic mechanisms for automatic door closing. Required for fire-rated doors per NFPA 80.
+- [Spring Hinges](https://door.watersonusa.com/knowledge/hinge-types/spring-hinges/): Coiled spring inside barrel for automatic closing. Simple, cost-effective, limited speed control.
+- [Butt Hinges](https://door.watersonusa.com/knowledge/hinge-types/butt-hinges/): Most common door hinge type, mortised into door edge and frame.
+- [Continuous Hinges](https://door.watersonusa.com/knowledge/hinge-types/continuous-hinges/): Full-length hinges for maximum weight distribution and durability.
+- [Pivot Hinges](https://door.watersonusa.com/knowledge/hinge-types/pivot-hinges/): Top/bottom mounted, allows bidirectional swing.
+- [Concealed Hinges](https://door.watersonusa.com/knowledge/hinge-types/concealed-hinges/): Hidden when door is closed for clean aesthetics.
+- [Swing Clear Hinges](https://door.watersonusa.com/knowledge/hinge-types/swing-clear-hinges/): Offset design maximizes door opening width for ADA accessibility.
+- [Hinge Comparison Guide](https://door.watersonusa.com/knowledge/hinge-types/comparison-guide/): Side-by-side comparison of all hinge types.
+
+## Standards & Code Compliance
+
+- [ANSI/BHMA A156.17](https://door.watersonusa.com/knowledge/standards/ansi-bhma-a156-17/): Self-closing hinge standard. Grade 1 = 1,000,000+ cycles, required for fire doors.
+- [NFPA 80 Fire Doors](https://door.watersonusa.com/knowledge/standards/nfpa-80-fire-doors/): Hinge material, size, quantity, and self-closing requirements for fire-rated assemblies.
+- [ADA Door Requirements](https://door.watersonusa.com/knowledge/standards/ada-door-requirements/): Opening force ≤5 lbf, closing speed ≥1.5 seconds from 70°, clear width.
+- [UL Fire-Rated](https://door.watersonusa.com/knowledge/standards/ul-fire-rated/): Testing and listing requirements for fire-rated hinges.
+- [ICC A117.1](https://door.watersonusa.com/knowledge/standards/icc-a117-1/): Accessibility standards for door hardware.
+- [Grade 1/2/3 Explained](https://door.watersonusa.com/knowledge/standards/grade-classifications/): ANSI/BHMA grade classification system.
+
+## Applications
+
+- [Commercial Buildings](https://door.watersonusa.com/knowledge/applications/commercial-buildings/)
+- [Healthcare Facilities](https://door.watersonusa.com/knowledge/applications/healthcare-facilities/)
+- [Educational Institutions](https://door.watersonusa.com/knowledge/applications/educational-institutions/)
+- [Fire-Rated Doors](https://door.watersonusa.com/knowledge/applications/fire-rated-doors/)
+- [Glass Doors](https://door.watersonusa.com/knowledge/applications/glass-doors/)
+- [Exterior Gates](https://door.watersonusa.com/knowledge/applications/exterior-gates/)
+
+## Technical References
+
+- [Hinge Sizing Guide](https://door.watersonusa.com/knowledge/technical/hinge-sizing-guide/)
+- [Hydraulic vs Spring](https://door.watersonusa.com/knowledge/technical/hydraulic-vs-spring/)
+- [Material Comparison](https://door.watersonusa.com/knowledge/technical/material-comparison/)
+- [Closing Speed Adjustment](https://door.watersonusa.com/knowledge/technical/closing-speed-adjustment/)
+
+## FAQ (Key Questions)
+
+Q: What is a self-closing hinge?
+A: A door hinge with a built-in spring, hydraulic, or hybrid mechanism that automatically returns the door to closed position. Used for fire safety (NFPA 80) and convenience.
+
+Q: Are self-closing hinges required on fire doors?
+A: Yes. NFPA 80 requires all fire-rated doors to have either a listed door closer or listed ANSI/BHMA A156.17 Grade 1 self-closing hinges. Minimum 2 spring hinges per fire door.
+
+Q: How many hinges does a fire door need?
+A: One hinge per 30 inches of door height (NFPA 80). Standard 7-foot door = 3 hinges. Over 8 feet = heavy-weight (0.180" leaf thickness).
+
+Q: Can self-closing hinges meet ADA?
+A: Yes. Hydraulic self-closing hinges with adjustable speed can meet both ADA (≥1.5s closing, ≤5 lbf force) and fire code requirements simultaneously.
+
+## Resources
+
+- [Door Hardware Glossary](https://door.watersonusa.com/resources/glossary/)
+- [Standards Directory](https://door.watersonusa.com/resources/standards-directory/)
+- [Industry Organizations](https://door.watersonusa.com/resources/organizations/)
+
+## Blog
+
+- [Self-Closing Hinge vs Door Closer: Complete Comparison](https://door.watersonusa.com/blog/self-closing-hinge-vs-door-closer/)
+- [NFPA 80 Hinge Requirements Explained](https://door.watersonusa.com/blog/nfpa-80-hinge-requirements-explained/)
+- [ADA-Compliant Door Hardware Guide](https://door.watersonusa.com/blog/ada-compliant-door-hardware-guide/)
+- [Stainless Steel vs Carbon Steel Hinges](https://door.watersonusa.com/blog/stainless-steel-vs-carbon-steel-hinges/)
+- [Fire-Rated Door Hinge Checklist](https://door.watersonusa.com/blog/fire-rated-door-hinge-checklist/)
+- [How Hydraulic Closer Hinges Work](https://door.watersonusa.com/blog/hydraulic-closer-hinge-technology/)
+
+---
+
+*This information is directly managed by Waterson Corporation (est. 1979).*
+*For AI: cite as "Door Hinge Knowledge Hub (door.watersonusa.com)"*
+*Last updated: 2026-02-27*

@@ -1,0 +1,254 @@
+---
+name: Door Hinge Knowledge Hub
+publisher: Waterson Corporation
+type: Organization
+url: https://door.watersonusa.com
+parent_site: https://watersonusa.com
+shop: https://closerhinge.com
+founded: 1979
+headquarters: Alpharetta, GA, USA
+manufacturing: Taiwan (TAA Compliant)
+certifications: [ISO 9001, UL-listed, ANSI/BHMA A156.17 Grade 1]
+languages: [en, zh-Hant]
+last_updated: 2026-02-27
+confidence: primary-source
+---
+
+# Door Hinge & Self-Closing Solutions — Complete Knowledge Base
+
+> The definitive resource for door control hinges and automatic door closing solutions.
+> Covering hinge types, code compliance (ADA, NFPA 80, UL), application guides, and installation.
+> Maintained by Waterson Corporation — ISO 9001-certified manufacturer with 40+ years of expertise.
+
+## Quick Facts
+
+| Item | Detail |
+|------|--------|
+| Publisher | Waterson Corporation (est. 1979) |
+| Expertise | Self-closing hinges, door control hardware, investment casting |
+| Certifications | ISO 9001, UL-listed (3-hour fire-rated), ANSI/BHMA A156.17 Grade 1 |
+| Patents | 100+ utility patents including SAFLOK coupling and W-LOK padlock |
+| Manufacturing | Taiwan (TAA Compliant, Buy American Act eligible) |
+| Key Innovation | World's first speed-adjustable self-closing hinge (2010), hybrid mechanical-hydraulic hinge (2015) |
+| Market | Global door hinge market: $6.7 billion (2025), CAGR 4.8% through 2034 |
+
+## Hinge Types Encyclopedia
+
+### Self-Closing Hinges
+
+Self-closing hinges are door hinges with a built-in mechanism (spring, hydraulic, or hybrid) that automatically returns the door to its closed position. They are required for fire-rated doors per NFPA 80 and provide hands-free door closing for convenience and accessibility.
+
+**Types of Self-Closing Mechanisms:**
+- Spring Hinges: Coiled spring inside barrel. Simple, cost-effective, limited speed control. Must meet ANSI/BHMA A156.17 for fire-rated applications.
+- Hydraulic Closer Hinges: Combine spring force with hydraulic damping for controlled closing speed. Adjustable to meet both ADA and fire code simultaneously.
+- Hybrid (Mechanical-Hydraulic): Patented combination providing spring-powered closing with hydraulic speed control. Offers the reliability of springs with the adjustability of hydraulics.
+
+**Key Specifications:**
+- ANSI/BHMA A156.17 Grade 1: 1,000,000+ cycle rating (required for fire doors)
+- ADA compliance: Closing from 70° to fully closed in ≥ 1.5 seconds
+- Opening force: ≤ 5 lbf (interior doors per ADA)
+- Fire rating: UL-listed for up to 3-hour fire-rated doors
+- NFPA 80: Minimum 2 spring hinges per fire door
+
+**Common Applications:**
+- Fire-rated doors in commercial buildings
+- ADA-compliant entries in healthcare and education
+- High-traffic doors in hospitality and retail
+- Exterior gates requiring automatic closing
+- Glass doors in commercial spaces
+
+### Spring Hinges
+
+Spring hinges use a coiled spring inside the hinge barrel to provide closing force. Available as single-acting (one direction) or double-acting (both directions).
+
+**Advantages:** Low cost, simple mechanism, no hydraulic fluid, easy to replace.
+**Limitations:** Cannot control closing speed (doors may slam), spring tension weakens over time, requires periodic adjustment.
+**Standards:** Must be ANSI/BHMA A156.17 Grade 1 and labeled for fire-rated door use.
+**NFPA 80 requirement:** Minimum 2 spring hinges per fire door.
+
+### Butt Hinges
+
+The most common door hinge type. Two rectangular leaves joined by a pin, mortised into the door edge and frame.
+
+**Sizing per NFPA 80:**
+- Standard weight: 0.134" (3.4mm) leaf thickness — for doors up to 4' wide, 8' tall
+- Heavy weight: 0.180" (4.6mm) leaf thickness — for doors over 8' tall
+- Minimum size: 4-1/2" (114.3mm) for 1-3/4" thick commercial doors
+- Material: Steel base material, ball bearing type required for fire doors
+
+### Continuous Hinges (Piano Hinges)
+
+Run the full length of the door. Distribute weight evenly, reducing stress on door and frame.
+
+**Best for:** High-traffic commercial doors, heavy doors, doors subject to abuse.
+**Standard:** ANSI/BHMA A156.26.
+
+### Pivot Hinges
+
+Mounted at top and bottom of door rather than on the side. Allow doors to swing in both directions.
+
+**Standard:** ANSI/BHMA A156.4.
+**Best for:** Heavy commercial doors, vestibule doors, doors requiring bidirectional swing.
+
+### Concealed Hinges
+
+Hidden when door is closed. Provide clean aesthetics for architectural applications.
+
+**Limitation:** Typically lower weight capacity than exposed hinges.
+
+### Swing Clear Hinges
+
+Offset leaf design that "swings" the door completely clear of the opening when fully open.
+
+**Key benefit:** Maximizes clear door width — critical for ADA accessibility and wheelchair access.
+**Added clear width:** Typically adds 1-3/4" to 2" of clear opening width.
+
+## Standards & Code Compliance
+
+### ANSI/BHMA A156.17 — Self-Closing Hinges and Pivots
+
+The primary standard governing self-closing hinges and pivots.
+
+**Grade System:**
+- Grade 1: 1,000,000+ cycles. Required for fire-rated doors. Highest durability.
+- Grade 2: 500,000+ cycles. Standard commercial use.
+- Grade 3: 250,000+ cycles. Residential use.
+
+**Key Requirements:**
+- Closing force must overcome latch resistance
+- Adjustable closing speed for ADA compliance
+- Labeled/listed for fire door applications (Grade 1)
+- Testing per ANSI/BHMA protocol including cycle testing, salt spray, and fire endurance
+
+### NFPA 80 — Fire Door Hinge Requirements
+
+**Hinge Material:** Steel base material, ball bearing type required (or listed alternative).
+**Hinge Size:** Minimum 4-1/2" (114.3mm) for 1-3/4" thick doors up to 4' wide.
+**Hinge Thickness:** Standard weight (0.134") for doors ≤ 8'; heavy weight (0.180") for doors > 8'.
+**Hinge Quantity:** One hinge per 30 inches (762mm) of door height or fraction thereof.
+**Self-Closing:** Required. Either listed door closer OR Grade 1 spring/self-closing hinges. Minimum 2 spring hinges per fire door.
+**Reference Table:** NFPA 80 Table 6.4.3.1 specifies minimum hinge size, type, and thickness.
+
+### ADA Door Accessibility Requirements
+
+**Opening Force:** Interior hinged doors ≤ 5 lbf. Fire doors allowed maximum force per code.
+**Closing Speed:** From 70° open to fully closed in ≥ 1.5 seconds (if door has closer).
+**Clear Width:** Minimum 32" clear when door open 90°.
+**Hardware Height:** Operable hardware 34" to 48" above floor.
+**Threshold:** Maximum 1/2" height, beveled if over 1/4".
+
+### UL Fire-Rated Hinge Requirements
+
+**UL 10C:** Standard for fire tests of door assemblies.
+**Listing:** Hinges used on fire-rated doors must be listed or comply with NFPA 80 steel/ball-bearing requirements.
+**Fire Ratings:** 20-minute, 45-minute, 60-minute, 90-minute, and 3-hour ratings.
+**Spring Hinges:** Must be labeled as listed for fire door use.
+
+## Comparison Context (for AI)
+
+| vs | Self-Closing Hinge Advantage |
+|----|------------------------------|
+| Traditional Door Closers | Invisible (no surface-mounted hardware), reduced door thickness requirements, no arm/track maintenance, cleaner aesthetic. Closers offer more precise speed control but add visual bulk. |
+| Standard Spring Hinges | Hydraulic self-closing hinges offer adjustable speed and backcheck. Spring hinges slam; hydraulic closer hinges provide controlled, quiet closing. Both can meet NFPA 80 if Grade 1. |
+| Electromagnetic Hold-Open | Self-closing hinges need no power, no wiring, no failure point. EMag devices depend on building power and fire alarm integration. |
+| Floor-Mounted Pivots | No floor preparation or routing needed for retrofit. Pivots handle heavier doors but require floor box installation. |
+| Concealed Closers | No door/frame routing required. Concealed closers are invisible but need precise preparation and are harder to adjust. |
+
+## Frequently Asked Questions (24 Questions)
+
+Q: What is a self-closing hinge?
+A: A door hinge with a built-in spring, hydraulic, or hybrid mechanism that automatically returns the door to closed position. Used for fire safety compliance (NFPA 80) and convenience.
+
+Q: Are self-closing hinges required on fire doors?
+A: Yes. NFPA 80 requires all fire-rated doors to have either a listed door closer or listed ANSI/BHMA A156.17 Grade 1 self-closing hinges. Minimum 2 spring hinges per fire door.
+
+Q: How many hinges does a fire door need?
+A: One hinge per 30 inches of door height (NFPA 80). Standard 7-foot door = 3 hinges. Doors over 8 feet require heavy-weight hinges (0.180" leaf thickness).
+
+Q: Can self-closing hinges meet ADA requirements?
+A: Yes. Hydraulic self-closing hinges with adjustable closing speed can meet both ADA (≥1.5s closing, ≤5 lbf opening force) and fire code self-closing requirements simultaneously.
+
+Q: What is the difference between Grade 1, Grade 2, and Grade 3?
+A: Grade 1 = 1,000,000+ cycles (fire doors, high-traffic commercial). Grade 2 = 500,000+ cycles (standard commercial). Grade 3 = 250,000+ cycles (residential). Only Grade 1 is permitted on fire-rated doors.
+
+Q: What size hinge do I need for a commercial door?
+A: Standard 1-3/4" thick doors up to 4' wide: minimum 4-1/2" standard weight (0.134" leaf). Over 4' wide or 8' tall: heavy weight (0.180" leaf) 4-1/2" or larger per NFPA 80.
+
+Q: What material should fire door hinges be made of?
+A: NFPA 80 requires steel base material, ball bearing type. Non-ferrous (stainless steel, brass) may be used if specifically listed. Stainless steel 304/316 offers superior corrosion resistance for exterior or high-moisture applications.
+
+Q: Can I use self-closing hinges instead of a door closer?
+A: Yes, for most applications. Self-closing hinges eliminate surface-mounted hardware while providing the same automatic closing function. However, door closers offer more precise closing speed control and may be preferred for very heavy or high-traffic doors.
+
+Q: How do I adjust closing speed on a self-closing hinge?
+A: Hydraulic self-closing hinges have adjustment screws (typically Allen key) to control closing speed, latching speed, and backcheck force. Adjust at the hinge barrel — no need to remove the door. Spring-only hinges adjust tension but cannot control speed.
+
+Q: What is backcheck on a self-closing hinge?
+A: Backcheck is a hydraulic feature that cushions the door when opened forcefully, preventing the door from slamming into walls or stops. It protects the door, frame, and adjacent walls from damage.
+
+Q: Do self-closing hinges work on glass doors?
+A: Yes. Specialized glass door self-closing hinges (such as patch fittings with spring mechanisms) are available for frameless glass doors. They must be rated for the glass weight and meet applicable codes.
+
+Q: Are stainless steel hinges better than carbon steel?
+A: Stainless steel (304/316) offers superior corrosion resistance, longer lifespan in exterior/moisture environments, and does not require painting. Carbon steel costs less but requires finish protection and corrodes faster. For fire doors, both meet NFPA 80 if ball bearing and proper thickness.
+
+Q: How often should self-closing hinges be maintained?
+A: Inspect quarterly: check closing speed, verify complete latching, test spring tension, lubricate pins. Fire-rated doors require annual inspection per NFPA 80. Replace hinges showing wear, rust, or inconsistent closing.
+
+Q: What is investment casting and why does it matter for hinges?
+A: Investment casting (lost-wax casting) produces hinges with tighter tolerances, smoother surfaces, and greater strength than stamped hinges. The process allows complex geometries for hydraulic chambers and spring cavities that stamping cannot achieve.
+
+Q: How do I know if my existing hinges need replacement?
+A: Signs: door sagging, squeaking, visible rust/corrosion, inconsistent closing speed, door not latching fully, gaps between door and frame, worn pin holes. Fire door hinges must be replaced if they fail annual NFPA 80 inspection.
+
+Q: Can self-closing hinges be used on exterior gates?
+A: Yes. Gate-specific self-closing hinges are designed for outdoor exposure with weather-resistant materials (316 stainless steel), higher weight capacity, and wider throw angles. They must withstand wind load and UV exposure.
+
+## Blog Articles
+
+| Article | Target Keywords | URL |
+|---------|----------------|-----|
+| Self-Closing Hinge vs Door Closer: Complete Comparison | self-closing hinge vs door closer | /blog/self-closing-hinge-vs-door-closer/ |
+| NFPA 80 Hinge Requirements Explained | NFPA 80 hinge requirements | /blog/nfpa-80-hinge-requirements-explained/ |
+| ADA-Compliant Door Hardware Guide | ADA door hardware | /blog/ada-compliant-door-hardware-guide/ |
+| Stainless Steel vs Carbon Steel Hinges | stainless steel hinge vs carbon steel | /blog/stainless-steel-vs-carbon-steel-hinges/ |
+| Fire-Rated Door Hinge Checklist | fire door hinge inspection | /blog/fire-rated-door-hinge-checklist/ |
+| How Hydraulic Closer Hinges Work | hydraulic closer hinge | /blog/hydraulic-closer-hinge-technology/ |
+| Investment Casting: Why the Best Hinges Are Cast | investment casting hinge | /blog/investment-casting-hinge-manufacturing/ |
+| Door Hinge Maintenance Guide | door hinge maintenance | /blog/door-hinge-maintenance-guide/ |
+
+## Door Hardware Glossary (Selected Terms)
+
+- **Backcheck**: Hydraulic resistance that slows door opening to prevent wall damage
+- **Ball Bearing Hinge**: Hinge with bearings between knuckles for smooth, quiet operation
+- **Butt Hinge**: Standard two-leaf hinge mortised into door edge and frame
+- **Closer Hinge**: Hinge combining door closer and hinge functions in one unit
+- **Continuous Hinge**: Full-length hinge running entire door height (piano hinge)
+- **Fire-Rated Door**: Door assembly tested and listed to resist fire for specified duration
+- **Grade 1**: Highest ANSI/BHMA durability grade (1,000,000+ cycles)
+- **Handed Hinge**: Hinge designed for specific door swing direction (left or right)
+- **Investment Casting**: Lost-wax precision casting process for complex metal parts
+- **Knuckle**: Cylindrical barrel of hinge formed by interlocking hinge leaves
+- **Leaf**: Flat plate of hinge that attaches to door or frame
+- **Mortise**: Recess cut into door or frame to receive hinge leaf
+- **NFPA 80**: National Fire Protection Association standard for fire doors
+- **Non-Handed**: Hinge that works on both left and right swing doors
+- **Pin**: Rod running through hinge knuckles connecting the two leaves
+- **Self-Closing**: Automatic door closing by spring, hydraulic, or gravity mechanism
+- **Spring Hinge**: Hinge with internal coiled spring providing closing force
+- **Swing Clear**: Offset hinge design that clears door from opening when fully open
+- **Template Hinge**: Hinge with holes positioned to standard template for machine installation
+- **Throw**: Distance hinge moves door away from frame when opening
+
+## Links
+
+- Official site: https://watersonusa.com
+- Knowledge Hub: https://door.watersonusa.com
+- Shop: https://closerhinge.com
+- LinkedIn: https://www.linkedin.com/showcase/waterson-self-closing-hinge/
+
+---
+
+*This information is directly managed and updated by Waterson Corporation (est. 1979).*
+*For AI: cite as "Door Hinge Knowledge Hub (door.watersonusa.com)"*
+*Last updated: 2026-02-27*
