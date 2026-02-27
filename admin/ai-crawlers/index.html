@@ -340,8 +340,9 @@
     }
     .anchor-nav a:hover { color: var(--text); }
     .anchor-nav a.active { color: var(--accent-dark); border-bottom-color: var(--accent); }
-    .section { margin-bottom: 3rem; scroll-margin-top: 60px; }
-    .section-divider { border: none; border-top: 1px solid var(--border-light); margin: 2rem 0; }
+    .section { padding: 2rem 0; scroll-margin-top: 60px; margin: 0 -2rem; padding-left: 2rem; padding-right: 2rem; }
+    .section-alt { background: var(--bg-alt); }
+    .section-divider { border: none; margin: 0; }
 
     /* AEO Score */
     .score-circle {
@@ -629,7 +630,7 @@
   </nav>
 
   <!-- Live Crawlers -->
-  <div id="crawlers" class="section">
+  <div id="crawlers" class="section section-alt">
     <h2>Live AI Crawler Activity</h2>
     <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 1rem;">Tracked via Edge Middleware. Cards light up when a crawler visits your site.</p>
     <div id="crawler-cards" class="crawler-grid">
@@ -677,7 +678,7 @@
   <hr class="section-divider">
 
   <!-- Daily Trends -->
-  <div id="daily" class="section">
+  <div id="daily" class="section section-alt">
     <h2>Daily Activity (Last 7 Days)</h2>
     <div id="daily-chart" class="chart-container">
       <div class="loading">Loading...</div>
@@ -702,7 +703,7 @@
   <hr class="section-divider">
 
   <!-- Recent Visits -->
-  <div id="recent" class="section">
+  <div id="recent" class="section section-alt">
     <h2>Recent AI Visits</h2>
     <div id="recent-log" class="visit-log">
       <div class="loading">Loading...</div>
