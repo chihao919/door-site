@@ -235,6 +235,120 @@
     .tab.active { color: var(--primary); border-bottom-color: var(--accent); }
     .tab-content { display: none; }
     .tab-content.active { display: block; }
+
+    /* AEO Score */
+    .score-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 auto 0.5rem;
+      border: 4px solid var(--border);
+    }
+    .score-high { border-color: var(--green); color: var(--green); }
+    .score-mid { border-color: var(--accent); color: var(--accent-hover); }
+    .score-low { border-color: var(--red); color: var(--red); }
+    .check-row {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .check-row:last-child { border-bottom: none; }
+    .check-icon { width: 24px; flex-shrink: 0; font-size: 1.1rem; }
+    .check-name { flex: 1; font-weight: 600; font-size: 0.9rem; }
+    .check-score { width: 60px; text-align: right; font-size: 0.85rem; font-weight: 600; }
+    .check-pass { color: var(--green); }
+    .check-partial { color: var(--accent-hover); }
+    .check-fail { color: var(--red); }
+    .site-check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+    .site-check-item {
+      background: var(--bg-alt);
+      border-radius: 8px;
+      padding: 0.8rem;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    .site-check-item .icon { font-size: 1.5rem; }
+    .site-check-item .name { font-size: 0.8rem; color: var(--text-light); margin-top: 0.3rem; }
+    .page-score-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 0.8rem 0;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .page-score-card:hover { border-color: var(--accent); }
+    .page-score-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .page-score-header code { font-size: 0.85rem; }
+    .page-score-badge {
+      padding: 0.2rem 0.8rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .page-score-details { display: none; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
+    .page-score-card.open .page-score-details { display: block; }
+    .scan-btn {
+      padding: 0.5rem 1.2rem;
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+    .scan-btn:hover { background: var(--accent-hover); color: white; }
+    .scan-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* Crawler Cards Grid */
+    .crawler-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .crawler-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem;
+      position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .crawler-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .crawler-card.active { border-left: 4px solid var(--green); }
+    .crawler-card.awaiting { border-left: 4px solid var(--border); opacity: 0.65; }
+    .crawler-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+    .crawler-card-name { font-size: 1rem; font-weight: 700; color: var(--primary); }
+    .crawler-card-org { font-size: 0.75rem; color: var(--text-light); margin-top: 0.1rem; }
+    .crawler-card-status {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .status-active { background: #dcfce7; color: #166534; }
+    .status-awaiting { background: var(--bg-alt); color: var(--text-light); }
+    .crawler-card-count { font-size: 2rem; font-weight: 700; color: var(--primary); line-height: 1.2; }
+    .crawler-card-today { font-size: 0.8rem; color: var(--green); font-weight: 600; }
+    .crawler-card-today.zero { color: var(--text-light); }
   </style>
 </head>
 <body>
@@ -281,24 +395,47 @@
 
   <!-- Tabs -->
   <div class="tabs">
-    <button class="tab active" data-tab="overview">Overview</button>
+    <button class="tab active" data-tab="crawlers">Live Crawlers</button>
+    <button class="tab" data-tab="aeo">AEO Score</button>
     <button class="tab" data-tab="daily">Daily Trends</button>
     <button class="tab" data-tab="pages">Pages Crawled</button>
     <button class="tab" data-tab="recent">Recent Visits</button>
   </div>
 
-  <!-- Overview Tab -->
-  <div id="tab-overview" class="tab-content active">
-    <h2>Visits by AI Crawler</h2>
-    <div id="bot-chart" class="chart-container">
+  <!-- Live Crawlers Tab -->
+  <div id="tab-crawlers" class="tab-content active">
+    <h2>Live AI Crawler Activity</h2>
+    <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 1rem;">Tracked via Edge Middleware. Data refreshes on page load.</p>
+    <div id="crawler-cards" class="crawler-grid">
       <div class="loading">Loading...</div>
     </div>
-    <table id="bot-table">
-      <thead>
-        <tr><th>Crawler</th><th>Organization</th><th>Total Visits</th></tr>
-      </thead>
-      <tbody id="bot-table-body"></tbody>
-    </table>
+  </div>
+
+  <!-- AEO Score Tab -->
+  <div id="tab-aeo" class="tab-content">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h2>AEO Friendliness Score</h2>
+      <button class="scan-btn" id="scan-btn" onclick="runAeoScan()">Run Scan</button>
+    </div>
+    <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 1rem;">Scans all pages for AI-friendliness: JSON-LD, FAQ, meta tags, llms.txt, and more.</p>
+
+    <!-- Site-wide checks -->
+    <h3 style="margin-top: 1.5rem;">Site-Wide Files</h3>
+    <div id="site-checks" class="site-check-grid">
+      <div class="empty-state">Click "Run Scan" to start</div>
+    </div>
+
+    <!-- Overall score -->
+    <div id="aeo-overall" style="text-align: center; margin: 1.5rem 0; display: none;">
+      <div id="aeo-score-circle" class="score-circle">—</div>
+      <div style="font-size: 0.9rem; color: var(--text-light);">Average AEO Score</div>
+    </div>
+
+    <!-- Per-page scores -->
+    <h3>Page Scores</h3>
+    <div id="aeo-pages">
+      <div class="empty-state">Click "Run Scan" to start</div>
+    </div>
   </div>
 
   <!-- Daily Tab -->
@@ -330,15 +467,39 @@
 </div>
 
 <script>
-const AI_ORGS = {
-  GPTBot: "OpenAI", "ChatGPT-User": "OpenAI", "OAI-SearchBot": "OpenAI",
-  "Google-Extended": "Google", Googlebot: "Google",
-  "Anthropic-AI": "Anthropic", ClaudeBot: "Anthropic", "Claude-Web": "Anthropic",
-  PerplexityBot: "Perplexity", Bytespider: "ByteDance", CCBot: "Common Crawl",
-  "Cohere-ai": "Cohere", "Meta-ExternalAgent": "Meta", "Meta-ExternalFetcher": "Meta",
-  Applebot: "Apple", "Applebot-Extended": "Apple", Bingbot: "Microsoft",
-  "FacebookExternalHit": "Meta", Amazonbot: "Amazon", YouBot: "You.com",
-  AI2Bot: "AI2", "Ai2Bot-Dolma": "AI2", Diffbot: "Diffbot", PetalBot: "Petal",
+const ALL_BOTS = [
+  { id: "GPTBot", name: "GPTBot", org: "OpenAI" },
+  { id: "ChatGPT-User", name: "ChatGPT", org: "OpenAI" },
+  { id: "OAI-SearchBot", name: "OAI Search", org: "OpenAI" },
+  { id: "ClaudeBot", name: "ClaudeBot", org: "Anthropic" },
+  { id: "Anthropic-AI", name: "Anthropic AI", org: "Anthropic" },
+  { id: "PerplexityBot", name: "PerplexityBot", org: "Perplexity" },
+  { id: "Bytespider", name: "Bytespider", org: "ByteDance" },
+  { id: "Google-Extended", name: "Google AI", org: "Google" },
+  { id: "Bingbot", name: "Bingbot", org: "Microsoft" },
+  { id: "Applebot", name: "Applebot", org: "Apple" },
+  { id: "Meta-ExternalAgent", name: "Meta AI", org: "Meta" },
+  { id: "Amazonbot", name: "Amazonbot", org: "Amazon" },
+  { id: "CCBot", name: "CCBot", org: "Common Crawl" },
+  { id: "Cohere-ai", name: "Cohere", org: "Cohere" },
+  { id: "YouBot", name: "YouBot", org: "You.com" },
+  { id: "PetalBot", name: "PetalBot", org: "Huawei" },
+  { id: "Diffbot", name: "Diffbot", org: "Diffbot" },
+];
+
+const CHECK_LABELS = {
+  jsonLd: "JSON-LD Structured Data",
+  faqSchema: "FAQ Schema",
+  metaDescription: "Meta Description",
+  openGraph: "Open Graph Tags",
+  pageTitle: "Page Title",
+  headingStructure: "Heading Structure (H1/H2)",
+  faqContent: "FAQ Content",
+  quickFacts: "Quick Facts Table",
+  sourceAttribution: "Source Attribution",
+  canonical: "Canonical URL",
+  comparisonTable: "Comparison Table",
+  blockquoteSummary: "Blockquote Summary",
 };
 
 let dashboardKey = "";
@@ -372,142 +533,203 @@ async function loadDashboard() {
   }
 }
 
+function timeAgo(ts) {
+  if (!ts) return null;
+  const diff = Date.now() - new Date(ts).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return mins + "m ago";
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return hrs + "h ago";
+  const days = Math.floor(hrs / 24);
+  return days + "d ago";
+}
+
 function renderDashboard() {
-  // Summary
+  // Summary cards
   document.getElementById("total-bots").textContent = data.summary.totalBots;
   document.getElementById("total-visits").textContent = data.summary.totalVisits.toLocaleString();
-
   const today = new Date().toISOString().slice(0, 10);
   const todayVisits = data.daily[today]
-    ? Object.values(data.daily[today]).reduce((a, b) => a + b, 0)
-    : 0;
+    ? Object.values(data.daily[today]).reduce((a, b) => a + b, 0) : 0;
   document.getElementById("today-visits").textContent = todayVisits.toLocaleString();
-
   const weekVisits = Object.values(data.daily).reduce(
-    (sum, day) => sum + Object.values(day).reduce((a, b) => a + b, 0), 0
-  );
+    (sum, day) => sum + Object.values(day).reduce((a, b) => a + b, 0), 0);
   document.getElementById("week-visits").textContent = weekVisits.toLocaleString();
 
-  renderBotChart();
-  renderBotTable();
+  renderCrawlerCards();
   renderDailyChart();
   renderPagesTable();
   renderRecentLog();
 }
 
-function renderBotChart() {
-  const container = document.getElementById("bot-chart");
+function renderCrawlerCards() {
+  const container = document.getElementById("crawler-cards");
   const totals = data.totals || {};
-  const sorted = Object.entries(totals).sort((a, b) => Number(b[1]) - Number(a[1]));
-  const max = sorted.length ? Number(sorted[0][1]) : 1;
+  const today = new Date().toISOString().slice(0, 10);
+  const todayData = data.daily[today] || {};
 
-  if (!sorted.length) {
-    container.innerHTML = '<div class="empty-state">No AI crawler visits recorded yet.</div>';
-    return;
+  // Find last seen time for each bot from recent visits
+  const lastSeen = {};
+  for (const v of (data.recentVisits || [])) {
+    if (v.bot && !lastSeen[v.bot]) lastSeen[v.bot] = v.ts;
   }
 
-  container.innerHTML = sorted.map(([bot, count]) => `
-    <div class="bar-row">
-      <div class="bar-label">${bot}</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width: ${(Number(count) / max * 100).toFixed(1)}%"></div>
+  const cards = ALL_BOTS.map(bot => {
+    const total = Number(totals[bot.id] || 0);
+    const todayCount = Number(todayData[bot.id] || 0);
+    const lastTs = lastSeen[bot.id];
+    const isActive = total > 0;
+
+    return `
+      <div class="crawler-card ${isActive ? 'active' : 'awaiting'}">
+        <div class="crawler-card-header">
+          <div>
+            <div class="crawler-card-name">${bot.name}</div>
+            <div class="crawler-card-org">${bot.org}</div>
+          </div>
+          <span class="crawler-card-status ${isActive ? 'status-active' : 'status-awaiting'}">
+            ${isActive ? (lastTs ? timeAgo(lastTs) : 'Seen') : 'Awaiting'}
+          </span>
+        </div>
+        <div class="crawler-card-count">${isActive ? total.toLocaleString() : '—'}</div>
+        <div class="crawler-card-today ${todayCount ? '' : 'zero'}">
+          ${isActive ? (todayCount ? '+' + todayCount + ' today' : 'No visits today') : 'Awaiting...'}
+        </div>
       </div>
-      <div class="bar-count">${Number(count).toLocaleString()}</div>
-    </div>
-  `).join("");
-}
+    `;
+  });
 
-function renderBotTable() {
-  const tbody = document.getElementById("bot-table-body");
-  const totals = data.totals || {};
-  const sorted = Object.entries(totals).sort((a, b) => Number(b[1]) - Number(a[1]));
-
-  if (!sorted.length) {
-    tbody.innerHTML = '<tr><td colspan="3" class="empty-state">No data yet</td></tr>';
-    return;
-  }
-
-  tbody.innerHTML = sorted.map(([bot, count]) => `
-    <tr>
-      <td><span class="bot-badge">${bot}</span></td>
-      <td><span class="org-badge">${AI_ORGS[bot] || "Unknown"}</span></td>
-      <td><strong>${Number(count).toLocaleString()}</strong></td>
-    </tr>
-  `).join("");
+  container.innerHTML = cards.join("");
 }
 
 function renderDailyChart() {
   const container = document.getElementById("daily-chart");
   const daily = data.daily || {};
   const dates = Object.keys(daily).sort();
-
   if (!dates.length) {
     container.innerHTML = '<div class="empty-state">No daily data yet.</div>';
     return;
   }
-
-  let html = "";
   const maxDaily = Math.max(...dates.map(d =>
-    Object.values(daily[d]).reduce((a, b) => a + b, 0)
-  ), 1);
-
-  for (const date of dates) {
+    Object.values(daily[d]).reduce((a, b) => a + b, 0)), 1);
+  container.innerHTML = dates.map(date => {
     const dayTotal = Object.values(daily[date]).reduce((a, b) => a + b, 0);
-    html += `
-      <div class="bar-row">
-        <div class="bar-label">${date}</div>
-        <div class="bar-track">
-          <div class="bar-fill" style="width: ${(dayTotal / maxDaily * 100).toFixed(1)}%"></div>
-        </div>
-        <div class="bar-count">${dayTotal}</div>
-      </div>
-    `;
-  }
-  container.innerHTML = html;
+    return `<div class="bar-row">
+      <div class="bar-label">${date}</div>
+      <div class="bar-track"><div class="bar-fill" style="width: ${(dayTotal / maxDaily * 100).toFixed(1)}%"></div></div>
+      <div class="bar-count">${dayTotal}</div>
+    </div>`;
+  }).join("");
 }
 
 function renderPagesTable() {
   const tbody = document.getElementById("pages-table-body");
   const pages = data.pages || {};
   const rows = [];
-
   for (const [bot, pageData] of Object.entries(pages)) {
     for (const [path, count] of Object.entries(pageData)) {
       rows.push({ bot, path, count: Number(count) });
     }
   }
   rows.sort((a, b) => b.count - a.count);
-
   if (!rows.length) {
     tbody.innerHTML = '<tr><td colspan="3" class="empty-state">No page data yet</td></tr>';
     return;
   }
-
-  tbody.innerHTML = rows.slice(0, 50).map(r => `
-    <tr>
-      <td><code>${r.path}</code></td>
-      <td><span class="bot-badge">${r.bot}</span></td>
-      <td><strong>${r.count}</strong></td>
-    </tr>
-  `).join("");
+  tbody.innerHTML = rows.slice(0, 50).map(r =>
+    `<tr><td><code>${r.path}</code></td><td><span class="bot-badge">${r.bot}</span></td><td><strong>${r.count}</strong></td></tr>`
+  ).join("");
 }
 
 function renderRecentLog() {
   const container = document.getElementById("recent-log");
   const visits = data.recentVisits || [];
-
   if (!visits.length) {
     container.innerHTML = '<div class="empty-state">No recent visits recorded.</div>';
     return;
   }
-
-  container.innerHTML = visits.map(v => `
-    <div class="visit-item">
+  container.innerHTML = visits.map(v =>
+    `<div class="visit-item">
       <span class="visit-time">${v.ts ? new Date(v.ts).toLocaleString() : "—"}</span>
       <span class="bot-badge">${v.bot || "?"}</span>
       <span class="visit-path">${v.path || "/"}</span>
+    </div>`
+  ).join("");
+}
+
+// AEO Scan
+async function runAeoScan() {
+  const btn = document.getElementById("scan-btn");
+  btn.disabled = true;
+  btn.textContent = "Scanning...";
+  document.getElementById("aeo-pages").innerHTML = '<div class="loading">Scanning all pages...</div>';
+
+  try {
+    const resp = await fetch(`/api/aeo-scan?key=${encodeURIComponent(dashboardKey)}`);
+    const result = await resp.json();
+    if (result.error) throw new Error(result.error);
+    renderAeoResults(result);
+  } catch (err) {
+    document.getElementById("aeo-pages").innerHTML = `<div class="error-msg">Scan failed: ${err.message}</div>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Run Scan";
+  }
+}
+
+function renderAeoResults(result) {
+  // Site checks
+  const sc = result.siteChecks || {};
+  document.getElementById("site-checks").innerHTML = [
+    { name: "llms.txt", ok: sc.llmsTxt?.found },
+    { name: "llms-full.txt", ok: sc.llmsFullTxt?.found },
+    { name: "robots.txt", ok: sc.robotsTxt?.found },
+    { name: "sitemap.xml", ok: sc.sitemapXml?.found },
+  ].map(c => `
+    <div class="site-check-item">
+      <div class="icon">${c.ok ? '&#9989;' : '&#10060;'}</div>
+      <div class="name">${c.name}</div>
     </div>
   `).join("");
+
+  // Overall score
+  const overall = document.getElementById("aeo-overall");
+  overall.style.display = "block";
+  const circle = document.getElementById("aeo-score-circle");
+  const score = result.overallScore;
+  circle.textContent = score;
+  circle.className = "score-circle " + (score >= 75 ? "score-high" : score >= 50 ? "score-mid" : "score-low");
+
+  // Per-page
+  const container = document.getElementById("aeo-pages");
+  const sorted = (result.pages || []).sort((a, b) => (b.score || 0) - (a.score || 0));
+
+  container.innerHTML = sorted.map((p, i) => {
+    const s = p.score || 0;
+    const cls = s >= 75 ? "check-pass" : s >= 50 ? "check-partial" : "check-fail";
+    const checks = p.checks || {};
+
+    return `
+      <div class="page-score-card" onclick="this.classList.toggle('open')">
+        <div class="page-score-header">
+          <code>${p.path}</code>
+          <span class="page-score-badge ${cls}" style="background: ${s >= 75 ? '#dcfce7' : s >= 50 ? '#fff9e0' : '#fef2f2'}">${s}/${p.maxScore || 100}</span>
+        </div>
+        <div class="page-score-details">
+          ${Object.entries(checks).map(([key, c]) => {
+            const cCls = c.score === c.max ? "check-pass" : c.score > 0 ? "check-partial" : "check-fail";
+            const icon = c.score === c.max ? "&#9989;" : c.score > 0 ? "&#9888;&#65039;" : "&#10060;";
+            return `<div class="check-row">
+              <span class="check-icon">${icon}</span>
+              <span class="check-name">${CHECK_LABELS[key] || key}</span>
+              <span class="check-score ${cCls}">${c.score}/${c.max}</span>
+            </div>`;
+          }).join("")}
+        </div>
+      </div>
+    `;
+  }).join("");
 }
 
 // Tab switching
