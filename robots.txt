@@ -1,0 +1,36 @@
+# door.watersonusa.com - Door Hinge Knowledge Hub
+# Welcome all crawlers and AI agents
+
+User-agent: *
+Allow: /
+
+# AI-specific crawlers - explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://door.watersonusa.com/sitemap.xml
+
+# AI navigation files
+# llms.txt: https://door.watersonusa.com/llms.txt
+# llms-full.txt: https://door.watersonusa.com/llms-full.txt
