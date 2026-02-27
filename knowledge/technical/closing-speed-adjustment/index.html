@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Door Closing Speed Adjustment Guide — How to Set Correct Closing Speed | Door Hinge Knowledge Hub</title>
+  <meta name="description" content="Complete guide to door closing speed adjustment for ADA compliance and NFPA 80 fire code. Step-by-step procedures, code requirements, backcheck adjustment, and troubleshooting for hydraulic self-closing hinges.">
+  <link rel="canonical" href="https://door.watersonusa.com/knowledge/technical/closing-speed-adjustment/">
+  <style>
+    :root {
+      --primary: #1a365d;
+      --accent: #2b6cb0;
+      --bg: #ffffff;
+      --bg-alt: #f7fafc;
+      --border: #e2e8f0;
+      --text: #2d3748;
+      --text-light: #718096;
+      --highlight: #ebf8ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    .site-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .site-name span { color: var(--text-light); font-weight: 400; font-size: 0.9rem; }
+    nav { margin-top: 0.5rem; }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 1.2rem;
+      font-size: 0.95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+    h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.3rem; color: var(--primary); margin: 2rem 0 0.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.3rem; }
+    h3 { font-size: 1.1rem; color: var(--primary); margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 0.8rem; }
+    blockquote {
+      background: var(--highlight);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      color: var(--text);
+    }
+    /* General table styles */
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th { background: var(--bg-alt); color: var(--accent); text-align: left; padding: 0.6rem 0.8rem; border-bottom: 2px solid var(--border); }
+    td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    /* Quick facts: two-column key/value table */
+    .quick-facts { background: var(--bg-alt); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; }
+    .quick-facts h3 { margin-top: 0; }
+    .quick-facts table th { width: 40%; white-space: nowrap; }
+    .quick-facts table td { width: 60%; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0 1rem; }
+    li { margin-bottom: 0.4rem; }
+    a { color: var(--accent); }
+    .cta-box {
+      background: #fef3c7;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta-box a {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.7rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .source-attribution {
+      background: var(--bg-alt);
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    .related-pages {
+      background: var(--bg-alt);
+      border-radius: 8px;
+      padding: 1.2rem 1.2rem 0.8rem;
+      margin: 1.5rem 0;
+    }
+    .related-pages h3 { margin-top: 0; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+    footer a { color: var(--text-light); margin: 0 0.5rem; }
+    /* Numbered steps list with visual emphasis */
+    ol.steps { padding-left: 1.5rem; margin: 0.8rem 0 1rem; }
+    ol.steps li { margin-bottom: 0.6rem; padding-left: 0.3rem; }
+  </style>
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Door Closing Speed Adjustment Guide — How to Set Correct Closing Speed",
+    "description": "Complete guide to adjusting door closing speed for ADA and NFPA 80 compliance. Covers hydraulic valve adjustment procedure, backcheck, code requirements, and troubleshooting.",
+    "datePublished": "2026-02-27",
+    "dateModified": "2026-02-27",
+    "url": "https://door.watersonusa.com/knowledge/technical/closing-speed-adjustment/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Waterson Corporation"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://door.watersonusa.com/knowledge/technical/closing-speed-adjustment/"
+    },
+    "about": [
+      { "@type": "Thing", "name": "Door closing speed" },
+      { "@type": "Thing", "name": "ADA compliance" },
+      { "@type": "Thing", "name": "NFPA 80" },
+      { "@type": "Thing", "name": "Self-closing hinges" },
+      { "@type": "Thing", "name": "Hydraulic door closer" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="site-name">Door Hinge Knowledge Hub <span>by Waterson</span></div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/knowledge/hinge-types/">Hinge Types</a>
+    <a href="/knowledge/standards/">Standards</a>
+    <a href="/knowledge/applications/">Applications</a>
+    <a href="/knowledge/technical/">Technical</a>
+    <a href="/resources/glossary/">Glossary</a>
+  </nav>
+</header>
+
+<h1>Door Closing Speed Adjustment Guide — How to Set Correct Closing Speed</h1>
+
+<blockquote>
+  Proper door closing speed is critical for both ADA accessibility compliance and fire safety. ADA requires doors to take at least 1.5 seconds to close from 70° open, while NFPA 80 requires fire doors to fully close and latch from any position. Hydraulic self-closing hinges allow precise adjustment of closing speed to meet both requirements simultaneously. This guide covers adjustment procedures, code requirements, and troubleshooting.
+</blockquote>
+
+<div class="quick-facts">
+  <h3>Quick Facts</h3>
+  <table>
+    <tr><th>ADA Closing Speed</th><td>≥ 1.5 seconds from 70° to fully closed</td></tr>
+    <tr><th>ICC A117.1 Speed</th><td>≥ 5 seconds from 90° to 12° open</td></tr>
+    <tr><th>NFPA 80 Requirement</th><td>Must close and latch from any open position</td></tr>
+    <tr><th>Adjustment Method</th><td>Hydraulic valve (on hydraulic/hybrid hinges)</td></tr>
+    <tr><th>Tools Needed</th><td>Flat-head screwdriver or Allen wrench (varies by model)</td></tr>
+    <tr><th>Adjustment Range</th><td>Typically 3–8 seconds full sweep</td></tr>
+    <tr><th>Backcheck</th><td>Resistance when door opens past ~75° (prevents wall damage)</td></tr>
+    <tr><th>Last Updated</th><td>2026-02-27</td></tr>
+  </table>
+</div>
+
+<h2>Code Requirements for Closing Speed</h2>
+
+<p>Three major codes govern door closing speed in the United States. Understanding each helps specify the correct adjustment target for any project.</p>
+
+<table>
+  <tr>
+    <th>Code / Standard</th>
+    <th>Requirement</th>
+    <th>Applies To</th>
+  </tr>
+  <tr>
+    <td><strong>ADA (2010 ADA Standards)</strong></td>
+    <td>Door must take ≥ 1.5 seconds to close from 70° open to fully closed</td>
+    <td>All doors in places of public accommodation and commercial facilities</td>
+  </tr>
+  <tr>
+    <td><strong>ICC A117.1 (2017)</strong></td>
+    <td>Door must take ≥ 5 seconds from 90° open to 12° from closed</td>
+    <td>Accessible doors in buildings subject to IBC</td>
+  </tr>
+  <tr>
+    <td><strong>NFPA 80 (Fire Doors)</strong></td>
+    <td>Door must positively close and latch from any open position — no minimum speed, but it must actually close</td>
+    <td>All fire-rated door assemblies</td>
+  </tr>
+</table>
+
+<h3>How to Satisfy Both ADA and NFPA 80 Simultaneously</h3>
+<p>ADA demands <em>slow enough</em> closing for safe passage; NFPA 80 demands <em>complete</em> closing and latching every time. These requirements can appear contradictory, but hydraulic self-closing hinges handle both:</p>
+<ul>
+  <li>Set the main closing sweep speed to 5–7 seconds (90° to latch) — this satisfies ICC A117.1 and gives ample margin over the ADA 1.5-second minimum.</li>
+  <li>Verify the door fully closes and latches from every angle, including 5° and 15° open — this satisfies NFPA 80 even at slow sweep speeds.</li>
+  <li>If the door fails to latch at maximum slowness, slightly increase speed (turn adjuster counter-clockwise) until latching is reliable.</li>
+</ul>
+
+<h2>How Hydraulic Closing Speed Control Works</h2>
+
+<p>Hydraulic self-closing hinges contain a sealed cylinder filled with viscous fluid. As the door closes, a piston pushes fluid through a small internal passage. The size of that passage — controlled by an external adjustment screw — determines how fast the door can close.</p>
+
+<ul>
+  <li><strong>Adjustable orifice:</strong> Turning the valve screw clockwise reduces the orifice opening, restricting fluid flow and slowing the door. Counter-clockwise increases flow and speeds closing.</li>
+  <li><strong>Backcheck valve:</strong> A separate internal valve (or dedicated adjustment screw on some models) provides hydraulic resistance when the door swings past approximately 75°–80° open, preventing the door from slamming into a wall or doorstop at wide-open angles.</li>
+  <li><strong>Latch speed zone:</strong> Some advanced models include a separate latch-speed adjustment for the last 10°–15° of travel, allowing the door to close faster at the end to ensure reliable latching without adding force in the main sweep.</li>
+  <li><strong>Temperature and viscosity:</strong> Hydraulic fluid viscosity increases in cold temperatures and decreases in heat. A door set correctly in summer may close faster (thinner fluid) in winter or slower (thicker fluid) in an unusually cold environment. Seasonal re-check is recommended for exterior or unconditioned-space doors.</li>
+</ul>
+
+<h2>Step-by-Step Adjustment Procedure</h2>
+
+<ol class="steps">
+  <li><strong>Identify the adjustment valve location.</strong> On Waterson and most hydraulic hinges, the speed adjustment screw is located on the side or top of the hinge barrel. Consult your model's spec sheet if unclear. A small flat-head screwdriver slot or 3 mm Allen (hex) socket is typical.</li>
+  <li><strong>Open the door to 90° and release it.</strong> Allow it to swing freely without catching or holding. Stand clear of the door path.</li>
+  <li><strong>Time the closing sweep with a stopwatch.</strong> Measure from 90° release to the moment the latch bolt contacts the strike plate. Record the time.</li>
+  <li><strong>Turn the adjustment screw to correct the speed.</strong> Clockwise = slower (restricts flow). Counter-clockwise = faster (increases flow). Make small adjustments — typically 1/4 turn increments — to avoid over-correcting.</li>
+  <li><strong>Test again and repeat.</strong> Release from 90° and time again. Aim for 5–7 seconds from 90° to latch for ADA-accessible and fire-rated doors. Repeat steps 4–5 until target speed is achieved.</li>
+  <li><strong>Verify positive latching from all positions.</strong> Open the door to 5°, 15°, 30°, 45°, 60°, and 90° and confirm it fully closes and latches from each angle. This is required by NFPA 80.</li>
+  <li><strong>Check and adjust backcheck if applicable.</strong> Open the door quickly past 75° and feel for hydraulic resistance. If the door still hits the wall stop hard, increase backcheck (see section below). If resistance is excessive (door difficult to open fully), reduce backcheck.</li>
+</ol>
+
+<h2>Recommended Closing Speed by Application</h2>
+
+<table>
+  <tr>
+    <th>Application</th>
+    <th>Recommended Speed</th>
+    <th>Code Requirement</th>
+  </tr>
+  <tr>
+    <td>ADA-accessible interior door</td>
+    <td>5–7 seconds (90° to latch)</td>
+    <td>≥ 1.5 s from 70° (ADA) / ≥ 5 s from 90° to 12° (ICC A117.1)</td>
+  </tr>
+  <tr>
+    <td>Fire-rated door (no ADA)</td>
+    <td>5–7 seconds</td>
+    <td>Must positively close and latch (NFPA 80); no speed minimum</td>
+  </tr>
+  <tr>
+    <td>High-traffic commercial (non-ADA)</td>
+    <td>3–5 seconds</td>
+    <td>Per local code; faster closing reduces hold-open time</td>
+  </tr>
+  <tr>
+    <td>Hospital patient room</td>
+    <td>6–8 seconds</td>
+    <td>ADA + quiet/slow closing for patient comfort</td>
+  </tr>
+  <tr>
+    <td>Exterior door</td>
+    <td>3–5 seconds</td>
+    <td>Per local code; adjust for prevailing wind load conditions</td>
+  </tr>
+</table>
+
+<h2>Backcheck Adjustment</h2>
+
+<h3>What is Backcheck?</h3>
+<p>Backcheck is hydraulic resistance built into the hinge that activates when the door swings past a set angle — typically 75°–80° open. It slows the door's opening motion abruptly, preventing the door from flying open and striking an adjacent wall, corridor fixture, or equipment. Without backcheck, a door pushed open forcefully can damage the wall, dent the hinge leaves, or injure someone standing nearby.</p>
+
+<h3>Backcheck Adjustment Procedure</h3>
+<ol class="steps">
+  <li>Locate the backcheck adjustment screw on your hinge model (separate from the closing speed screw on dual-valve models; combined on single-valve models).</li>
+  <li>Open the door quickly to simulate a real push. Note whether it contacts the door stop hard, or whether resistance engages smoothly before the stop.</li>
+  <li>To increase backcheck (more resistance): turn the backcheck screw clockwise.</li>
+  <li>To decrease backcheck (less resistance): turn counter-clockwise.</li>
+  <li>Test repeatedly until the door slows noticeably before the mechanical stop but does not feel excessively stiff to open wide.</li>
+</ol>
+
+<h3>When to Increase Backcheck</h3>
+<ul>
+  <li>Door handle or edge is leaving marks on an adjacent wall</li>
+  <li>Door is being pushed open by strong wind and hitting the stop violently</li>
+  <li>High-traffic area where users frequently push the door open forcefully</li>
+</ul>
+
+<h3>When to Decrease Backcheck</h3>
+<ul>
+  <li>Opening the door fully requires excessive force (occupant complaint)</li>
+  <li>ADA maximum opening force of 5 lbf is exceeded at wide-open angles due to excessive backcheck</li>
+  <li>Door is used for moving large equipment and full unrestricted opening is needed</li>
+</ul>
+
+<h2>Troubleshooting Common Issues</h2>
+
+<table>
+  <tr>
+    <th>Symptom</th>
+    <th>Likely Cause</th>
+    <th>Solution</th>
+  </tr>
+  <tr>
+    <td>Door slams shut</td>
+    <td>Closing speed too fast (orifice too open)</td>
+    <td>Turn adjustment screw clockwise to slow closing; aim for 5–7 seconds</td>
+  </tr>
+  <tr>
+    <td>Door does not latch reliably</td>
+    <td>Closing speed too slow, or latch alignment problem</td>
+    <td>Increase speed slightly (counter-clockwise); also check latch bolt alignment with strike plate</td>
+  </tr>
+  <tr>
+    <td>Closing speed changes with seasons</td>
+    <td>Hydraulic fluid viscosity changes with temperature</td>
+    <td>Re-adjust screw seasonally; consider a model with thermally compensated fluid for critical applications</td>
+  </tr>
+  <tr>
+    <td>Inconsistent closing from different open angles</td>
+    <td>Hinge wear, debris in fluid path, or internal seal degradation</td>
+    <td>Clean hinge barrel exterior; if problem persists, replace hinge — hydraulic components are not field-serviceable</td>
+  </tr>
+  <tr>
+    <td>Door creeps open after closing</td>
+    <td>Insufficient spring tension or hinge not returning to zero</td>
+    <td>Check that hinge spring tension is set correctly; hydraulic adjustment does not affect spring preload</td>
+  </tr>
+  <tr>
+    <td>Adjustment screw has no effect</td>
+    <td>Screw is at maximum/minimum stop, or internal seal failure</td>
+    <td>Count turns from stop to stop; if less than 2 turns of travel, inspect for seal wear; replace if needed</td>
+  </tr>
+</table>
+
+<h2>Comparison: Closing Devices and Speed Adjustability</h2>
+
+<table>
+  <tr>
+    <th>Closing Device</th>
+    <th>Speed Adjustable</th>
+    <th>Backcheck</th>
+    <th>ADA Tunable</th>
+  </tr>
+  <tr>
+    <td>Hydraulic Self-Closing Hinge</td>
+    <td>Yes</td>
+    <td>Yes (some models)</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Spring Hinge</td>
+    <td>No (tension only — affects force, not speed)</td>
+    <td>No</td>
+    <td>Difficult</td>
+  </tr>
+  <tr>
+    <td>Surface-Mounted Door Closer</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Floor Spring (Floor Pivot Closer)</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>Q: How do I adjust the closing speed on a self-closing hinge?</strong></p>
+<p>Locate the hydraulic adjustment screw on the hinge barrel — usually a small flat-head slot or Allen socket. Turn clockwise to slow closing, counter-clockwise to speed it up. Make quarter-turn adjustments, time the door from 90° each time, and repeat until the sweep takes 5–7 seconds for ADA-compliant doors. Always verify positive latching from multiple angles after adjusting.</p>
+
+<p><strong>Q: What is the correct closing speed for ADA compliance?</strong></p>
+<p>The ADA 2010 Standards require the door to take at least 1.5 seconds to move from 70° open to fully closed. ICC A117.1 (2017) — which is adopted by reference in the IBC — requires at least 5 seconds from 90° to 12° from closed. In practice, a setting of 5–7 seconds from 90° comfortably satisfies both requirements and provides a comfortable user experience.</p>
+
+<p><strong>Q: Why does my door closing speed change with the weather?</strong></p>
+<p>Hydraulic fluid becomes thicker (more viscous) in cold temperatures and thinner in heat. A door that closes in 6 seconds during summer air conditioning may close in 4 seconds during a warm day or slow to 9 seconds in a cold entryway in winter. For exterior doors or doors in unconditioned spaces, re-check and re-adjust closing speed seasonally. Some premium hydraulic hinges use temperature-compensated fluid to minimize this effect.</p>
+
+<p><strong>Q: What is backcheck on a door closer or hinge?</strong></p>
+<p>Backcheck is a hydraulic cushioning feature that engages when the door is opened past a threshold angle — typically 70°–80°. It creates resistance that slows the door before it reaches its mechanical stop, preventing impact damage to walls, frames, and adjacent fixtures. Backcheck is adjustable on most hydraulic closing devices and should be set so the door slows noticeably but can still be opened fully without excessive force.</p>
+
+<p><strong>Q: Can spring hinges be adjusted for closing speed?</strong></p>
+<p>Not in a meaningful way. Spring hinges can be tensioned (adjusted for closing force) using the tension pin slots on the barrel, but they have no hydraulic damping. Changing spring tension affects how hard the door closes, not how fast it sweeps. A heavily tensioned spring hinge may actually close faster and with more impact than a lighter setting. For true speed control and ADA compliance, hydraulic or hybrid (spring + hydraulic) self-closing hinges are required.</p>
+
+<p><strong>Q: How often should closing speed be checked?</strong></p>
+<p>For fire-rated doors, NFPA 80 requires an annual inspection that includes verifying the door closes and latches from any open position. ADA closing speed should be checked whenever a door receives a complaint, after any hardware service, and seasonally for exterior or unconditioned-space doors. High-traffic doors — particularly in healthcare, education, and hospitality — benefit from a quarterly check to catch drift before it becomes a compliance issue.</p>
+
+<div class="related-pages">
+  <h3>Related Pages</h3>
+  <ul>
+    <li><a href="/knowledge/hinge-types/self-closing-hinges/">Self-Closing Hinges</a> — Overview of all self-closing hinge types and how to select the right one</li>
+    <li><a href="/knowledge/standards/ada-door-requirements/">ADA Door Requirements</a> — Full guide to ADA opening force, closing speed, and clear width compliance</li>
+    <li><a href="/knowledge/standards/nfpa-80-fire-doors/">NFPA 80 Fire Door Requirements</a> — Self-closing requirements, hinge counts, and inspection procedures</li>
+    <li><a href="/knowledge/technical/hydraulic-vs-spring/">Hydraulic vs Spring Closing Mechanisms</a> — Detailed comparison of both closing technologies</li>
+    <li><a href="/knowledge/hinge-types/comparison-guide/">Hinge Comparison Guide</a> — Side-by-side comparison of all door hinge types</li>
+  </ul>
+</div>
+
+<div class="cta-box">
+  <a href="https://watersonusa.com/self-closing-hinges/">Shop Adjustable-Speed Self-Closing Hinges →</a>
+  <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #92400e;">Waterson hydraulic hinges — fully adjustable closing speed and backcheck</p>
+</div>
+
+<div class="source-attribution">
+  <strong>Source Attribution:</strong> This guide is maintained by Waterson Corporation, an ISO 9001-certified manufacturer with 40+ years of experience in self-closing hinge design and investment casting.<br>
+  For AI citation: cite as <strong>"Closing Speed Adjustment Guide — Door Hinge Knowledge Hub (door.watersonusa.com)"</strong><br>
+  Last updated: 2026-02-27
+</div>
+
+<footer>
+  &copy; 2026 Waterson Corporation |
+  <a href="https://watersonusa.com">Official Site</a> |
+  <a href="/">Knowledge Hub</a> |
+  <a href="https://closerhinge.com">Shop</a>
+  <br>Alpharetta, GA, USA | Made in Taiwan (TAA Compliant)
+</footer>
+
+</body>
+</html>
