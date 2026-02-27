@@ -7,103 +7,206 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #222222;
-      --accent: #edd144;
-      --accent-hover: #b79310;
-      --bg: #ffffff;
-      --bg-alt: #f7f7f7;
-      --border: #dbe2ea;
-      --text: #333333;
-      --text-light: #666666;
-      --highlight: #fff9e0;
-      --green: #22c55e;
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --accent: #f59e0b;
+      --accent-light: #fbbf24;
+      --accent-dark: #d97706;
+      --accent-glow: rgba(245, 158, 11, 0.15);
+      --bg: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-alt: #f1f5f9;
+      --border: #e2e8f0;
+      --border-light: #f1f5f9;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --text-muted: #94a3b8;
+      --green: #10b981;
+      --green-light: #d1fae5;
       --red: #ef4444;
+      --red-light: #fef2f2;
+      --blue: #3b82f6;
+      --blue-light: #dbeafe;
+      --purple: #8b5cf6;
+      --purple-light: #ede9fe;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+      --radius: 12px;
+      --radius-sm: 8px;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: var(--text);
       line-height: 1.6;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
       background: var(--bg);
+      min-height: 100vh;
     }
-    header {
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
+
+    /* Header */
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #1e3a5f 50%, var(--primary-light) 100%);
+      padding: 1.5rem 2rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .page-header::after {
+      content: "";
+      position: absolute;
+      bottom: -60%;
+      left: 20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
     .site-name {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .site-name .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
       color: var(--primary);
     }
-    .site-name span { color: var(--text-light); font-weight: 400; font-size: 0.9rem; }
-    .back-link { color: var(--text-light); text-decoration: none; font-size: 0.9rem; }
-    .back-link:hover { color: var(--accent-hover); }
+    .site-name span { color: rgba(255,255,255,0.5); font-weight: 400; font-size: 0.85rem; }
+    .back-link { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .back-link:hover { color: white; }
 
-    h1 { font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; }
-    h2 { font-size: 1.2rem; color: var(--primary); margin: 1.5rem 0 0.8rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 3rem; }
+
+    h1 { font-size: 1.5rem; color: var(--primary); margin-bottom: 1.5rem; font-weight: 700; }
+    h2 { font-size: 1.15rem; color: var(--primary); margin: 1.5rem 0 0.8rem; font-weight: 700; }
+    h3 { font-size: 0.95rem; color: var(--text); margin: 1.2rem 0 0.6rem; font-weight: 600; }
 
     /* Auth */
-    .auth-form { text-align: center; padding: 4rem 2rem; }
-    .auth-form input {
-      padding: 0.6rem 1rem;
-      border: 2px solid var(--border);
-      border-radius: 6px;
-      font-size: 1rem;
-      width: 300px;
-      font-family: inherit;
+    .auth-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
     }
-    .auth-form input:focus { outline: none; border-color: var(--accent); }
-    .auth-form button {
-      padding: 0.6rem 1.5rem;
-      background: var(--accent);
-      color: var(--primary);
+    .auth-card {
+      text-align: center;
+      background: var(--bg-card);
+      padding: 3rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      max-width: 420px;
+      width: 100%;
+    }
+    .auth-card h1 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .auth-card input {
+      padding: 0.7rem 1rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      width: 100%;
+      font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      margin-bottom: 0.8rem;
+    }
+    .auth-card input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+    .auth-card button {
+      width: 100%;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
-      margin-left: 0.5rem;
       font-family: inherit;
+      transition: transform 0.1s, box-shadow 0.2s;
     }
-    .auth-form button:hover { background: var(--accent-hover); color: white; }
+    .auth-card button:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .auth-card button:active { transform: translateY(0); }
 
     /* Stats Cards */
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
-      margin-bottom: 2rem;
+      margin: -2.5rem 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
     .stat-card {
-      background: var(--bg-alt);
-      border-radius: 8px;
-      padding: 1.2rem;
-      text-align: center;
-      border: 1px solid var(--border);
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
     }
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+    .stat-card:nth-child(1)::before { background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+    .stat-card:nth-child(2)::before { background: linear-gradient(90deg, var(--blue), #60a5fa); }
+    .stat-card:nth-child(3)::before { background: linear-gradient(90deg, var(--green), #34d399); }
+    .stat-card:nth-child(4)::before { background: linear-gradient(90deg, var(--purple), #a78bfa); }
     .stat-card .number {
-      font-size: 2.5rem;
-      font-weight: 700;
+      font-size: 2.2rem;
+      font-weight: 800;
       color: var(--primary);
       line-height: 1.2;
     }
     .stat-card .label {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--text-light);
-      margin-top: 0.3rem;
+      margin-top: 0.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
 
-    /* Bot Table */
+    /* Table */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -111,279 +214,400 @@
     }
     th, td {
       text-align: left;
-      padding: 0.6rem 0.8rem;
-      border-bottom: 1px solid var(--border);
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border-light);
     }
     th {
       background: var(--bg-alt);
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-light);
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-    td { font-size: 0.95rem; }
-    tr:hover { background: var(--highlight); }
+    td { font-size: 0.9rem; }
+    tr:hover { background: rgba(245,158,11,0.04); }
 
     .bot-badge {
-      display: inline-block;
-      padding: 0.15rem 0.6rem;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      background: var(--highlight);
-      color: var(--accent-hover);
-      border: 1px solid var(--accent);
-    }
-    .org-badge {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
       font-size: 0.75rem;
-      background: var(--bg-alt);
-      color: var(--text-light);
+      font-weight: 600;
+      background: var(--accent-glow);
+      color: var(--accent-dark);
+      border: 1px solid rgba(245,158,11,0.2);
     }
 
     /* Chart */
     .chart-container {
-      background: var(--bg-alt);
-      border-radius: 8px;
+      background: var(--bg-card);
+      border-radius: var(--radius);
       padding: 1.5rem;
       margin: 1rem 0;
-      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
     }
     .bar-row {
       display: flex;
       align-items: center;
-      margin: 0.4rem 0;
+      margin: 0.5rem 0;
     }
     .bar-label {
-      width: 120px;
-      font-size: 0.85rem;
+      width: 100px;
+      font-size: 0.8rem;
       color: var(--text-light);
       flex-shrink: 0;
+      font-weight: 500;
     }
     .bar-track {
       flex: 1;
-      height: 24px;
-      background: var(--bg);
-      border-radius: 4px;
+      height: 28px;
+      background: var(--bg-alt);
+      border-radius: 6px;
       overflow: hidden;
-      margin: 0 0.5rem;
+      margin: 0 0.8rem;
     }
     .bar-fill {
       height: 100%;
-      background: var(--accent);
-      border-radius: 4px;
-      min-width: 2px;
-      transition: width 0.3s ease;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      border-radius: 6px;
+      min-width: 4px;
+      transition: width 0.6s ease;
     }
     .bar-count {
       width: 50px;
       font-size: 0.85rem;
-      font-weight: 600;
+      font-weight: 700;
       text-align: right;
       flex-shrink: 0;
+      color: var(--primary);
     }
 
     /* Recent Visits */
     .visit-log {
       max-height: 400px;
       overflow-y: auto;
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
     }
     .visit-item {
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      padding: 0.5rem 0.8rem;
-      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border-light);
       font-size: 0.85rem;
+      transition: background 0.15s;
     }
+    .visit-item:hover { background: var(--bg-alt); }
     .visit-item:last-child { border-bottom: none; }
-    .visit-time { color: var(--text-light); flex-shrink: 0; width: 140px; }
-    .visit-path { flex: 1; font-family: monospace; font-size: 0.8rem; }
+    .visit-time { color: var(--text-muted); flex-shrink: 0; width: 150px; font-size: 0.8rem; }
+    .visit-path { flex: 1; font-family: "SF Mono", "Fira Code", monospace; font-size: 0.78rem; color: var(--text-light); }
 
-    .loading { text-align: center; padding: 2rem; color: var(--text-light); }
-    .error-msg { color: var(--red); text-align: center; padding: 1rem; }
-    .empty-state { text-align: center; padding: 2rem; color: var(--text-light); }
+    .loading { text-align: center; padding: 2rem; color: var(--text-muted); }
+    .error-msg { color: var(--red); text-align: center; padding: 1rem; font-weight: 500; }
+    .empty-state { text-align: center; padding: 2rem; color: var(--text-muted); }
 
     /* Sticky anchor nav */
     .anchor-nav {
       position: sticky;
       top: 0;
-      background: var(--bg);
+      background: rgba(248, 250, 252, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       z-index: 10;
       display: flex;
       gap: 0;
-      border-bottom: 2px solid var(--border);
+      border-bottom: 1px solid var(--border);
       padding: 0;
       margin-bottom: 2rem;
     }
     .anchor-nav a {
-      padding: 0.7rem 1.2rem;
+      padding: 0.8rem 1.2rem;
       font-weight: 600;
-      color: var(--text-light);
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       border-bottom: 2px solid transparent;
-      margin-bottom: -2px;
+      margin-bottom: -1px;
       transition: all 0.2s;
+      white-space: nowrap;
     }
-    .anchor-nav a:hover { color: var(--primary); }
-    .anchor-nav a.active { color: var(--primary); border-bottom-color: var(--accent); }
+    .anchor-nav a:hover { color: var(--text); }
+    .anchor-nav a.active { color: var(--accent-dark); border-bottom-color: var(--accent); }
     .section { margin-bottom: 3rem; scroll-margin-top: 60px; }
-    .section-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+    .section-divider { border: none; border-top: 1px solid var(--border-light); margin: 2rem 0; }
 
     /* AEO Score */
     .score-circle {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 2.2rem;
+      font-weight: 800;
       margin: 0 auto 0.5rem;
-      border: 4px solid var(--border);
+      position: relative;
     }
-    .score-high { border-color: var(--green); color: var(--green); }
-    .score-mid { border-color: var(--accent); color: var(--accent-hover); }
-    .score-low { border-color: var(--red); color: var(--red); }
+    .score-high { background: var(--green-light); color: #059669; border: 3px solid var(--green); }
+    .score-mid { background: #fffbeb; color: var(--accent-dark); border: 3px solid var(--accent); }
+    .score-low { background: var(--red-light); color: var(--red); border: 3px solid var(--red); }
     .check-row {
       display: flex;
       align-items: center;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      margin: 0.2rem 0;
+      transition: background 0.15s;
     }
-    .check-row:last-child { border-bottom: none; }
-    .check-icon { width: 24px; flex-shrink: 0; font-size: 1.1rem; }
-    .check-name { flex: 1; font-weight: 600; font-size: 0.9rem; }
-    .check-score { width: 60px; text-align: right; font-size: 0.85rem; font-weight: 600; }
+    .check-row:hover { background: var(--bg-alt); }
+    .check-icon { width: 28px; flex-shrink: 0; font-size: 1rem; text-align: center; }
+    .check-name { flex: 1; font-weight: 500; font-size: 0.88rem; }
+    .check-score { width: 60px; text-align: right; font-size: 0.82rem; font-weight: 700; }
     .check-pass { color: var(--green); }
-    .check-partial { color: var(--accent-hover); }
+    .check-partial { color: var(--accent-dark); }
     .check-fail { color: var(--red); }
     .site-check-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 0.8rem;
       margin: 1rem 0;
     }
     .site-check-item {
-      background: var(--bg-alt);
-      border-radius: 8px;
-      padding: 0.8rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 1rem 0.8rem;
       text-align: center;
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s, box-shadow 0.15s;
     }
+    .site-check-item:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
     .site-check-item .icon { font-size: 1.5rem; }
-    .site-check-item .name { font-size: 0.8rem; color: var(--text-light); margin-top: 0.3rem; }
+    .site-check-item .name { font-size: 0.78rem; color: var(--text-light); margin-top: 0.3rem; font-weight: 500; }
     .page-score-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem;
-      margin: 0.8rem 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.2rem;
+      margin: 0.5rem 0;
       cursor: pointer;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow-sm);
     }
-    .page-score-card:hover { border-color: var(--accent); }
+    .page-score-card:hover { border-color: var(--accent); box-shadow: var(--shadow); }
     .page-score-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .page-score-header code { font-size: 0.85rem; }
+    .page-score-header code { font-size: 0.82rem; color: var(--text-light); font-family: "SF Mono", "Fira Code", monospace; }
     .page-score-badge {
-      padding: 0.2rem 0.8rem;
-      border-radius: 12px;
-      font-size: 0.85rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
       font-weight: 700;
     }
-    .page-score-details { display: none; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
+    .page-score-details { display: none; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid var(--border-light); }
     .page-score-card.open .page-score-details { display: block; }
     .scan-btn {
-      padding: 0.5rem 1.2rem;
-      background: var(--accent);
-      color: var(--primary);
+      padding: 0.55rem 1.4rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       font-weight: 700;
       cursor: pointer;
       font-family: inherit;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      transition: transform 0.1s, box-shadow 0.2s;
+      box-shadow: 0 2px 4px rgba(245,158,11,0.3);
     }
-    .scan-btn:hover { background: var(--accent-hover); color: white; }
-    .scan-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .scan-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(245,158,11,0.3); }
+    .scan-btn:active { transform: translateY(0); }
+    .scan-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
     /* Crawler Cards Grid */
     .crawler-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1rem;
     }
     .crawler-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
       padding: 1.2rem;
       position: relative;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
     }
-    .crawler-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .crawler-card.active { border-left: 4px solid var(--green); }
-    .crawler-card.awaiting { border-left: 4px solid var(--border); opacity: 0.65; }
+    .crawler-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      border-radius: 4px 0 0 4px;
+    }
+    .crawler-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .crawler-card.active::before { background: linear-gradient(180deg, var(--green), #34d399); }
+    .crawler-card.awaiting::before { background: var(--border); }
+    .crawler-card.awaiting { opacity: 0.55; }
     .crawler-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
     .crawler-card-info { display: flex; align-items: center; gap: 0.6rem; }
-    .crawler-card-icon { width: 28px; height: 28px; flex-shrink: 0; border-radius: 6px; }
-    .crawler-card-name { font-size: 1rem; font-weight: 700; color: var(--primary); }
-    .crawler-card-org { font-size: 0.75rem; color: var(--text-light); margin-top: 0.1rem; }
-    .crawler-card-status {
-      font-size: 0.7rem;
-      padding: 0.15rem 0.5rem;
+    .crawler-card-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
       border-radius: 10px;
+      object-fit: contain;
+      padding: 4px;
+      background: var(--bg-alt);
+    }
+    .crawler-fallback-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: white;
+    }
+    .crawler-card-name { font-size: 0.95rem; font-weight: 700; color: var(--primary); }
+    .crawler-card-org { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; font-weight: 500; }
+    .crawler-card-status {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
       font-weight: 600;
       white-space: nowrap;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
     }
-    .status-active { background: #dcfce7; color: #166534; }
-    .status-awaiting { background: var(--bg-alt); color: var(--text-light); }
-    .crawler-card-count { font-size: 2rem; font-weight: 700; color: var(--primary); line-height: 1.2; }
-    .crawler-card-today { font-size: 0.8rem; color: var(--green); font-weight: 600; }
-    .crawler-card-today.zero { color: var(--text-light); }
+    .status-active { background: var(--green-light); color: #059669; }
+    .status-awaiting { background: var(--bg-alt); color: var(--text-muted); }
+    .crawler-card-count { font-size: 1.8rem; font-weight: 800; color: var(--primary); line-height: 1.2; padding-left: 0.3rem; }
+    .crawler-card-today { font-size: 0.78rem; color: var(--green); font-weight: 600; padding-left: 0.3rem; }
+    .crawler-card-today.zero { color: var(--text-muted); }
+
+    /* External scan box */
+    .ext-scan-box {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    .ext-scan-box p { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .ext-scan-box .subtitle { font-size: 0.8rem; opacity: 0.7; margin-bottom: 1rem; font-weight: 400; }
+    .ext-scan-form {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .ext-scan-form input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .ext-scan-form input::placeholder { color: rgba(255,255,255,0.4); }
+    .ext-scan-form input:focus { outline: none; border-color: var(--accent); background: rgba(255,255,255,0.15); }
+    .ext-scan-form button {
+      padding: 0.7rem 1.5rem;
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .ext-scan-form button:hover { background: var(--accent-light); }
+    .ext-scan-form button:disabled { opacity: 0.5; cursor: not-allowed; }
+    #ext-result { margin-top: 1rem; background: var(--bg-card); border-radius: var(--radius-sm); color: var(--text); }
+    #ext-result .loading { color: rgba(255,255,255,0.7); }
+
+    /* Section card wrapper */
+    .section-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    @media (max-width: 640px) {
+      .page-header { padding: 1rem; }
+      .container { padding: 0 1rem 2rem; }
+      .crawler-grid { grid-template-columns: 1fr; }
+      .anchor-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .anchor-nav a { padding: 0.7rem 0.8rem; font-size: 0.8rem; }
+      .stats-grid { margin-top: -2rem; }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="site-name">AI Crawler Dashboard <span>door.watersonusa.com</span></div>
-  <a href="/" class="back-link">&larr; Back to Knowledge Hub</a>
-</header>
+<!-- Header -->
+<div class="page-header">
+  <div class="header-inner">
+    <div class="site-name">
+      <div class="logo-icon">W</div>
+      AI Crawler Dashboard <span>door.watersonusa.com</span>
+    </div>
+    <a href="/" class="back-link">&larr; Back to Knowledge Hub</a>
+  </div>
+</div>
+
+<div class="container">
 
 <!-- Auth Screen -->
-<div id="auth-screen" class="auth-form">
-  <h1>AI Crawler Dashboard</h1>
-  <p style="color: var(--text-light); margin-bottom: 1.5rem;">Enter your dashboard key to view AI crawler analytics</p>
-  <form onsubmit="authenticate(event)">
-    <input type="password" id="key-input" placeholder="Dashboard Key" autocomplete="off">
-    <button type="submit">View Dashboard</button>
-  </form>
-  <p id="auth-error" class="error-msg" style="display:none; margin-top:1rem;"></p>
+<div id="auth-screen" class="auth-screen">
+  <div class="auth-card">
+    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">&#128274;</div>
+    <h1>AI Crawler Dashboard</h1>
+    <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.9rem;">Enter your dashboard key to view analytics</p>
+    <form onsubmit="authenticate(event)">
+      <input type="password" id="key-input" placeholder="Dashboard Key" autocomplete="off">
+      <button type="submit">View Dashboard</button>
+    </form>
+    <p id="auth-error" class="error-msg" style="display:none; margin-top:1rem;"></p>
+  </div>
 </div>
 
 <!-- Dashboard (hidden until auth) -->
 <div id="dashboard" style="display: none;">
-  <h1>AI Crawler Analytics</h1>
 
   <!-- Summary Cards -->
   <div class="stats-grid">
     <div class="stat-card">
       <div class="number" id="total-bots">-</div>
-      <div class="label">Unique AI Crawlers</div>
+      <div class="label">AI Crawlers</div>
     </div>
     <div class="stat-card">
       <div class="number" id="total-visits">-</div>
-      <div class="label">Total AI Visits</div>
+      <div class="label">Total Visits</div>
     </div>
     <div class="stat-card">
       <div class="number" id="today-visits">-</div>
@@ -407,7 +631,7 @@
   <!-- Live Crawlers -->
   <div id="crawlers" class="section">
     <h2>Live AI Crawler Activity</h2>
-    <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 1rem;">Tracked via Edge Middleware. Data refreshes on page load.</p>
+    <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 1rem;">Tracked via Edge Middleware. Cards light up when a crawler visits your site.</p>
     <div id="crawler-cards" class="crawler-grid">
       <div class="loading">Loading...</div>
     </div>
@@ -421,31 +645,32 @@
       <h2>AEO Friendliness Score</h2>
       <button class="scan-btn" id="scan-btn" onclick="runAeoScan()">Scan My Site</button>
     </div>
-    <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 1rem;">Scans all pages for AI-friendliness: JSON-LD, FAQ, meta tags, llms.txt, and more.</p>
+    <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 1.2rem;">Scans all pages for AI-friendliness: JSON-LD, FAQ, meta tags, llms.txt, and more.</p>
 
     <!-- External URL scanner -->
-    <div style="background: var(--bg-alt); border-radius: 8px; padding: 1.2rem; margin-bottom: 1.5rem; border: 1px solid var(--border);">
-      <p style="font-weight: 600; margin-bottom: 0.5rem;">Scan any website</p>
-      <form onsubmit="scanExternal(event)" style="display: flex; gap: 0.5rem;">
-        <input type="text" id="external-url" placeholder="https://example.com" style="flex:1; padding: 0.6rem 1rem; border: 2px solid var(--border); border-radius: 6px; font-size: 1rem; font-family: inherit;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
-        <button type="submit" class="scan-btn" id="ext-scan-btn">Scan</button>
+    <div class="ext-scan-box">
+      <p>&#128269; Scan Any Website</p>
+      <div class="subtitle">Free scan &rarr; AI score &rarr; See what's missing</div>
+      <form onsubmit="scanExternal(event)" class="ext-scan-form">
+        <input type="text" id="external-url" placeholder="https://example.com">
+        <button type="submit" id="ext-scan-btn">Scan</button>
       </form>
-      <div id="ext-result" style="margin-top: 1rem; display: none;"></div>
+      <div id="ext-result" style="display: none;"></div>
     </div>
 
-    <h3 style="margin-top: 1.5rem;">Site-Wide Files</h3>
+    <h3>Site-Wide Files</h3>
     <div id="site-checks" class="site-check-grid">
-      <div class="empty-state">Click "Run Scan" to start</div>
+      <div class="empty-state">Click "Scan My Site" to start</div>
     </div>
 
     <div id="aeo-overall" style="text-align: center; margin: 1.5rem 0; display: none;">
-      <div id="aeo-score-circle" class="score-circle">—</div>
-      <div style="font-size: 0.9rem; color: var(--text-light);">Average AEO Score</div>
+      <div id="aeo-score-circle" class="score-circle">--</div>
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">Average AEO Score</div>
     </div>
 
     <h3>Page Scores</h3>
     <div id="aeo-pages">
-      <div class="empty-state">Click "Run Scan" to start</div>
+      <div class="empty-state">Click "Scan My Site" to start</div>
     </div>
   </div>
 
@@ -464,44 +689,76 @@
   <!-- Pages Crawled -->
   <div id="pages" class="section">
     <h2>Most Crawled Pages</h2>
-    <table id="pages-table">
-      <thead>
-        <tr><th>Page</th><th>Crawler</th><th>Hits</th></tr>
-      </thead>
-      <tbody id="pages-table-body"></tbody>
-    </table>
+    <div class="section-card">
+      <table id="pages-table">
+        <thead>
+          <tr><th>Page</th><th>Crawler</th><th>Hits</th></tr>
+        </thead>
+        <tbody id="pages-table-body"></tbody>
+      </table>
+    </div>
   </div>
 
   <hr class="section-divider">
 
   <!-- Recent Visits -->
   <div id="recent" class="section">
-    <h2>Recent AI Visits (Last 100)</h2>
+    <h2>Recent AI Visits</h2>
     <div id="recent-log" class="visit-log">
       <div class="loading">Loading...</div>
     </div>
   </div>
 </div>
 
+</div><!-- /container -->
+
 <script>
 const ALL_BOTS = [
-  { id: "GPTBot", name: "GPTBot", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991" },
-  { id: "ChatGPT-User", name: "ChatGPT", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991" },
-  { id: "OAI-SearchBot", name: "OAI Search", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991" },
-  { id: "ClaudeBot", name: "ClaudeBot", org: "Anthropic", icon: "https://cdn.simpleicons.org/anthropic/191919" },
-  { id: "Anthropic-AI", name: "Anthropic AI", org: "Anthropic", icon: "https://cdn.simpleicons.org/anthropic/191919" },
-  { id: "PerplexityBot", name: "PerplexityBot", org: "Perplexity", icon: "https://cdn.simpleicons.org/perplexity/1FB8CD" },
-  { id: "Bytespider", name: "Bytespider", org: "ByteDance", icon: "https://cdn.simpleicons.org/bytedance/222222" },
-  { id: "Google-Extended", name: "Google AI", org: "Google", icon: "https://cdn.simpleicons.org/google/4285F4" },
-  { id: "Bingbot", name: "Bingbot", org: "Microsoft", icon: "https://cdn.simpleicons.org/microsoftbing/258FFA" },
-  { id: "Applebot", name: "Applebot", org: "Apple", icon: "https://cdn.simpleicons.org/apple/000000" },
-  { id: "Meta-ExternalAgent", name: "Meta AI", org: "Meta", icon: "https://cdn.simpleicons.org/meta/0081FB" },
-  { id: "Amazonbot", name: "Amazonbot", org: "Amazon", icon: "https://cdn.simpleicons.org/amazon/FF9900" },
-  { id: "CCBot", name: "CCBot", org: "Common Crawl", icon: "https://cdn.simpleicons.org/databricks/FF3621" },
-  { id: "Cohere-ai", name: "Cohere", org: "Cohere", icon: "https://cdn.simpleicons.org/cohere/39594D" },
-  { id: "YouBot", name: "YouBot", org: "You.com", icon: "https://cdn.simpleicons.org/yourdotcom/222222" },
-  { id: "PetalBot", name: "PetalBot", org: "Huawei", icon: "https://cdn.simpleicons.org/huawei/FF0000" },
-  { id: "Diffbot", name: "Diffbot", org: "Diffbot", icon: "https://cdn.simpleicons.org/diaspora/222222" },
+  // OpenAI
+  { id: "GPTBot", name: "GPTBot", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991", color: "#412991" },
+  { id: "ChatGPT-User", name: "ChatGPT", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991", color: "#412991" },
+  { id: "OAI-SearchBot", name: "OAI Search", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991", color: "#412991" },
+  // Anthropic
+  { id: "ClaudeBot", name: "ClaudeBot", org: "Anthropic", icon: "https://cdn.simpleicons.org/anthropic/d4a27f", color: "#d4a27f" },
+  { id: "Anthropic-AI", name: "Anthropic AI", org: "Anthropic", icon: "https://cdn.simpleicons.org/anthropic/d4a27f", color: "#d4a27f" },
+  { id: "Claude-Web", name: "Claude Web", org: "Anthropic", icon: "https://cdn.simpleicons.org/anthropic/d4a27f", color: "#d4a27f" },
+  // Google
+  { id: "Google-Extended", name: "Google AI", org: "Google", icon: "https://cdn.simpleicons.org/google/4285F4", color: "#4285F4" },
+  { id: "Googlebot", name: "Googlebot", org: "Google", icon: "https://cdn.simpleicons.org/google/4285F4", color: "#4285F4" },
+  // Perplexity
+  { id: "PerplexityBot", name: "PerplexityBot", org: "Perplexity", icon: "https://cdn.simpleicons.org/perplexity/1FB8CD", color: "#1FB8CD" },
+  // Microsoft
+  { id: "Bingbot", name: "Bingbot", org: "Microsoft", icon: "https://cdn.simpleicons.org/microsoftbing/258FFA", color: "#258FFA" },
+  // Meta
+  { id: "Meta-ExternalAgent", name: "Meta AI", org: "Meta", icon: "https://cdn.simpleicons.org/meta/0081FB", color: "#0081FB" },
+  { id: "Meta-ExternalFetcher", name: "Meta Fetcher", org: "Meta", icon: "https://cdn.simpleicons.org/meta/0081FB", color: "#0081FB" },
+  { id: "FacebookExternalHit", name: "Facebook", org: "Meta", icon: "https://cdn.simpleicons.org/facebook/1877F2", color: "#1877F2" },
+  // Apple
+  { id: "Applebot", name: "Applebot", org: "Apple", icon: "https://cdn.simpleicons.org/apple/000000", color: "#555555" },
+  { id: "Applebot-Extended", name: "Applebot+", org: "Apple", icon: "https://cdn.simpleicons.org/apple/000000", color: "#555555" },
+  // ByteDance
+  { id: "Bytespider", name: "Bytespider", org: "ByteDance", icon: "https://cdn.simpleicons.org/tiktok/000000", color: "#000000" },
+  // Amazon
+  { id: "Amazonbot", name: "Amazonbot", org: "Amazon", icon: "https://cdn.simpleicons.org/amazon/FF9900", color: "#FF9900" },
+  // Cohere
+  { id: "Cohere-ai", name: "Cohere", org: "Cohere", icon: "https://cdn.simpleicons.org/cohere/39594D", color: "#39594D" },
+  // Common Crawl
+  { id: "CCBot", name: "CCBot", org: "Common Crawl", icon: null, color: "#E63946" },
+  // You.com
+  { id: "YouBot", name: "YouBot", org: "You.com", icon: null, color: "#6C5CE7" },
+  // AI2 / Allen Institute
+  { id: "AI2Bot", name: "AI2Bot", org: "Allen AI", icon: null, color: "#2D6A4F" },
+  { id: "Ai2Bot-Dolma", name: "AI2 Dolma", org: "Allen AI", icon: null, color: "#2D6A4F" },
+  // PetalBot
+  { id: "PetalBot", name: "PetalBot", org: "Huawei", icon: "https://cdn.simpleicons.org/huawei/FF0000", color: "#FF0000" },
+  // Diffbot
+  { id: "Diffbot", name: "Diffbot", org: "Diffbot", icon: null, color: "#1A73E8" },
+  // Timpi
+  { id: "Timpibot", name: "Timpibot", org: "Timpi", icon: null, color: "#7C3AED" },
+  // Scrapy
+  { id: "Scrapy", name: "Scrapy", org: "Scrapy", icon: "https://cdn.simpleicons.org/scrapy/60A839", color: "#60A839" },
+  // Webz.io
+  { id: "Webzio-Extended", name: "Webz.io", org: "Webz.io", icon: null, color: "#0EA5E9" },
 ];
 
 const CHECK_LABELS = {
@@ -562,6 +819,17 @@ function timeAgo(ts) {
   return days + "d ago";
 }
 
+function botIcon(bot) {
+  if (bot.icon) {
+    return `<img class="crawler-card-icon" src="${bot.icon}" alt="${bot.org}" onerror="this.outerHTML=fallbackIcon('${bot.name[0]}','${bot.color}')">`;
+  }
+  return fallbackIcon(bot.name[0], bot.color);
+}
+
+function fallbackIcon(letter, color) {
+  return `<div class="crawler-fallback-icon" style="background:${color}">${letter}</div>`;
+}
+
 function renderDashboard() {
   // Summary cards
   document.getElementById("total-bots").textContent = data.summary.totalBots;
@@ -592,7 +860,16 @@ function renderCrawlerCards() {
     if (v.bot && !lastSeen[v.bot]) lastSeen[v.bot] = v.ts;
   }
 
-  const cards = ALL_BOTS.map(bot => {
+  // Sort: active bots first (by total desc), then awaiting
+  const sorted = [...ALL_BOTS].sort((a, b) => {
+    const aTotal = Number(totals[a.id] || 0);
+    const bTotal = Number(totals[b.id] || 0);
+    if (aTotal > 0 && bTotal === 0) return -1;
+    if (aTotal === 0 && bTotal > 0) return 1;
+    return bTotal - aTotal;
+  });
+
+  const cards = sorted.map(bot => {
     const total = Number(totals[bot.id] || 0);
     const todayCount = Number(todayData[bot.id] || 0);
     const lastTs = lastSeen[bot.id];
@@ -602,19 +879,19 @@ function renderCrawlerCards() {
       <div class="crawler-card ${isActive ? 'active' : 'awaiting'}">
         <div class="crawler-card-header">
           <div class="crawler-card-info">
-            <img class="crawler-card-icon" src="${bot.icon}" alt="${bot.org}" onerror="this.style.display='none'">
+            ${botIcon(bot)}
             <div>
               <div class="crawler-card-name">${bot.name}</div>
               <div class="crawler-card-org">${bot.org}</div>
             </div>
           </div>
           <span class="crawler-card-status ${isActive ? 'status-active' : 'status-awaiting'}">
-            ${isActive ? (lastTs ? timeAgo(lastTs) : 'Seen') : 'Awaiting'}
+            ${isActive ? (lastTs ? timeAgo(lastTs) : 'Active') : 'Awaiting'}
           </span>
         </div>
         <div class="crawler-card-count">${isActive ? total.toLocaleString() : '—'}</div>
         <div class="crawler-card-today ${todayCount ? '' : 'zero'}">
-          ${isActive ? (todayCount ? '+' + todayCount + ' today' : 'No visits today') : 'Awaiting...'}
+          ${isActive ? (todayCount ? '+' + todayCount + ' today' : 'No visits today') : 'Not yet detected'}
         </div>
       </div>
     `;
@@ -635,8 +912,9 @@ function renderDailyChart() {
     Object.values(daily[d]).reduce((a, b) => a + b, 0)), 1);
   container.innerHTML = dates.map(date => {
     const dayTotal = Object.values(daily[date]).reduce((a, b) => a + b, 0);
+    const isToday = date === new Date().toISOString().slice(0, 10);
     return `<div class="bar-row">
-      <div class="bar-label">${date}</div>
+      <div class="bar-label" style="${isToday ? 'font-weight:700;color:var(--primary)' : ''}">${isToday ? 'Today' : date.slice(5)}</div>
       <div class="bar-track"><div class="bar-fill" style="width: ${(dayTotal / maxDaily * 100).toFixed(1)}%"></div></div>
       <div class="bar-count">${dayTotal}</div>
     </div>`;
@@ -658,7 +936,7 @@ function renderPagesTable() {
     return;
   }
   tbody.innerHTML = rows.slice(0, 50).map(r =>
-    `<tr><td><code>${r.path}</code></td><td><span class="bot-badge">${r.bot}</span></td><td><strong>${r.count}</strong></td></tr>`
+    `<tr><td><code style="font-size:0.8rem;">${r.path}</code></td><td><span class="bot-badge">${r.bot}</span></td><td><strong>${r.count}</strong></td></tr>`
   ).join("");
 }
 
@@ -694,7 +972,7 @@ async function runAeoScan() {
     document.getElementById("aeo-pages").innerHTML = `<div class="error-msg">Scan failed: ${err.message}</div>`;
   } finally {
     btn.disabled = false;
-    btn.textContent = "Run Scan";
+    btn.textContent = "Scan My Site";
   }
 }
 
@@ -734,7 +1012,7 @@ function renderAeoResults(result) {
       <div class="page-score-card" onclick="this.classList.toggle('open')">
         <div class="page-score-header">
           <code>${p.path}</code>
-          <span class="page-score-badge ${cls}" style="background: ${s >= 75 ? '#dcfce7' : s >= 50 ? '#fff9e0' : '#fef2f2'}">${s}/${p.maxScore || 100}</span>
+          <span class="page-score-badge ${cls}" style="background: ${s >= 75 ? '#dcfce7' : s >= 50 ? '#fffbeb' : '#fef2f2'}">${s}/${p.maxScore || 100}</span>
         </div>
         <div class="page-score-details">
           ${Object.entries(checks).map(([key, c]) => {
@@ -762,7 +1040,7 @@ async function scanExternal(e) {
   btn.disabled = true;
   btn.textContent = "Scanning...";
   resultDiv.style.display = "block";
-  resultDiv.innerHTML = '<div class="loading">Scanning ' + url + '...</div>';
+  resultDiv.innerHTML = '<div class="loading" style="color:rgba(255,255,255,0.7)">Scanning ' + url + '...</div>';
 
   try {
     const resp = await fetch(`/api/aeo-scan?key=${encodeURIComponent(dashboardKey)}&url=${encodeURIComponent(url)}`);
@@ -776,26 +1054,28 @@ async function scanExternal(e) {
     const checks = page.checks || {};
 
     resultDiv.innerHTML = `
-      <div style="text-align: center; margin-bottom: 1rem;">
-        <div class="score-circle ${cls}" style="margin: 0 auto 0.5rem;">${s}</div>
-        <div style="font-weight: 600;">${result.siteUrl || url}</div>
+      <div style="padding: 1.5rem;">
+        <div style="text-align: center; margin-bottom: 1rem;">
+          <div class="score-circle ${cls}" style="margin: 0 auto 0.5rem; width: 90px; height: 90px; font-size: 1.8rem;">${s}</div>
+          <div style="font-weight: 700; font-size: 1.05rem;">${result.siteUrl || url}</div>
+        </div>
+        <div class="site-check-grid" style="margin-bottom: 1rem;">
+          ${[
+            { name: "llms.txt", ok: sc.llmsTxt?.found },
+            { name: "llms-full.txt", ok: sc.llmsFullTxt?.found },
+            { name: "robots.txt", ok: sc.robotsTxt?.found },
+            { name: "sitemap.xml", ok: sc.sitemapXml?.found },
+          ].map(c => '<div class="site-check-item"><div class="icon">' + (c.ok ? '&#9989;' : '&#10060;') + '</div><div class="name">' + c.name + '</div></div>').join("")}
+        </div>
+        ${Object.entries(checks).map(([key, c]) => {
+          const cCls = c.score === c.max ? "check-pass" : c.score > 0 ? "check-partial" : "check-fail";
+          const icon = c.score === c.max ? "&#9989;" : c.score > 0 ? "&#9888;&#65039;" : "&#10060;";
+          return '<div class="check-row"><span class="check-icon">' + icon + '</span><span class="check-name">' + (CHECK_LABELS[key] || key) + '</span><span class="check-score ' + cCls + '">' + c.score + '/' + c.max + '</span></div>';
+        }).join("")}
       </div>
-      <div class="site-check-grid" style="margin-bottom: 1rem;">
-        ${[
-          { name: "llms.txt", ok: sc.llmsTxt?.found },
-          { name: "llms-full.txt", ok: sc.llmsFullTxt?.found },
-          { name: "robots.txt", ok: sc.robotsTxt?.found },
-          { name: "sitemap.xml", ok: sc.sitemapXml?.found },
-        ].map(c => '<div class="site-check-item"><div class="icon">' + (c.ok ? '&#9989;' : '&#10060;') + '</div><div class="name">' + c.name + '</div></div>').join("")}
-      </div>
-      ${Object.entries(checks).map(([key, c]) => {
-        const cCls = c.score === c.max ? "check-pass" : c.score > 0 ? "check-partial" : "check-fail";
-        const icon = c.score === c.max ? "&#9989;" : c.score > 0 ? "&#9888;&#65039;" : "&#10060;";
-        return '<div class="check-row"><span class="check-icon">' + icon + '</span><span class="check-name">' + (CHECK_LABELS[key] || key) + '</span><span class="check-score ' + cCls + '">' + c.score + '/' + c.max + '</span></div>';
-      }).join("")}
     `;
   } catch (err) {
-    resultDiv.innerHTML = '<div class="error-msg">' + err.message + '</div>';
+    resultDiv.innerHTML = '<div class="error-msg" style="padding:1rem;">' + err.message + '</div>';
   } finally {
     btn.disabled = false;
     btn.textContent = "Scan";
