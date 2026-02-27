@@ -4,6 +4,12 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
+  // Support scanning external URLs
+  const externalUrl = req.query.url;
+  if (externalUrl) {
+    return handleExternalScan(externalUrl, res);
+  }
+
   const baseUrl = "https://door.watersonusa.com";
   const pages = [
     "/",
@@ -199,4 +205,36 @@ async function checkSiteFiles(baseUrl) {
   } catch { checks.sitemapXml = { found: false }; }
 
   return checks;
+}
+
+async function handleExternalScan(rawUrl, res) {
+  try {
+    let url = rawUrl.trim();
+    if (!url.startsWith("http")) url = "https://" + url;
+    const parsed = new URL(url);
+    const baseUrl = parsed.origin;
+
+    // Fetch the main page
+    const resp = await fetch(url, { headers: { "User-Agent": "AEO-Scanner/1.0 (door.watersonusa.com)" } });
+    if (!resp.ok) {
+      return res.status(400).json({ error: `Failed to fetch ${url}: ${resp.status}` });
+    }
+    const html = await resp.text();
+    const pageResult = { path: parsed.pathname || "/", ...analyzePage(html, parsed.pathname || "/") };
+
+    // Check site-wide files
+    const siteChecks = await checkSiteFiles(baseUrl);
+
+    res.setHeader("Cache-Control", "s-maxage=300");
+    return res.status(200).json({
+      siteUrl: baseUrl,
+      scannedUrl: url,
+      scanDate: new Date().toISOString(),
+      overallScore: pageResult.score,
+      siteChecks,
+      pages: [pageResult],
+    });
+  } catch (e) {
+    return res.status(400).json({ error: "Invalid URL or scan failed: " + e.message });
+  }
 }

@@ -419,9 +419,19 @@
   <div id="aeo" class="section">
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <h2>AEO Friendliness Score</h2>
-      <button class="scan-btn" id="scan-btn" onclick="runAeoScan()">Run Scan</button>
+      <button class="scan-btn" id="scan-btn" onclick="runAeoScan()">Scan My Site</button>
     </div>
     <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 1rem;">Scans all pages for AI-friendliness: JSON-LD, FAQ, meta tags, llms.txt, and more.</p>
+
+    <!-- External URL scanner -->
+    <div style="background: var(--bg-alt); border-radius: 8px; padding: 1.2rem; margin-bottom: 1.5rem; border: 1px solid var(--border);">
+      <p style="font-weight: 600; margin-bottom: 0.5rem;">Scan any website</p>
+      <form onsubmit="scanExternal(event)" style="display: flex; gap: 0.5rem;">
+        <input type="text" id="external-url" placeholder="https://example.com" style="flex:1; padding: 0.6rem 1rem; border: 2px solid var(--border); border-radius: 6px; font-size: 1rem; font-family: inherit;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+        <button type="submit" class="scan-btn" id="ext-scan-btn">Scan</button>
+      </form>
+      <div id="ext-result" style="margin-top: 1rem; display: none;"></div>
+    </div>
 
     <h3 style="margin-top: 1.5rem;">Site-Wide Files</h3>
     <div id="site-checks" class="site-check-grid">
@@ -740,6 +750,56 @@ function renderAeoResults(result) {
       </div>
     `;
   }).join("");
+}
+
+// External URL scan
+async function scanExternal(e) {
+  e.preventDefault();
+  const url = document.getElementById("external-url").value.trim();
+  if (!url) return;
+  const btn = document.getElementById("ext-scan-btn");
+  const resultDiv = document.getElementById("ext-result");
+  btn.disabled = true;
+  btn.textContent = "Scanning...";
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = '<div class="loading">Scanning ' + url + '...</div>';
+
+  try {
+    const resp = await fetch(`/api/aeo-scan?key=${encodeURIComponent(dashboardKey)}&url=${encodeURIComponent(url)}`);
+    const result = await resp.json();
+    if (result.error) throw new Error(result.error);
+
+    const s = result.overallScore || 0;
+    const cls = s >= 75 ? "score-high" : s >= 50 ? "score-mid" : "score-low";
+    const sc = result.siteChecks || {};
+    const page = result.pages?.[0] || {};
+    const checks = page.checks || {};
+
+    resultDiv.innerHTML = `
+      <div style="text-align: center; margin-bottom: 1rem;">
+        <div class="score-circle ${cls}" style="margin: 0 auto 0.5rem;">${s}</div>
+        <div style="font-weight: 600;">${result.siteUrl || url}</div>
+      </div>
+      <div class="site-check-grid" style="margin-bottom: 1rem;">
+        ${[
+          { name: "llms.txt", ok: sc.llmsTxt?.found },
+          { name: "llms-full.txt", ok: sc.llmsFullTxt?.found },
+          { name: "robots.txt", ok: sc.robotsTxt?.found },
+          { name: "sitemap.xml", ok: sc.sitemapXml?.found },
+        ].map(c => '<div class="site-check-item"><div class="icon">' + (c.ok ? '&#9989;' : '&#10060;') + '</div><div class="name">' + c.name + '</div></div>').join("")}
+      </div>
+      ${Object.entries(checks).map(([key, c]) => {
+        const cCls = c.score === c.max ? "check-pass" : c.score > 0 ? "check-partial" : "check-fail";
+        const icon = c.score === c.max ? "&#9989;" : c.score > 0 ? "&#9888;&#65039;" : "&#10060;";
+        return '<div class="check-row"><span class="check-icon">' + icon + '</span><span class="check-name">' + (CHECK_LABELS[key] || key) + '</span><span class="check-score ' + cCls + '">' + c.score + '/' + c.max + '</span></div>';
+      }).join("")}
+    `;
+  } catch (err) {
+    resultDiv.innerHTML = '<div class="error-msg">' + err.message + '</div>';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Scan";
+  }
 }
 
 // Scroll-based anchor highlight
