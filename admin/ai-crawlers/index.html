@@ -335,6 +335,8 @@
     .crawler-card.active { border-left: 4px solid var(--green); }
     .crawler-card.awaiting { border-left: 4px solid var(--border); opacity: 0.65; }
     .crawler-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+    .crawler-card-info { display: flex; align-items: center; gap: 0.6rem; }
+    .crawler-card-icon { width: 28px; height: 28px; flex-shrink: 0; border-radius: 6px; }
     .crawler-card-name { font-size: 1rem; font-weight: 700; color: var(--primary); }
     .crawler-card-org { font-size: 0.75rem; color: var(--text-light); margin-top: 0.1rem; }
     .crawler-card-status {
@@ -468,23 +470,23 @@
 
 <script>
 const ALL_BOTS = [
-  { id: "GPTBot", name: "GPTBot", org: "OpenAI" },
-  { id: "ChatGPT-User", name: "ChatGPT", org: "OpenAI" },
-  { id: "OAI-SearchBot", name: "OAI Search", org: "OpenAI" },
-  { id: "ClaudeBot", name: "ClaudeBot", org: "Anthropic" },
-  { id: "Anthropic-AI", name: "Anthropic AI", org: "Anthropic" },
-  { id: "PerplexityBot", name: "PerplexityBot", org: "Perplexity" },
-  { id: "Bytespider", name: "Bytespider", org: "ByteDance" },
-  { id: "Google-Extended", name: "Google AI", org: "Google" },
-  { id: "Bingbot", name: "Bingbot", org: "Microsoft" },
-  { id: "Applebot", name: "Applebot", org: "Apple" },
-  { id: "Meta-ExternalAgent", name: "Meta AI", org: "Meta" },
-  { id: "Amazonbot", name: "Amazonbot", org: "Amazon" },
-  { id: "CCBot", name: "CCBot", org: "Common Crawl" },
-  { id: "Cohere-ai", name: "Cohere", org: "Cohere" },
-  { id: "YouBot", name: "YouBot", org: "You.com" },
-  { id: "PetalBot", name: "PetalBot", org: "Huawei" },
-  { id: "Diffbot", name: "Diffbot", org: "Diffbot" },
+  { id: "GPTBot", name: "GPTBot", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991" },
+  { id: "ChatGPT-User", name: "ChatGPT", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991" },
+  { id: "OAI-SearchBot", name: "OAI Search", org: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991" },
+  { id: "ClaudeBot", name: "ClaudeBot", org: "Anthropic", icon: "https://cdn.simpleicons.org/anthropic/191919" },
+  { id: "Anthropic-AI", name: "Anthropic AI", org: "Anthropic", icon: "https://cdn.simpleicons.org/anthropic/191919" },
+  { id: "PerplexityBot", name: "PerplexityBot", org: "Perplexity", icon: "https://cdn.simpleicons.org/perplexity/1FB8CD" },
+  { id: "Bytespider", name: "Bytespider", org: "ByteDance", icon: "https://cdn.simpleicons.org/bytedance/222222" },
+  { id: "Google-Extended", name: "Google AI", org: "Google", icon: "https://cdn.simpleicons.org/google/4285F4" },
+  { id: "Bingbot", name: "Bingbot", org: "Microsoft", icon: "https://cdn.simpleicons.org/microsoftbing/258FFA" },
+  { id: "Applebot", name: "Applebot", org: "Apple", icon: "https://cdn.simpleicons.org/apple/000000" },
+  { id: "Meta-ExternalAgent", name: "Meta AI", org: "Meta", icon: "https://cdn.simpleicons.org/meta/0081FB" },
+  { id: "Amazonbot", name: "Amazonbot", org: "Amazon", icon: "https://cdn.simpleicons.org/amazon/FF9900" },
+  { id: "CCBot", name: "CCBot", org: "Common Crawl", icon: "https://cdn.simpleicons.org/databricks/FF3621" },
+  { id: "Cohere-ai", name: "Cohere", org: "Cohere", icon: "https://cdn.simpleicons.org/cohere/39594D" },
+  { id: "YouBot", name: "YouBot", org: "You.com", icon: "https://cdn.simpleicons.org/yourdotcom/222222" },
+  { id: "PetalBot", name: "PetalBot", org: "Huawei", icon: "https://cdn.simpleicons.org/huawei/FF0000" },
+  { id: "Diffbot", name: "Diffbot", org: "Diffbot", icon: "https://cdn.simpleicons.org/diaspora/222222" },
 ];
 
 const CHECK_LABELS = {
@@ -584,9 +586,12 @@ function renderCrawlerCards() {
     return `
       <div class="crawler-card ${isActive ? 'active' : 'awaiting'}">
         <div class="crawler-card-header">
-          <div>
-            <div class="crawler-card-name">${bot.name}</div>
-            <div class="crawler-card-org">${bot.org}</div>
+          <div class="crawler-card-info">
+            <img class="crawler-card-icon" src="${bot.icon}" alt="${bot.org}" onerror="this.style.display='none'">
+            <div>
+              <div class="crawler-card-name">${bot.name}</div>
+              <div class="crawler-card-org">${bot.org}</div>
+            </div>
           </div>
           <span class="crawler-card-status ${isActive ? 'status-active' : 'status-awaiting'}">
             ${isActive ? (lastTs ? timeAgo(lastTs) : 'Seen') : 'Awaiting'}
