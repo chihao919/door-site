@@ -209,32 +209,32 @@
     .error-msg { color: var(--red); text-align: center; padding: 1rem; }
     .empty-state { text-align: center; padding: 2rem; color: var(--text-light); }
 
-    /* Tab nav */
-    .tabs {
+    /* Sticky anchor nav */
+    .anchor-nav {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
       display: flex;
       gap: 0;
       border-bottom: 2px solid var(--border);
-      margin-bottom: 1.5rem;
+      padding: 0;
+      margin-bottom: 2rem;
     }
-    .tab {
-      padding: 0.6rem 1.2rem;
-      cursor: pointer;
+    .anchor-nav a {
+      padding: 0.7rem 1.2rem;
       font-weight: 600;
       color: var(--text-light);
+      text-decoration: none;
+      font-size: 0.95rem;
       border-bottom: 2px solid transparent;
       margin-bottom: -2px;
       transition: all 0.2s;
-      font-family: inherit;
-      font-size: 0.95rem;
-      background: none;
-      border-top: none;
-      border-left: none;
-      border-right: none;
     }
-    .tab:hover { color: var(--primary); }
-    .tab.active { color: var(--primary); border-bottom-color: var(--accent); }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
+    .anchor-nav a:hover { color: var(--primary); }
+    .anchor-nav a.active { color: var(--primary); border-bottom-color: var(--accent); }
+    .section { margin-bottom: 3rem; scroll-margin-top: 60px; }
+    .section-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
 
     /* AEO Score */
     .score-circle {
@@ -395,17 +395,17 @@
     </div>
   </div>
 
-  <!-- Tabs -->
-  <div class="tabs">
-    <button class="tab active" data-tab="crawlers">Live Crawlers</button>
-    <button class="tab" data-tab="aeo">AEO Score</button>
-    <button class="tab" data-tab="daily">Daily Trends</button>
-    <button class="tab" data-tab="pages">Pages Crawled</button>
-    <button class="tab" data-tab="recent">Recent Visits</button>
-  </div>
+  <!-- Anchor Nav -->
+  <nav class="anchor-nav">
+    <a href="#crawlers" class="active">Live Crawlers</a>
+    <a href="#aeo">AEO Score</a>
+    <a href="#daily">Daily Trends</a>
+    <a href="#pages">Pages Crawled</a>
+    <a href="#recent">Recent Visits</a>
+  </nav>
 
-  <!-- Live Crawlers Tab -->
-  <div id="tab-crawlers" class="tab-content active">
+  <!-- Live Crawlers -->
+  <div id="crawlers" class="section">
     <h2>Live AI Crawler Activity</h2>
     <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 1rem;">Tracked via Edge Middleware. Data refreshes on page load.</p>
     <div id="crawler-cards" class="crawler-grid">
@@ -413,43 +413,46 @@
     </div>
   </div>
 
-  <!-- AEO Score Tab -->
-  <div id="tab-aeo" class="tab-content">
+  <hr class="section-divider">
+
+  <!-- AEO Score -->
+  <div id="aeo" class="section">
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <h2>AEO Friendliness Score</h2>
       <button class="scan-btn" id="scan-btn" onclick="runAeoScan()">Run Scan</button>
     </div>
     <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 1rem;">Scans all pages for AI-friendliness: JSON-LD, FAQ, meta tags, llms.txt, and more.</p>
 
-    <!-- Site-wide checks -->
     <h3 style="margin-top: 1.5rem;">Site-Wide Files</h3>
     <div id="site-checks" class="site-check-grid">
       <div class="empty-state">Click "Run Scan" to start</div>
     </div>
 
-    <!-- Overall score -->
     <div id="aeo-overall" style="text-align: center; margin: 1.5rem 0; display: none;">
       <div id="aeo-score-circle" class="score-circle">—</div>
       <div style="font-size: 0.9rem; color: var(--text-light);">Average AEO Score</div>
     </div>
 
-    <!-- Per-page scores -->
     <h3>Page Scores</h3>
     <div id="aeo-pages">
       <div class="empty-state">Click "Run Scan" to start</div>
     </div>
   </div>
 
-  <!-- Daily Tab -->
-  <div id="tab-daily" class="tab-content">
+  <hr class="section-divider">
+
+  <!-- Daily Trends -->
+  <div id="daily" class="section">
     <h2>Daily Activity (Last 7 Days)</h2>
     <div id="daily-chart" class="chart-container">
       <div class="loading">Loading...</div>
     </div>
   </div>
 
-  <!-- Pages Tab -->
-  <div id="tab-pages" class="tab-content">
+  <hr class="section-divider">
+
+  <!-- Pages Crawled -->
+  <div id="pages" class="section">
     <h2>Most Crawled Pages</h2>
     <table id="pages-table">
       <thead>
@@ -459,8 +462,10 @@
     </table>
   </div>
 
-  <!-- Recent Tab -->
-  <div id="tab-recent" class="tab-content">
+  <hr class="section-divider">
+
+  <!-- Recent Visits -->
+  <div id="recent" class="section">
     <h2>Recent AI Visits (Last 100)</h2>
     <div id="recent-log" class="visit-log">
       <div class="loading">Loading...</div>
@@ -737,15 +742,19 @@ function renderAeoResults(result) {
   }).join("");
 }
 
-// Tab switching
-document.querySelectorAll(".tab").forEach(tab => {
-  tab.addEventListener("click", () => {
-    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
-    tab.classList.add("active");
-    document.getElementById("tab-" + tab.dataset.tab).classList.add("active");
+// Scroll-based anchor highlight
+const navLinks = document.querySelectorAll(".anchor-nav a");
+const sections = document.querySelectorAll(".section");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove("active"));
+      const link = document.querySelector(`.anchor-nav a[href="#${entry.target.id}"]`);
+      if (link) link.classList.add("active");
+    }
   });
-});
+}, { rootMargin: "-80px 0px -60% 0px" });
+sections.forEach(s => observer.observe(s));
 
 // Auto-login with saved key
 const savedKey = localStorage.getItem("door-site-dash-key");
