@@ -17,8 +17,8 @@
       --accent-dark: #b79310;
       --accent-glow: rgba(237, 209, 68, 0.15);
       --bg: #ffffff;
-      --bg-warm: #faf9f6;
-      --bg-cool: #f0f4f8;
+      --bg-warm: #fef8e8;
+      --bg-cool: #edf2f7;
       --bg-dark: #1a1a2e;
       --border: #dbe2ea;
       --border-light: #e8ecf1;
@@ -100,11 +100,11 @@
 
     /* Content Sections */
     .section { padding: 2.5rem 0; }
-    .section-warm { background: var(--bg-warm); }
-    .section-cool { background: var(--bg-cool); }
+    .section-warm { background: var(--bg-warm); border-top: 1px solid #f0e4c3; border-bottom: 1px solid #f0e4c3; }
+    .section-cool { background: var(--bg-cool); border-top: 1px solid #dce4ee; border-bottom: 1px solid #dce4ee; }
     .section-white { background: var(--bg); }
     .section-dark {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      background: var(--primary);
       color: white;
     }
 
