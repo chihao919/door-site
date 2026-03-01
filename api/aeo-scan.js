@@ -27,6 +27,14 @@ export default async function handler(req, res) {
     "/knowledge/standards/",
     "/knowledge/applications/",
     "/knowledge/technical/",
+    "/knowledge/technical/troubleshooting/",
+    "/knowledge/technical/door-closer-vs-hinge/",
+    "/knowledge/technical/hinge-adjustment-guide/",
+    "/knowledge/standards/spring-hinges-fire-doors/",
+    "/knowledge/technical/hardware-specification-guide/",
+    "/knowledge/hinge-types/butt-hinges/",
+    "/knowledge/hinge-types/pivot-hinges/",
+    "/knowledge/hinge-types/concealed-hinges/",
   ];
 
   try {
