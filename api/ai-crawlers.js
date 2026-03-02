@@ -1,12 +1,7 @@
 import { Redis } from "@upstash/redis";
 
 export default async function handler(req, res) {
-  // Simple auth check via query param
-  const authKey = req.query.key;
-  if (authKey !== process.env.DASHBOARD_KEY) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-
+  // Crawler data is public — no auth required
   const kvUrl = process.env.KV_REST_API_URL;
   const kvToken = process.env.KV_REST_API_TOKEN;
   if (!kvUrl || !kvToken) {

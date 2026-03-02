@@ -114,50 +114,6 @@
     h2 { font-size: 1.15rem; color: var(--primary); margin: 1.5rem 0 0.8rem; font-weight: 700; }
     h3 { font-size: 0.95rem; color: var(--text); margin: 1.2rem 0 0.6rem; font-weight: 600; }
 
-    /* Auth */
-    .auth-screen {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 60vh;
-    }
-    .auth-card {
-      text-align: center;
-      background: var(--bg-card);
-      padding: 3rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-lg);
-      max-width: 420px;
-      width: 100%;
-    }
-    .auth-card h1 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .auth-card input {
-      padding: 0.7rem 1rem;
-      border: 2px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-size: 1rem;
-      width: 100%;
-      font-family: inherit;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      margin-bottom: 0.8rem;
-    }
-    .auth-card input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
-    .auth-card button {
-      width: 100%;
-      padding: 0.7rem 1.5rem;
-      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color: white;
-      border: none;
-      border-radius: var(--radius-sm);
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      font-family: inherit;
-      transition: transform 0.1s, box-shadow 0.2s;
-    }
-    .auth-card button:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
-    .auth-card button:active { transform: translateY(0); }
-
     /* Stats Cards */
     .stats-grid {
       display: grid;
@@ -340,8 +296,8 @@
     }
     .anchor-nav a:hover { color: var(--text); }
     .anchor-nav a.active { color: var(--accent-dark); border-bottom-color: var(--accent); }
-    .section { padding: 2rem 0; scroll-margin-top: 60px; margin: 0 -2rem; padding-left: 2rem; padding-right: 2rem; }
-    .section-alt { background: var(--bg-alt); border-top: 1px solid #e0d6be; border-bottom: 1px solid #e0d6be; }
+    .section { padding: 2rem 0; scroll-margin-top: 60px; }
+    .section-alt { background: var(--bg-alt); border-radius: var(--radius); padding: 2rem; margin: 0 -0.5rem; }
     .section-divider { border: none; margin: 0; }
 
     /* AEO Score */
@@ -583,22 +539,8 @@
 
 <div class="container">
 
-<!-- Auth Screen -->
-<div id="auth-screen" class="auth-screen">
-  <div class="auth-card">
-    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">&#128274;</div>
-    <h1>AI Crawler Dashboard</h1>
-    <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.9rem;">Enter your dashboard key to view analytics</p>
-    <form onsubmit="authenticate(event)">
-      <input type="password" id="key-input" placeholder="Dashboard Key" autocomplete="off">
-      <button type="submit">View Dashboard</button>
-    </form>
-    <p id="auth-error" class="error-msg" style="display:none; margin-top:1rem;"></p>
-  </div>
-</div>
-
-<!-- Dashboard (hidden until auth) -->
-<div id="dashboard" style="display: none;">
+<!-- Dashboard -->
+<div id="dashboard">
 
   <!-- Summary Cards -->
   <div class="stats-grid">
@@ -777,34 +719,20 @@ const CHECK_LABELS = {
   blockquoteSummary: "Blockquote Summary",
 };
 
-let dashboardKey = "";
+let dashboardKey = localStorage.getItem("door-site-dash-key") || "";
 let data = null;
-
-function authenticate(e) {
-  e.preventDefault();
-  dashboardKey = document.getElementById("key-input").value.trim();
-  if (!dashboardKey) return;
-  loadDashboard();
-}
 
 async function loadDashboard() {
   try {
     const resp = await fetch(`/api/ai-crawlers?key=${encodeURIComponent(dashboardKey)}`);
-    if (resp.status === 401) {
-      document.getElementById("auth-error").textContent = "Invalid key. Please try again.";
-      document.getElementById("auth-error").style.display = "block";
+    data = await resp.json();
+    if (data.error) {
+      document.getElementById("dashboard").innerHTML = '<div class="empty-state" style="padding:3rem;">Dashboard data unavailable: ' + data.error + '</div>';
       return;
     }
-    data = await resp.json();
-    if (data.error) throw new Error(data.error);
-
-    document.getElementById("auth-screen").style.display = "none";
-    document.getElementById("dashboard").style.display = "block";
-    localStorage.setItem("door-site-dash-key", dashboardKey);
     renderDashboard();
   } catch (err) {
-    document.getElementById("auth-error").textContent = "Error: " + err.message;
-    document.getElementById("auth-error").style.display = "block";
+    document.getElementById("dashboard").innerHTML = '<div class="empty-state" style="padding:3rem;">Failed to load: ' + err.message + '</div>';
   }
 }
 
@@ -1097,13 +1025,8 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: "-80px 0px -60% 0px" });
 sections.forEach(s => observer.observe(s));
 
-// Auto-login with saved key
-const savedKey = localStorage.getItem("door-site-dash-key");
-if (savedKey) {
-  dashboardKey = savedKey;
-  document.getElementById("key-input").value = savedKey;
-  loadDashboard();
-}
+// Auto-load dashboard
+loadDashboard();
 </script>
 
 </body>
