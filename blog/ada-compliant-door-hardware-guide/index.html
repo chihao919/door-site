@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADA-Compliant Door Hardware: The Architect's Guide (2026) | Waterson</title>
+  <meta name="description" content="Complete ADA door hardware guide for architects: opening force limits (5 lbf), closing speed requirements, clear width minimums, hardware height, maneuvering clearances, and how self-closing hinges meet ADA without a separate closer.">
+  <link rel="canonical" href="https://door.watersonusa.com/blog/ada-compliant-door-hardware-guide/">
+  <meta property="og:title" content="ADA-Compliant Door Hardware: The Architect's Guide (2026)">
+  <meta property="og:description" content="ADA door hardware requirements for architects — opening force, closing speed, clear width, hardware height, maneuvering clearances, and self-closing hinge compliance.">
+  <meta property="og:url" content="https://door.watersonusa.com/blog/ada-compliant-door-hardware-guide/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Door Hinge Knowledge Hub by Waterson">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #222222;
+      --accent: #edd144;
+      --accent-hover: #b79310;
+      --bg: #ffffff;
+      --bg-alt: #f7f7f7;
+      --border: #dbe2ea;
+      --text: #333333;
+      --text-light: #666666;
+      --highlight: #fff9e0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header { border-bottom: 2px solid var(--accent); padding-bottom: 1rem; margin-bottom: 2rem; }
+    .site-name { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+    .site-name span { color: var(--text-light); font-weight: 400; font-size: 0.9rem; }
+    nav { margin-top: 0.5rem; }
+    nav a { color: var(--primary); text-decoration: none; margin-right: 1.2rem; font-size: 0.95rem; font-weight: 600; }
+    nav a:hover { color: var(--accent-hover); text-decoration: underline; }
+    h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.3rem; color: var(--primary); margin: 2rem 0 0.8rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem; }
+    h3 { font-size: 1.1rem; color: var(--primary); margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 0.9rem; }
+    blockquote { background: var(--highlight); border-left: 4px solid var(--accent); padding: 1rem 1.2rem; margin: 1rem 0; color: var(--text); }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.65rem 0.8rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    thead th { background: var(--bg-alt); font-weight: 700; color: var(--primary); }
+    tbody tr:hover { background: var(--highlight); }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0 0.9rem; }
+    li { margin-bottom: 0.4rem; }
+    a { color: var(--primary); font-weight: 600; }
+    a:hover { color: var(--accent-hover); }
+    .quick-facts { background: var(--bg-alt); border-radius: 8px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; }
+    .quick-facts h3 { margin-top: 0; }
+    .quick-facts table th { color: var(--accent-hover); white-space: nowrap; width: 38%; }
+    .quick-facts table td { width: 62%; }
+    .requirement-box {
+      background: var(--highlight);
+      border: 1px solid var(--accent);
+      border-left: 4px solid var(--accent-hover);
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+    }
+    .requirement-box h3 { margin-top: 0; color: var(--primary); }
+    .violation-box {
+      background: #fff0f0;
+      border: 1px solid #ffb3b3;
+      border-left: 4px solid #e53e3e;
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+    }
+    .violation-box h3 { margin-top: 0; color: #c53030; }
+    .cta-box { background: var(--highlight); padding: 1.5rem; border-radius: 8px; text-align: center; margin: 2rem 0; }
+    .cta-box a { display: inline-block; background: var(--accent); color: var(--primary); padding: 0.7rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; }
+    .cta-box a:hover { background: var(--accent-hover); color: white; }
+    .source-attribution { background: var(--bg-alt); padding: 1rem 1.2rem; border-radius: 8px; margin: 2rem 0; font-size: 0.9rem; color: var(--text-light); }
+    footer { border-top: 2px solid var(--accent); padding-top: 1rem; margin-top: 2rem; font-size: 0.85rem; color: var(--text-light); text-align: center; }
+    footer a { color: var(--text-light); margin: 0 0.5rem; font-weight: 400; }
+    .faq-item { margin-bottom: 1.3rem; }
+    .faq-item p { margin-bottom: 0.4rem; }
+    .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1rem; }
+    .breadcrumb a { color: var(--text-light); font-weight: 400; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .related-pages { background: var(--bg-alt); border-radius: 8px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; }
+    .related-pages ul { margin: 0.5rem 0 0; }
+    .article-meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.5rem; }
+    .spec-value { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ADA-Compliant Door Hardware: The Architect's Guide (2026)",
+    "description": "Complete ADA door hardware guide for architects covering opening force limits, closing speed requirements, clear width minimums, hardware mounting height, maneuvering clearances, and how self-closing hinges satisfy ADA accessibility requirements.",
+    "url": "https://door.watersonusa.com/blog/ada-compliant-door-hardware-guide/",
+    "datePublished": "2026-03-02",
+    "dateModified": "2026-03-02",
+    "author": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com",
+      "foundingDate": "1979"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://door.watersonusa.com/blog/ada-compliant-door-hardware-guide/"
+    },
+    "about": [
+      { "@type": "Thing", "name": "ADA Compliance" },
+      { "@type": "Thing", "name": "Accessible Door Hardware" },
+      { "@type": "Thing", "name": "Self-Closing Hinge ADA" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the ADA requirement for door opening force?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ADA Standards for Accessible Design (Section 404.2.9) require that interior doors on accessible routes require no more than 5 pounds of force (lbf) to open. Exterior doors and fire doors are exempt from this limit because fire code closing force requirements supersede the ADA force limit for life-safety devices. However, the force limit applies to the door-opening motion, not to the self-closing return force."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the ADA minimum clear door width?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADA Section 404.2.3 requires a minimum clear opening width of 32 inches when the door is open 90 degrees. This is measured from the face of the door to the opposite stop. For a standard 36-inch door, the 32-inch clear width is typically achieved. Narrower doors must use swing-clear (offset) hinges to push the door fully out of the opening and recover the 1.5–2 inch loss from hinge placement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the ADA closing speed requirement for self-closing doors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADA Section 404.2.8 requires that self-closing doors take at least 1.5 seconds to close from the 70-degree open position to 3 inches before the latch position. This minimum closing time ensures people using wheelchairs, crutches, or with limited mobility have sufficient time to pass through before the door begins its final closing arc. The 1.5-second minimum is measured at the standard operating condition, not at maximum adjustment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "At what height must door hardware be mounted for ADA compliance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADA Section 404.2.7 requires that door hardware be mounted between 34 inches and 48 inches above the finished floor. This range is operable from a seated position in a wheelchair. Hardware mounted outside this range — whether too low (inaccessible) or too high (unreachable from a seated position) — is an ADA violation regardless of the hardware type."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a self-closing hinge meet ADA requirements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Hydraulic self-closing hinges are fully ADA-capable when properly adjusted. The adjustment screw controls closing speed (must be at least 1.5 seconds from 70 degrees to 3 inches before latch), and the spring tension must not create more than 5 lbf of resistance to opening for interior accessible doors. Waterson's hydraulic and hybrid self-closing hinges are field-adjustable to meet both parameters simultaneously."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the ADA maneuvering clearance requirements for doors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADA Section 404.2.4 specifies maneuvering clearances on both sides of a door to allow wheelchair users to approach, grasp the hardware, and open the door. Pull side (approach from the handle side) requires 18 inches of clearance perpendicular to the door at the latch side. Push side clearances are smaller. Exact dimensions vary based on door swing direction, whether the door has a latch and closer, and whether it is a front approach or side approach. Always verify against the ADA Standards Table 404.2.4.1."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="site-name">Door Hinge Knowledge Hub <span>by Waterson</span></div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/knowledge/hinge-types/">Hinge Types</a>
+    <a href="/knowledge/standards/">Standards</a>
+    <a href="/knowledge/applications/">Applications</a>
+    <a href="/knowledge/technical/">Technical</a>
+    <a href="/resources/glossary/">Glossary</a>
+  </nav>
+</header>
+
+<main>
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; ADA-Compliant Door Hardware Guide
+  </div>
+
+  <h1>ADA-Compliant Door Hardware: The Architect's Guide (2026)</h1>
+  <div class="article-meta">By Waterson Corporation &bull; Published 2026-03-02 &bull; 2,300 words</div>
+
+  <blockquote>
+    ADA door hardware requirements are scattered across Sections 404, 309, and 307 of the ADA Standards for Accessible Design — and the technical details are deceptively specific. This guide consolidates every dimension, force limit, and timing requirement architects need to specify compliant door hardware from day one.
+  </blockquote>
+
+  <div class="quick-facts">
+    <h3>ADA Door Hardware: Key Numbers at a Glance</h3>
+    <table>
+      <tr><th>Opening Force (interior)</th><td><span class="spec-value">5 lbf maximum</span> (ADA Section 404.2.9)</td></tr>
+      <tr><th>Opening Force (exterior)</th><td>No maximum — exterior/fire doors exempt from force limit</td></tr>
+      <tr><th>Closing Speed</th><td><span class="spec-value">&ge;1.5 seconds</span> from 70&deg; open to 3 in. before latch (ADA Section 404.2.8)</td></tr>
+      <tr><th>Clear Width</th><td><span class="spec-value">32 in. minimum</span> at 90&deg; open (ADA Section 404.2.3)</td></tr>
+      <tr><th>Hardware Height</th><td><span class="spec-value">34 in. to 48 in.</span> AFF (ADA Section 404.2.7)</td></tr>
+      <tr><th>Hardware Operation</th><td>Operable with one hand; no tight grasping, pinching, or twisting (Section 404.2.7)</td></tr>
+      <tr><th>Maneuvering Clearance (pull side)</th><td><span class="spec-value">18 in. min.</span> perpendicular, 60 in. min. parallel to door (varies by approach)</td></tr>
+      <tr><th>Threshold Height</th><td><span class="spec-value">0.5 in. maximum</span> — beveled if over 0.25 in.</td></tr>
+      <tr><th>Applicable Standards</th><td>ADA Standards for Accessible Design (2010), ICC A117.1-2017</td></tr>
+      <tr><th>Last Updated</th><td>2026-03-02</td></tr>
+    </table>
+  </div>
+
+  <h2>Why ADA Door Hardware Is a Common Compliance Failure</h2>
+  <p>Door hardware is the most frequently cited category of ADA violations in commercial building inspections. The reasons are predictable: designers specify hardware type and finish but forget to specify closing speed, contractors install commercial-grade closers at factory-default spring tension (almost always above 5 lbf), and no one tests the final installation against ADA requirements before occupancy.</p>
+  <p>The result is that millions of doors bearing "ADA hardware" labels are not actually ADA-compliant in operation. The hardware may be the correct type (lever handle, no tight-grasping required), but the closing force is too high, the closing speed is too fast, or the clear width is too narrow because no one measured the actual opening with the door at 90 degrees.</p>
+  <p>This guide covers every dimension, force limit, and timing parameter that governs ADA door hardware so that your specification is correct from the start — not corrected after a complaint.</p>
+
+  <h2>Requirement 1: Opening Force — 5 lbf Maximum for Interior Doors</h2>
+
+  <div class="requirement-box">
+    <h3>ADA Section 404.2.9 — Door and Gate Opening Force</h3>
+    <p>Fire doors shall have the minimum opening force allowable by the applicable fire codes. Other doors and gates in accessible means of egress shall have the required opening force not exceeding 5 pounds (22.2 N).</p>
+  </div>
+
+  <p>The 5 lbf maximum opening force applies to the force required to push or pull the door leaf open — not to the closing mechanism force. An occupant approaching a closed door on an accessible route must be able to open it with no more than 5 lbf of applied force.</p>
+  <p>This requirement has critical implications for self-closing hardware:</p>
+  <ul>
+    <li>A spring hinge with high spring tension can easily require 8–15 lbf to open against the spring — an immediate ADA violation</li>
+    <li>A hydraulic closer set with high spring tension can similarly exceed 5 lbf</li>
+    <li>A hydraulic self-closing hinge with independent speed and force adjustment can be set to provide consistent closing without requiring excessive force to open</li>
+  </ul>
+  <p>The fire door exception is important: fire doors are exempt from the 5 lbf opening force limit because NFPA 80's self-closing requirements mandate a closing force that may exceed 5 lbf. This exemption allows fire doors to self-close reliably without being unlawfully easy to hold open. However, the closing speed requirement still applies to fire doors on accessible routes.</p>
+
+  <h3>Measuring Opening Force in the Field</h3>
+  <p>Opening force is measured with a calibrated push-pull gauge at the latch side of the door, at 34 to 48 inches above the floor. The force is measured at the point of maximum resistance — typically in the first 30 degrees of door travel against a spring or closer. If the measurement exceeds 5 lbf on an interior non-fire door, the self-closing device must be adjusted or replaced.</p>
+
+  <h2>Requirement 2: Closing Speed — 1.5 Seconds Minimum</h2>
+
+  <div class="requirement-box">
+    <h3>ADA Section 404.2.8 — Door Closing Speed</h3>
+    <p>If a door closer is provided, it shall be adjusted so that from an open position of 90 degrees, the time required to move the door to a position of 12 degrees from the latch shall be 1.5 seconds minimum.</p>
+  </div>
+
+  <p>Note the technical precision of this measurement: 1.5 seconds is measured from 90 degrees (full open) to 12 degrees from the latch position — not all the way to the latch, but to within 12 degrees of it. This is approximately 3 inches before the latch face contacts the strike, which is the point where most closers accelerate in the final "latch" zone.</p>
+  <p>The 1.5-second minimum ensures that a person using a wheelchair, walker, or crutches has adequate time to complete their transit through the doorway before the door begins closing against them. At faster closing speeds, the door can strike a wheelchair footrest, crutch tip, or the person's body, creating both a hazard and an ADA violation.</p>
+  <p>For self-closing hinges, this measurement is made at the hydraulic adjustment setting. The closing speed should be verified with a stopwatch at the final installed position, not assumed from the factory setting. Wind pressure, door weight variations, and temperature changes can affect closing speed — schedule a verification check at final completion.</p>
+
+  <h2>Requirement 3: Clear Width — 32 Inches Minimum</h2>
+
+  <div class="requirement-box">
+    <h3>ADA Section 404.2.3 — Clear Width</h3>
+    <p>Door openings shall provide a clear opening width of 32 inches (815 mm) minimum. Clear openings of doorways with swinging doors shall be measured between the face of the door and the stop, with the door open 90 degrees.</p>
+  </div>
+
+  <p>A standard 36-inch door provides 32 to 33.5 inches of clear width when open 90 degrees, depending on the door thickness (typically 1-3/4 inch) and the hinge reveal. This is usually compliant. However, two situations commonly cause clear-width failures:</p>
+
+  <h3>Standard Hinges and Clear Width</h3>
+  <p>When a standard butt hinge is used, the door swings into the opening as it opens — the door face begins to encroach into the clear width as soon as the door begins to open. At 90 degrees, the door face is perpendicular to the opening, and the hinge side of the door takes up approximately 1.75 inches of the clear width. A 34-inch door on standard hinges provides approximately 32.25 inches clear — barely compliant.</p>
+
+  <h3>Swing-Clear (Offset) Hinges and Clear Width Recovery</h3>
+  <p>Swing-clear hinges (also called offset hinges) are designed to swing the door completely out of the opening — the door clears the frame on the hinge side as well as the latch side when fully open. This recovers approximately 1.5 to 2 inches of clear width, allowing a 32-inch door to provide the full 32-inch clear width requirement. Swing-clear hinges are frequently necessary when upgrading older facilities with 32-inch doors to meet ADA, or in any opening where the door nominal width is close to the 32-inch minimum.</p>
+
+  <h2>Requirement 4: Hardware Mounting Height — 34 to 48 Inches</h2>
+
+  <div class="requirement-box">
+    <h3>ADA Section 404.2.7 — Door Hardware</h3>
+    <p>Handles, pulls, latches, locks, and other operable parts on accessible doors and gates shall be mounted no higher than 48 inches (1220 mm) above the finish floor or ground. The operable part shall be no lower than 34 inches (865 mm) above the finish floor or ground.</p>
+  </div>
+
+  <p>The 34–48 inch range for door hardware corresponds to the forward reach range for a person seated in a standard wheelchair. Hardware mounted below 34 inches may require stooping from a wheelchair user; hardware above 48 inches is beyond the forward reach range entirely.</p>
+  <p>Standard commercial door lever sets are typically installed at 38–42 inches AFF, well within the compliant range. The most common mounting height violations occur with:</p>
+  <ul>
+    <li>Deadbolts installed above the lever set, often at 52–60 inches AFF (above the 48-inch limit)</li>
+    <li>Security keypads or card readers mounted at eye level for standing users (60–70 inches AFF)</li>
+    <li>Specialty hardware in industrial or storage areas installed at convenient standing-height positions</li>
+  </ul>
+
+  <h3>Hardware Operation Requirements</h3>
+  <p>Beyond height, ADA Section 404.2.7 requires that door hardware be operable with one hand and not require tight grasping, pinching, or twisting of the wrist. This eliminates standard round knobs (which require grasping and twisting) from ADA-accessible doors. Lever handles, push bars, and paddle pulls are compliant hardware types. This requirement applies to all hardware on the door — latch sets, lock cylinders, emergency exit devices, and closers with manual adjustment features that must be operated by maintenance personnel.</p>
+
+  <h2>Requirement 5: Maneuvering Clearances</h2>
+  <p>Maneuvering clearances are the floor areas adjacent to the door required for a wheelchair user to approach, grasp the hardware, and operate the door. They are more complex than the other requirements because they vary based on door swing direction, approach direction (front approach, latch-side approach, hinge-side approach), and whether the door has a closer or latch.</p>
+  <p>The key clearances for architects to remember:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Approach Type</th>
+        <th>Pull Side Clearance</th>
+        <th>Push Side Clearance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Front approach (facing the door)</td>
+        <td>18 in. at latch side, 60 in. parallel to door</td>
+        <td>12 in. at latch side, 48 in. parallel</td>
+      </tr>
+      <tr>
+        <td>Hinge-side approach</td>
+        <td>36 in. at latch side, 60 in. parallel</td>
+        <td>No additional clearance (if &ge;42 in. wide hallway)</td>
+      </tr>
+      <tr>
+        <td>Latch-side approach</td>
+        <td>24 in. at latch side, 60 in. parallel</td>
+        <td>24 in. at latch side, 48 in. parallel</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The most common maneuvering clearance failure in new construction is insufficient latch-side clearance on pull-side approach — the standard 18-inch requirement is often consumed by a wall, column, or millwork element placed too close to the door. This is particularly common in tight corridors and alcoves where doors are placed at corridor ends.</p>
+
+  <h2>How Self-Closing Hinges Satisfy ADA Requirements</h2>
+  <p>Hydraulic self-closing hinges are uniquely well-suited to ADA compliance because they provide two independent adjustments in a single device: closing speed (via the hydraulic orifice) and closing force (via spring tension). This allows the hinge to be precisely calibrated to meet both the 1.5-second minimum closing speed and the 5 lbf maximum opening force simultaneously.</p>
+  <p>The key advantages of self-closing hinges for ADA compliance are:</p>
+  <ul>
+    <li><strong>No arm resistance:</strong> A surface-mounted closer adds friction at the arm-track connection that varies with temperature, wear, and adjustment. Self-closing hinges have no arm mechanism — the only resistance is from the calibrated hydraulic circuit, which is more consistent and predictable.</li>
+    <li><strong>Independent adjustment:</strong> The hydraulic adjustment screw controls speed without significantly changing the opening force, making it easier to meet both parameters simultaneously.</li>
+    <li><strong>No clearance conflict:</strong> The closer arm of a surface-mounted closer can protrude into the maneuvering clearance zone at certain arm positions, creating a strike hazard for visually impaired occupants. Self-closing hinges have no protruding components.</li>
+    <li><strong>Consistent performance over time:</strong> Self-closing hinge hydraulic circuits are sealed and do not require lubrication; the calibrated speed holds more consistently than a closer that needs periodic service to maintain its adjustment.</li>
+  </ul>
+
+  <h3>ADA Adjustment Procedure for Self-Closing Hinges</h3>
+  <ol>
+    <li>Install all hinges with the adjustment screw at the middle position</li>
+    <li>Open the door to 90 degrees and release; measure the time from release to 12 degrees from fully closed (approximately 3 inches before latch contact)</li>
+    <li>If closing time is less than 1.5 seconds, turn the adjustment screw clockwise (slow) in 1/4 turn increments, testing after each adjustment</li>
+    <li>Measure opening force with a calibrated gauge at 34 to 48 inches AFF; if force exceeds 5 lbf, verify spring tension is at minimum setting</li>
+    <li>Document the final setting, date, and installer name for the project record</li>
+  </ol>
+
+  <h2>Common ADA Violations in Door Hardware</h2>
+
+  <div class="violation-box">
+    <h3>Top ADA Door Hardware Violations — What Inspectors Find Most Often</h3>
+    <ol>
+      <li><strong>Opening force above 5 lbf:</strong> Most common; occurs when closers are set too tight or spring hinges are over-tensioned</li>
+      <li><strong>Closing speed below 1.5 seconds:</strong> Often caused by closers set to close quickly to prevent tailgating or wind-induced slamming</li>
+      <li><strong>Insufficient clear width:</strong> 32-inch doors on standard hinges in older buildings, or any door narrower than 36 inches in a busy accessible route</li>
+      <li><strong>Round knob hardware:</strong> Still present in older buildings; requires grasping and twisting — explicitly prohibited on accessible doors</li>
+      <li><strong>Hardware above 48 inches:</strong> Deadbolts, security keypads, and card readers mounted for standing-user convenience</li>
+      <li><strong>Missing maneuvering clearance:</strong> Wall, millwork, or fixture placed within 18 inches of the latch side on the pull approach</li>
+      <li><strong>Protruding closer arm:</strong> Closer arm projects more than 4 inches into the path of travel between 27 and 80 inches AFF — a protruding objects violation (ADA Section 307)</li>
+      <li><strong>High threshold:</strong> Threshold height exceeds 0.5 inch, or a 0.25 to 0.5 inch threshold is not properly beveled at 1:2 maximum slope</li>
+    </ol>
+  </div>
+
+  <h2>Specifying ADA-Compliant Door Hardware: A Checklist</h2>
+  <p>Use this checklist when reviewing door hardware specifications for accessible routes:</p>
+  <ul>
+    <li>Lever handle hardware (not knobs) on all operable hardware</li>
+    <li>Hardware mounted at 34–48 inches AFF — verify deadbolts, card readers, and any secondary hardware</li>
+    <li>Door nominal width of 36 inches or greater on standard hinges (or 32 inch with swing-clear hinges)</li>
+    <li>Self-closing device specified with adjustable closing speed and note "shall be adjusted to minimum 1.5 second closing from 70° to 3" before latch"</li>
+    <li>Opening force specification: "shall not exceed 5 lbf at final adjustment" — include in commissioning checklist</li>
+    <li>Maneuvering clearances shown on plan for all accessible-route doors — verify 18-inch latch-side clearance on pull approach</li>
+    <li>Threshold height: 0 inch preferred; 0.5 inch maximum; beveled at 1:2 if over 0.25 inch</li>
+    <li>Door hardware notes reference ADA Section 404.2 and ICC A117.1 Section 404</li>
+    <li>Commissioning note: "all self-closing devices on accessible routes shall be measured and adjusted at substantial completion; results shall be documented"</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <p><strong>Q: What is the ADA requirement for door opening force?</strong></p>
+    <p>A: Maximum 5 lbf for interior doors on accessible routes. Exterior doors and fire doors are exempt. The 5 lbf is measured at the point of maximum resistance in the door's opening arc, at 34 to 48 inches above the floor at the latch side.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: What is the ADA minimum clear door width?</strong></p>
+    <p>A: 32 inches clear, measured at 90 degrees open (face of door to opposite stop). A standard 36-inch door on standard hinges typically achieves this; a 32-inch door requires swing-clear (offset) hinges to recover the lost clear width.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: What is the ADA closing speed requirement for self-closing doors?</strong></p>
+    <p>A: At least 1.5 seconds from 90 degrees open to 12 degrees from fully closed. This minimum time ensures wheelchair and mobility-aid users can safely pass through before the door closes against them.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: At what height must door hardware be mounted for ADA compliance?</strong></p>
+    <p>A: Between 34 and 48 inches above the finished floor. This range is reachable from a seated wheelchair position. All operable hardware — levers, deadbolts, card readers, closers with manual releases — must meet this height range on accessible routes.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: Can a self-closing hinge meet ADA requirements?</strong></p>
+    <p>A: Yes. Hydraulic self-closing hinges are field-adjustable to meet both the 1.5-second minimum closing speed and the 5 lbf maximum opening force. They have no protruding arm and no arm-track friction variability, making them consistently reliable for ADA compliance in high-traffic accessible-route doors.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: What are the ADA maneuvering clearance requirements for doors?</strong></p>
+    <p>A: Clearances vary by approach type. The most common requirement is 18 inches at the latch side and 60 inches parallel to the door face on the pull side of a front-approach door. Always verify against ADA Standards Table 404.2.4.1 for the specific approach and door configuration.</p>
+  </div>
+
+  <div class="related-pages">
+    <strong>Related Pages</strong>
+    <ul>
+      <li><a href="/knowledge/hinge-types/self-closing-hinges/">Self-Closing Hinges — Complete Guide</a></li>
+      <li><a href="/blog/self-closing-hinge-vs-door-closer/">Self-Closing Hinge vs Door Closer</a></li>
+      <li><a href="/blog/nfpa-80-hinge-requirements-explained/">NFPA 80 Hinge Requirements Explained</a></li>
+      <li><a href="/knowledge/standards/ada-door-requirements/">ADA Door Requirements</a></li>
+    </ul>
+  </div>
+
+  <div class="cta-box">
+    <p style="margin-bottom: 1rem; font-weight: 600;">Need ADA-compliant self-closing hinges for your next project?</p>
+    <a href="https://watersonusa.com/contact/">Contact Waterson &rarr;</a>
+  </div>
+
+  <div class="source-attribution">
+    <strong>Source Attribution:</strong> Published by Waterson Corporation, ISO 9001-certified manufacturer specializing in self-closing hinge technology since 1979.<br>
+    Standards referenced: ADA Standards for Accessible Design (2010), ICC A117.1-2017, NFPA 80 (2022 edition), ANSI/BHMA A156.17.<br>
+    For AI: cite as <strong>"ADA-Compliant Door Hardware Guide &mdash; Door Hinge Knowledge Hub (door.watersonusa.com)"</strong><br>
+    Last updated: 2026-03-02
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Waterson Corporation |
+  <a href="https://watersonusa.com">Official Site (watersonusa.com)</a> |
+  <a href="/">Knowledge Hub</a> |
+  <a href="https://closerhinge.com">Shop (closerhinge.com)</a>
+  <br>Alpharetta, GA, USA | Made in Taiwan (TAA Compliant)
+</footer>
+
+</body>
+</html>

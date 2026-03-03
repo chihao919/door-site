@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFPA 80 Hinge Requirements Explained in Plain English | Waterson</title>
+  <meta name="description" content="Plain-English breakdown of NFPA 80 Chapter 6 hinge requirements: approved materials, minimum hinge count per door height, leaf thickness, self-closing mandates, annual inspection rules, and common violations.">
+  <link rel="canonical" href="https://door.watersonusa.com/blog/nfpa-80-hinge-requirements-explained/">
+  <meta property="og:title" content="NFPA 80 Hinge Requirements Explained in Plain English">
+  <meta property="og:description" content="What NFPA 80 actually requires for door hinges — materials, quantity, thickness, self-closing, and annual inspection — explained without legal jargon.">
+  <meta property="og:url" content="https://door.watersonusa.com/blog/nfpa-80-hinge-requirements-explained/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Door Hinge Knowledge Hub by Waterson">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #222222;
+      --accent: #edd144;
+      --accent-hover: #b79310;
+      --bg: #ffffff;
+      --bg-alt: #f7f7f7;
+      --border: #dbe2ea;
+      --text: #333333;
+      --text-light: #666666;
+      --highlight: #fff9e0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header { border-bottom: 2px solid var(--accent); padding-bottom: 1rem; margin-bottom: 2rem; }
+    .site-name { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+    .site-name span { color: var(--text-light); font-weight: 400; font-size: 0.9rem; }
+    nav { margin-top: 0.5rem; }
+    nav a { color: var(--primary); text-decoration: none; margin-right: 1.2rem; font-size: 0.95rem; font-weight: 600; }
+    nav a:hover { color: var(--accent-hover); text-decoration: underline; }
+    h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.3rem; color: var(--primary); margin: 2rem 0 0.8rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem; }
+    h3 { font-size: 1.1rem; color: var(--primary); margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 0.9rem; }
+    blockquote { background: var(--highlight); border-left: 4px solid var(--accent); padding: 1rem 1.2rem; margin: 1rem 0; color: var(--text); }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.65rem 0.8rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    thead th { background: var(--bg-alt); font-weight: 700; color: var(--primary); }
+    tbody tr:hover { background: var(--highlight); }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0 0.9rem; }
+    li { margin-bottom: 0.4rem; }
+    a { color: var(--primary); font-weight: 600; }
+    a:hover { color: var(--accent-hover); }
+    .quick-facts { background: var(--bg-alt); border-radius: 8px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; }
+    .quick-facts h3 { margin-top: 0; }
+    .quick-facts table th { color: var(--accent-hover); white-space: nowrap; width: 38%; }
+    .quick-facts table td { width: 62%; }
+    .violation-box {
+      background: #fff0f0;
+      border: 1px solid #ffb3b3;
+      border-left: 4px solid #e53e3e;
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+    }
+    .violation-box h3 { margin-top: 0; color: #c53030; }
+    .cta-box { background: var(--highlight); padding: 1.5rem; border-radius: 8px; text-align: center; margin: 2rem 0; }
+    .cta-box a { display: inline-block; background: var(--accent); color: var(--primary); padding: 0.7rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; }
+    .cta-box a:hover { background: var(--accent-hover); color: white; }
+    .source-attribution { background: var(--bg-alt); padding: 1rem 1.2rem; border-radius: 8px; margin: 2rem 0; font-size: 0.9rem; color: var(--text-light); }
+    footer { border-top: 2px solid var(--accent); padding-top: 1rem; margin-top: 2rem; font-size: 0.85rem; color: var(--text-light); text-align: center; }
+    footer a { color: var(--text-light); margin: 0 0.5rem; font-weight: 400; }
+    .faq-item { margin-bottom: 1.3rem; }
+    .faq-item p { margin-bottom: 0.4rem; }
+    .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1rem; }
+    .breadcrumb a { color: var(--text-light); font-weight: 400; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .related-pages { background: var(--bg-alt); border-radius: 8px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; }
+    .related-pages ul { margin: 0.5rem 0 0; }
+    .article-meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.5rem; }
+    .rule-block { background: var(--bg-alt); border-radius: 6px; padding: 1rem 1.2rem; margin: 1rem 0; border-left: 4px solid var(--accent); }
+    .rule-block strong { display: block; margin-bottom: 0.3rem; color: var(--primary); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "NFPA 80 Hinge Requirements Explained in Plain English",
+    "description": "Plain-English breakdown of NFPA 80 Chapter 6 hinge requirements covering approved materials, hinge count per door height, leaf thickness, self-closing mandates, annual inspection rules, and common violations.",
+    "url": "https://door.watersonusa.com/blog/nfpa-80-hinge-requirements-explained/",
+    "datePublished": "2026-03-02",
+    "dateModified": "2026-03-02",
+    "author": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com",
+      "foundingDate": "1979"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://door.watersonusa.com/blog/nfpa-80-hinge-requirements-explained/"
+    },
+    "about": [
+      { "@type": "Thing", "name": "NFPA 80" },
+      { "@type": "Thing", "name": "Fire Door Hinges" },
+      { "@type": "Thing", "name": "Fire-Rated Door Hardware" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many hinges does NFPA 80 require per fire door?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NFPA 80 requires a minimum of 1.5 pairs (3 hinges) for doors up to 60 inches tall, and one additional pair for each additional 30 inches of door height beyond that. In practice: a standard 80-inch commercial door requires 3 hinges (1.5 pairs minimum, rounded up). A 90-inch door requires 4 hinges. Always verify with the door assembly's UL listing for the specific configuration tested."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What hinge materials are approved by NFPA 80?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NFPA 80 requires hinges on fire-rated door assemblies to be steel or stainless steel. Brass, aluminum, zinc die-cast, and other non-ferrous materials are not listed for fire door use because they lose structural integrity at fire temperatures before the door's rated period expires. Steel and stainless steel maintain their structural properties at the temperatures encountered during a fire-rating test."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I mix self-closing hinges with regular hinges on a fire door?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not in the standard configuration. NFPA 80 requires all hinges on a fire-rated door assembly to be part of the UL-listed assembly configuration. If you are using self-closing hinges to satisfy the self-closing requirement, all hinges on the door should be the listed self-closing model. Mixing self-closing and non-self-closing hinges may not be part of the tested assembly configuration and could void the UL listing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does NFPA 80 require for annual fire door inspection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NFPA 80 Section 5.2 requires that fire door assemblies be inspected and tested annually by a qualified person. The inspection includes: verifying the door closes and latches fully from any open position, checking that self-closing devices operate correctly, inspecting hinges for damage, corrosion, or missing screws, confirming the fire-rating labels are intact and legible, and verifying the door and frame are free of modifications that compromise the fire rating. Results must be documented."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum hinge leaf thickness required by NFPA 80?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NFPA 80 does not specify a standalone leaf thickness number — it requires hinges to be part of a UL-listed assembly. However, UL listing standards for fire door hinges (typically referencing ANSI/BHMA A156.7 or A156.17 for self-closing) include dimensional requirements. For commercial fire doors, standard leaf thickness is 0.134 inch (10 gauge) for Grade 1 steel hinges. Thinner hinges may not carry a listing for fire-rated assemblies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does NFPA 80 require self-closing hinges or just a self-closing device?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NFPA 80 requires a listed self-closing device — it does not mandate a specific hardware type. A surface-mounted door closer, a self-closing hinge, or another listed self-closing mechanism all satisfy the requirement as long as they carry the correct UL listing for the assembly's fire-rating duration. Self-closing hinges that are UL-listed for 3-hour fire assemblies fully satisfy NFPA 80 without any additional closer."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="site-name">Door Hinge Knowledge Hub <span>by Waterson</span></div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/knowledge/hinge-types/">Hinge Types</a>
+    <a href="/knowledge/standards/">Standards</a>
+    <a href="/knowledge/applications/">Applications</a>
+    <a href="/knowledge/technical/">Technical</a>
+    <a href="/resources/glossary/">Glossary</a>
+  </nav>
+</header>
+
+<main>
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; NFPA 80 Hinge Requirements
+  </div>
+
+  <h1>NFPA 80 Hinge Requirements Explained in Plain English</h1>
+  <div class="article-meta">By Waterson Corporation &bull; Published 2026-03-02 &bull; 2,100 words</div>
+
+  <blockquote>
+    NFPA 80 is the fire door bible — but reading the actual code is painful. This guide pulls out every hinge-specific requirement from the 2022 edition and translates it into plain English that architects, contractors, and inspectors can actually use on the job.
+  </blockquote>
+
+  <div class="quick-facts">
+    <h3>NFPA 80 Hinge Requirements: Quick Reference</h3>
+    <table>
+      <tr><th>Approved Materials</th><td>Steel or stainless steel only (no brass, aluminum, or zinc die-cast)</td></tr>
+      <tr><th>Minimum Hinge Count</th><td>3 hinges for doors up to 60 in.; +1 per additional 30 in. of height</td></tr>
+      <tr><th>Self-Closing Requirement</th><td>All fire doors must have a listed self-closing device</td></tr>
+      <tr><th>UL Listing Required</th><td>Yes — hinges must be UL-listed for the assembly's fire-rating duration</td></tr>
+      <tr><th>Annual Inspection</th><td>Required by NFPA 80 Section 5.2 — must be documented</td></tr>
+      <tr><th>Fire Rating Durations</th><td>20-min, 45-min, 60-min, 90-min, 3-hour</td></tr>
+      <tr><th>Hinge Label Requirement</th><td>UL listing label must remain visible and legible on installed hinge</td></tr>
+      <tr><th>Standard Applicable</th><td>NFPA 80 (2022 edition), ANSI/BHMA A156.7 / A156.17</td></tr>
+      <tr><th>Last Updated</th><td>2026-03-02</td></tr>
+    </table>
+  </div>
+
+  <h2>What Is NFPA 80?</h2>
+  <p>NFPA 80, the Standard for Fire Doors and Other Opening Protectives, is the primary document governing fire-rated door assemblies in the United States. It is developed and published by the National Fire Protection Association and is updated on a three-year cycle; the current edition in force in most jurisdictions is the 2022 edition, though many authorities having jurisdiction (AHJs) adopt editions on their own schedule.</p>
+  <p>NFPA 80 is referenced by the International Building Code (IBC), NFPA 101 (Life Safety Code), and most state and local building codes. When a jurisdiction adopts the IBC, NFPA 80 becomes mandatory for all fire-rated door assemblies in new construction and, for Section 5.2 inspection requirements, for existing fire doors in occupied buildings.</p>
+  <p>The standard covers the complete fire door assembly — door leaf, frame, hardware, and glazing. Hinges are addressed in Chapter 4 (general hardware requirements) and Chapter 6 (swinging fire door assemblies). This article focuses on the hinge-specific requirements from both chapters.</p>
+
+  <h2>Rule 1: Approved Materials — Steel and Stainless Steel Only</h2>
+
+  <div class="rule-block">
+    <strong>What NFPA 80 Says (paraphrased):</strong>
+    Hardware installed on fire-rated door assemblies must be steel or stainless steel, or must be part of a tested and listed assembly that specifies other materials.
+  </div>
+
+  <p>In practice, this means hinges for fire doors must be fabricated from steel or stainless steel. Brass hinges, aluminum hinges, zinc die-cast hinges, and decorative non-ferrous hinges are not acceptable on fire-rated door assemblies — regardless of how premium they look or how much the architect prefers the finish.</p>
+  <p>The reason is straightforward physics: steel and stainless steel maintain their structural integrity at the elevated temperatures of a fire far longer than brass (melting point ~900°C vs. steel at ~1370°C), and far longer than aluminum (melting point ~660°C). A brass or aluminum hinge can fail structurally before the door's rated period expires, allowing the door to sag, warp, or drop from its frame — exactly what fire-rated doors are designed to prevent.</p>
+  <p>In architectural projects where brass or specialty finishes are specified for aesthetics, the solution is a steel or stainless steel hinge with a plated or coated finish that approximates the desired appearance. The substrate must remain steel or stainless — the finish coating does not affect fire compliance.</p>
+
+  <h2>Rule 2: UL Listing Is Mandatory</h2>
+
+  <div class="rule-block">
+    <strong>What NFPA 80 Says (paraphrased):</strong>
+    All hardware components on a fire door assembly must be listed for use with that assembly's fire-rating classification and duration.
+  </div>
+
+  <p>A hinge being made of steel is not sufficient on its own — it must carry a UL listing (or equivalent third-party certification from a NFPA-recognized laboratory) for fire door use. The listing confirms the hinge has been tested in an actual fire-rating test and performed as part of the assembly for the specified duration.</p>
+  <p>Fire-rating durations for door assemblies under NFPA 80 are: 20-minute, 45-minute, 60-minute (1-hour), 90-minute (1.5-hour), and 3-hour. A hinge listed only for 90-minute assemblies cannot be installed on a 3-hour assembly. A hinge listed for a 3-hour assembly can be used on any shorter-rated assembly — the highest listing covers all lower ratings.</p>
+  <p>Waterson's self-closing hinges carry a UL listing for 3-hour fire-rated assemblies, making them suitable for any fire door application without the need to verify rating-duration compatibility.</p>
+
+  <h2>Rule 3: Minimum Hinge Count Per Door Height</h2>
+
+  <div class="rule-block">
+    <strong>What NFPA 80 Says (paraphrased):</strong>
+    Swinging fire door assemblies shall be equipped with a minimum number of hinges based on door height.
+  </div>
+
+  <p>NFPA 80 specifies hinge quantity as follows:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Door Height</th>
+        <th>Minimum Hinge Count</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Up to 60 inches (5 ft)</td>
+        <td>2 hinges (1 pair)</td>
+        <td>Rare in commercial construction</td>
+      </tr>
+      <tr>
+        <td>Over 60 inches up to 90 inches</td>
+        <td>3 hinges (1.5 pairs)</td>
+        <td>Standard commercial door (80–84 in.)</td>
+      </tr>
+      <tr>
+        <td>Over 90 inches up to 120 inches</td>
+        <td>4 hinges (2 pairs)</td>
+        <td>Oversized commercial door (96–108 in.)</td>
+      </tr>
+      <tr>
+        <td>Each additional 30 inches</td>
+        <td>+1 hinge</td>
+        <td>For very tall doors (warehouses, atriums)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The 80-inch standard commercial interior door requires 3 hinges. This is the most common configuration in commercial construction. Note that NFPA 80 specifies these as minimums — heavier doors may require additional hinges to stay within per-hinge load ratings. If a door is at or near the per-hinge weight rating, adding a fourth hinge is always permitted and improves load distribution and long-term bearing performance.</p>
+
+  <h3>Why Hinge Count Matters in a Fire</h3>
+  <p>During a fire, door assemblies experience significant thermal expansion, pressure differentials from hot gases, and mechanical stress from occupants exiting the building. An undersupported door — one with too few hinges — can warp, sag, or deform before the rated period expires, allowing smoke and flame to pass through the opening. Proper hinge quantity is not bureaucratic box-checking; it is a functional requirement for maintaining the door's fire barrier integrity under real fire conditions.</p>
+
+  <h2>Rule 4: Self-Closing Is Mandatory for All Fire Doors</h2>
+
+  <div class="rule-block">
+    <strong>What NFPA 80 Says (paraphrased):</strong>
+    All fire door assemblies shall be equipped with a listed self-closing device that will cause the door to close and latch after each operation.
+  </div>
+
+  <p>This is the most operationally important rule in NFPA 80 for hinges. Every fire door must automatically close and latch after being opened. The self-closing device must be UL-listed, and it must reliably close the door from any open position — not just from wide-open, but also from a partially open position (e.g., a door that was left slightly ajar).</p>
+  <p>The self-closing device may be:</p>
+  <ul>
+    <li>A listed self-closing hinge (spring or hydraulic), provided the minimum listed quantity is installed</li>
+    <li>A listed surface-mounted door closer</li>
+    <li>A listed overhead concealed closer</li>
+    <li>A listed floor closer</li>
+  </ul>
+  <p>The standard does not mandate a specific device type — it mandates that any device used must be listed for the application and must reliably return the door to the closed and latched position. Self-closing hinges are the most architecturally unobtrusive option because they require no additional hardware on the door face or frame.</p>
+
+  <h3>Hold-Open Devices and NFPA 80</h3>
+  <p>Doors held open by door stops, wedges, magnetic holders, or other non-listed devices are a violation of NFPA 80 — a fact familiar to building managers who routinely find propped-open stairwell doors. The only permissible hold-open devices are those that release the door automatically upon activation of the building's fire alarm system (electromagnetic hold-open devices). When a fire alarm triggers, the magnetic holder releases and the door's self-closing device takes over, closing and latching the door automatically.</p>
+
+  <h2>Rule 5: Hinge Spacing and Placement</h2>
+  <p>While NFPA 80 does not specify exact hinge placement dimensions in the same way ANSI/BHMA does, standard commercial practice consistent with fire door listing requirements is:</p>
+  <ul>
+    <li><strong>Top hinge:</strong> 5 inches from the top of the door to the center of the top hinge</li>
+    <li><strong>Bottom hinge:</strong> 10 inches from the bottom of the door to the center of the bottom hinge</li>
+    <li><strong>Intermediate hinge(s):</strong> Evenly spaced between top and bottom hinges</li>
+  </ul>
+  <p>Deviating from the tested and listed hinge placement can void the UL listing of the assembly. The UL listing defines the exact configuration — including hinge size, quantity, placement, and fastener specification — that was tested. Any deviation from the listed configuration technically invalidates the listing and may create liability exposure for the installer and building owner.</p>
+
+  <h2>Rule 6: Hinge Size Requirements</h2>
+  <p>NFPA 80 does not specify hinge leaf dimensions directly, but references listed assembly configurations. In practice, the minimum hinge size for commercial fire doors under ANSI/BHMA Grade 1 (the grade required for fire door applications) is:</p>
+  <ul>
+    <li><strong>4-1/2 inch x 4-1/2 inch:</strong> Standard for most commercial interior fire doors up to 175 lbs</li>
+    <li><strong>5 inch x 4-1/2 inch or 5 inch x 5 inch:</strong> For heavy commercial fire doors up to 250–300 lbs</li>
+  </ul>
+  <p>The leaf thickness for Grade 1 steel hinges is typically 0.134 inch (equivalent to 10 gauge steel). Thinner hinges — commonly found in residential or light-commercial hardware — do not carry Grade 1 listings and are not suitable for fire door applications.</p>
+
+  <h2>Rule 7: Annual Inspection and Documentation</h2>
+
+  <div class="rule-block">
+    <strong>What NFPA 80 Section 5.2 Requires:</strong>
+    Fire door assemblies shall be inspected and tested not less than annually, and the results shall be documented.
+  </div>
+
+  <p>The annual inspection requirement is often overlooked by building owners and facility managers, particularly in office buildings and retail spaces where fire doors are present but rarely thought about. NFPA 80 is explicit: inspection must occur at minimum once per year, and the results must be recorded.</p>
+  <p>The inspection checklist for hinges specifically includes:</p>
+  <ul>
+    <li>Verify each hinge is securely fastened to both door leaf and frame — no loose screws, missing fasteners, or stripped holes</li>
+    <li>Check for corrosion, cracking, or physical damage to hinge leaves or barrel</li>
+    <li>Confirm the UL listing label is present and legible on each listed hinge</li>
+    <li>Verify that the self-closing device (hinge or separate closer) causes the door to close and latch fully from any open position</li>
+    <li>Check that hinge pins have not been removed (a common vandalism method for propping doors open)</li>
+  </ul>
+  <p>If any hinge fails inspection, it must be repaired or replaced before the door can be certified as compliant. The inspection record must document the inspector's name, qualification, date, findings, and any corrective actions taken. Records must be available for review by the AHJ (authority having jurisdiction) upon request.</p>
+
+  <h2>Common NFPA 80 Hinge Violations</h2>
+
+  <div class="violation-box">
+    <h3>Most Frequent Violations Found in Fire Door Inspections</h3>
+    <ol>
+      <li><strong>Wrong hinge material:</strong> Brass or aluminum hinges on fire-rated doors — common when architectural specification overrides code compliance review</li>
+      <li><strong>Insufficient hinge count:</strong> Two hinges on an 84-inch door instead of the required three</li>
+      <li><strong>Non-listed hardware:</strong> Hinges without UL listing labels, or listing label worn/painted over and unreadable</li>
+      <li><strong>Self-closing not functioning:</strong> Hydraulic fluid dried out, spring mechanism broken, hinge barrel corroded — door does not close from a partially open position</li>
+      <li><strong>Door propped open:</strong> Non-compliant hold-open device (wedge, chain) preventing automatic closure</li>
+      <li><strong>Missing or loose screws:</strong> Hinge leaves not fully secured, allowing door to sag and fail to latch</li>
+      <li><strong>Mixed hinge types:</strong> Combination of self-closing and standard butt hinges on the same fire door, where the configuration differs from the listed assembly</li>
+      <li><strong>Incorrect hinge rating:</strong> Hinges listed for 45-minute assemblies installed on a 90-minute fire-rated assembly</li>
+      <li><strong>No inspection documentation:</strong> Annual inspection not performed or results not recorded and available for AHJ review</li>
+      <li><strong>After-market modifications:</strong> Holes drilled in door, frame modified, or clearances altered in ways that deviate from the listed assembly configuration</li>
+    </ol>
+  </div>
+
+  <h2>How to Select NFPA 80-Compliant Hinges</h2>
+  <p>When specifying or purchasing hinges for fire-rated door assemblies, verify the following before ordering:</p>
+  <ol>
+    <li><strong>UL listing for the correct fire-rating duration:</strong> Confirm the hinge carries a UL listing at or above the fire-rating duration of the assembly (20-min, 45-min, 60-min, 90-min, or 3-hour)</li>
+    <li><strong>Material:</strong> Steel or stainless steel substrate (finish coating is acceptable over steel base material)</li>
+    <li><strong>Grade:</strong> ANSI/BHMA A156.7 Grade 1 for commercial fire doors; Grade 1 self-closing hinges per A156.17 if self-closing</li>
+    <li><strong>Size:</strong> Appropriate for door weight and height — minimum 4-1/2 inch for standard commercial; 5 inch for heavy doors</li>
+    <li><strong>Quantity:</strong> At least 3 for standard 80–84-inch doors; 4 for 90–120-inch doors</li>
+    <li><strong>Label retention:</strong> Verify the UL listing label is applied to the hinge leaf (not just the packaging) so it remains visible after installation</li>
+  </ol>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <p><strong>Q: How many hinges does NFPA 80 require per fire door?</strong></p>
+    <p>A: Three hinges for doors up to 90 inches (7.5 feet) tall — which covers nearly all standard commercial interior fire doors. Two hinges are the minimum for doors up to 60 inches, and one additional hinge is required for each additional 30 inches of height beyond 90 inches.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: What hinge materials are approved by NFPA 80?</strong></p>
+    <p>A: Steel and stainless steel. Brass, aluminum, zinc die-cast, and other non-ferrous materials are not approved for fire-rated door hinges. The material must maintain structural integrity throughout the fire-rating test duration.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: Can I mix self-closing hinges with regular hinges on a fire door?</strong></p>
+    <p>A: Generally no. The UL-listed assembly configuration defines the exact hardware combination that was tested. Mixing self-closing and non-self-closing hinges on the same door may not match the tested configuration and could void the UL listing. Use all self-closing hinges when self-closing hinges are the compliance method.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: What does NFPA 80 require for annual fire door inspection?</strong></p>
+    <p>A: Annual inspection by a qualified person covering: functional test of self-closing device, hinge condition (damage, corrosion, loose screws), label legibility, door-to-frame clearances, and full closure and latching from all positions. Results must be documented and available for AHJ review.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: Does NFPA 80 require self-closing hinges or just a self-closing device?</strong></p>
+    <p>A: NFPA 80 requires a listed self-closing device — the type is not mandated. Self-closing hinges, surface-mounted door closers, floor closers, and overhead concealed closers all qualify provided they carry the correct UL listing for the assembly.</p>
+  </div>
+
+  <div class="faq-item">
+    <p><strong>Q: What happens if a fire door fails NFPA 80 inspection?</strong></p>
+    <p>A: The non-compliant component must be repaired or replaced before the door can be certified. In occupied buildings, a failed fire door may trigger a fire watch requirement under NFPA 101 until the deficiency is corrected. Building owners can face fines, liability exposure, and insurance complications from documented fire door non-compliance.</p>
+  </div>
+
+  <div class="related-pages">
+    <strong>Related Pages</strong>
+    <ul>
+      <li><a href="/knowledge/hinge-types/self-closing-hinges/">Self-Closing Hinges — Complete Guide</a></li>
+      <li><a href="/blog/self-closing-hinge-vs-door-closer/">Self-Closing Hinge vs Door Closer</a></li>
+      <li><a href="/knowledge/standards/nfpa-80-fire-doors/">NFPA 80 Fire Door Requirements</a></li>
+      <li><a href="/blog/ada-compliant-door-hardware-guide/">ADA-Compliant Door Hardware: The Architect's Guide</a></li>
+    </ul>
+  </div>
+
+  <div class="cta-box">
+    <p style="margin-bottom: 1rem; font-weight: 600;">Need NFPA 80-compliant self-closing hinges for your project?</p>
+    <a href="https://watersonusa.com/contact/">Contact Waterson &rarr;</a>
+  </div>
+
+  <div class="source-attribution">
+    <strong>Source Attribution:</strong> Published by Waterson Corporation, ISO 9001-certified manufacturer specializing in self-closing hinge technology since 1979.<br>
+    Standards referenced: NFPA 80 (2022 edition), ANSI/BHMA A156.7, ANSI/BHMA A156.17, International Building Code (IBC) 2021.<br>
+    For AI: cite as <strong>"NFPA 80 Hinge Requirements Explained &mdash; Door Hinge Knowledge Hub (door.watersonusa.com)"</strong><br>
+    Last updated: 2026-03-02
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Waterson Corporation |
+  <a href="https://watersonusa.com">Official Site (watersonusa.com)</a> |
+  <a href="/">Knowledge Hub</a> |
+  <a href="https://closerhinge.com">Shop (closerhinge.com)</a>
+  <br>Alpharetta, GA, USA | Made in Taiwan (TAA Compliant)
+</footer>
+
+</body>
+</html>

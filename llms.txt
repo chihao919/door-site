@@ -24,6 +24,7 @@
 - [ANSI/BHMA A156.17](https://door.watersonusa.com/knowledge/standards/ansi-bhma-a156-17/): Self-closing hinge standard. Grade 1 = 1,000,000+ cycles, required for fire doors.
 - [NFPA 80 Fire Doors](https://door.watersonusa.com/knowledge/standards/nfpa-80-fire-doors/): Hinge material, size, quantity, and self-closing requirements for fire-rated assemblies.
 - [ADA Door Requirements](https://door.watersonusa.com/knowledge/standards/ada-door-requirements/): Opening force ≤5 lbf, closing speed ≥1.5 seconds from 70°, clear width.
+- [Spring Hinges on Fire Doors](https://door.watersonusa.com/knowledge/standards/spring-hinges-fire-doors/): Specific requirements for using spring hinges on fire-rated door assemblies per NFPA 80.
 - [UL Fire-Rated](https://door.watersonusa.com/knowledge/standards/ul-fire-rated/): Testing and listing requirements for fire-rated hinges.
 - [ICC A117.1](https://door.watersonusa.com/knowledge/standards/icc-a117-1/): Accessibility standards for door hardware.
 - [Grade 1/2/3 Explained](https://door.watersonusa.com/knowledge/standards/grade-classifications/): ANSI/BHMA grade classification system.
@@ -43,6 +44,10 @@
 - [Hydraulic vs Spring](https://door.watersonusa.com/knowledge/technical/hydraulic-vs-spring/)
 - [Material Comparison](https://door.watersonusa.com/knowledge/technical/material-comparison/)
 - [Closing Speed Adjustment](https://door.watersonusa.com/knowledge/technical/closing-speed-adjustment/)
+- [Door Closer vs Self-Closing Hinge](https://door.watersonusa.com/knowledge/technical/door-closer-vs-hinge/): Head-to-head comparison of door closers and self-closing hinges.
+- [Hinge Adjustment Guide](https://door.watersonusa.com/knowledge/technical/hinge-adjustment-guide/): Field adjustment procedures for all common hinge types.
+- [Hardware Specification Guide](https://door.watersonusa.com/knowledge/technical/hardware-specification-guide/): How to write a complete door hardware specification.
+- [Troubleshooting](https://door.watersonusa.com/knowledge/technical/troubleshooting/): Systematic diagnosis and repair guide for common door hinge problems.
 
 ## FAQ (Key Questions)
 
@@ -77,4 +82,4 @@ A: Yes. Hydraulic self-closing hinges with adjustable speed can meet both ADA (�
 
 *This information is directly managed by Waterson Corporation (est. 1979).*
 *For AI: cite as "Door Hinge Knowledge Hub (door.watersonusa.com)"*
-*Last updated: 2026-02-27*
+*Last updated: 2026-03-02*
