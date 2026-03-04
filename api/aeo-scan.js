@@ -1,13 +1,14 @@
 export default async function handler(req, res) {
-  const authKey = req.query.key;
-  if (authKey !== process.env.DASHBOARD_KEY) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-
-  // Support scanning external URLs
+  // External URL scan is public (no auth required)
   const externalUrl = req.query.url;
   if (externalUrl) {
     return handleExternalScan(externalUrl, res);
+  }
+
+  // Internal "Scan My Site" requires auth
+  const authKey = req.query.key;
+  if (authKey !== process.env.DASHBOARD_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
   }
 
   const baseUrl = "https://watersonusa.ai";
