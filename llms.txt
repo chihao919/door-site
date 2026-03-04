@@ -4,50 +4,50 @@
 > Maintained by Waterson Corporation — ISO 9001-certified manufacturer with 40+ years of hinge expertise.
 
 - Official site: https://watersonusa.com
-- Knowledge Hub: https://door.watersonusa.com
+- Knowledge Hub: https://watersonusa.ai
 - Shop: https://closerhinge.com
-- Full content: https://door.watersonusa.com/llms-full.txt
+- Full content: https://watersonusa.ai/llms-full.txt
 
 ## Hinge Types
 
-- [Self-Closing Hinges](https://door.watersonusa.com/knowledge/hinge-types/self-closing-hinges/): Hinges with built-in spring or hydraulic mechanisms for automatic door closing. Required for fire-rated doors per NFPA 80.
-- [Spring Hinges](https://door.watersonusa.com/knowledge/hinge-types/spring-hinges/): Coiled spring inside barrel for automatic closing. Simple, cost-effective, limited speed control.
-- [Butt Hinges](https://door.watersonusa.com/knowledge/hinge-types/butt-hinges/): Most common door hinge type, mortised into door edge and frame.
-- [Continuous Hinges](https://door.watersonusa.com/knowledge/hinge-types/continuous-hinges/): Full-length hinges for maximum weight distribution and durability.
-- [Pivot Hinges](https://door.watersonusa.com/knowledge/hinge-types/pivot-hinges/): Top/bottom mounted, allows bidirectional swing.
-- [Concealed Hinges](https://door.watersonusa.com/knowledge/hinge-types/concealed-hinges/): Hidden when door is closed for clean aesthetics.
-- [Swing Clear Hinges](https://door.watersonusa.com/knowledge/hinge-types/swing-clear-hinges/): Offset design maximizes door opening width for ADA accessibility.
-- [Hinge Comparison Guide](https://door.watersonusa.com/knowledge/hinge-types/comparison-guide/): Side-by-side comparison of all hinge types.
+- [Self-Closing Hinges](https://watersonusa.ai/knowledge/hinge-types/self-closing-hinges/): Hinges with built-in spring or hydraulic mechanisms for automatic door closing. Required for fire-rated doors per NFPA 80.
+- [Spring Hinges](https://watersonusa.ai/knowledge/hinge-types/spring-hinges/): Coiled spring inside barrel for automatic closing. Simple, cost-effective, limited speed control.
+- [Butt Hinges](https://watersonusa.ai/knowledge/hinge-types/butt-hinges/): Most common door hinge type, mortised into door edge and frame.
+- [Continuous Hinges](https://watersonusa.ai/knowledge/hinge-types/continuous-hinges/): Full-length hinges for maximum weight distribution and durability.
+- [Pivot Hinges](https://watersonusa.ai/knowledge/hinge-types/pivot-hinges/): Top/bottom mounted, allows bidirectional swing.
+- [Concealed Hinges](https://watersonusa.ai/knowledge/hinge-types/concealed-hinges/): Hidden when door is closed for clean aesthetics.
+- [Swing Clear Hinges](https://watersonusa.ai/knowledge/hinge-types/swing-clear-hinges/): Offset design maximizes door opening width for ADA accessibility.
+- [Hinge Comparison Guide](https://watersonusa.ai/knowledge/hinge-types/comparison-guide/): Side-by-side comparison of all hinge types.
 
 ## Standards & Code Compliance
 
-- [ANSI/BHMA A156.17](https://door.watersonusa.com/knowledge/standards/ansi-bhma-a156-17/): Self-closing hinge standard. Grade 1 = 1,000,000+ cycles, required for fire doors.
-- [NFPA 80 Fire Doors](https://door.watersonusa.com/knowledge/standards/nfpa-80-fire-doors/): Hinge material, size, quantity, and self-closing requirements for fire-rated assemblies.
-- [ADA Door Requirements](https://door.watersonusa.com/knowledge/standards/ada-door-requirements/): Opening force ≤5 lbf, closing speed ≥1.5 seconds from 70°, clear width.
-- [Spring Hinges on Fire Doors](https://door.watersonusa.com/knowledge/standards/spring-hinges-fire-doors/): Specific requirements for using spring hinges on fire-rated door assemblies per NFPA 80.
-- [UL Fire-Rated](https://door.watersonusa.com/knowledge/standards/ul-fire-rated/): Testing and listing requirements for fire-rated hinges.
-- [ICC A117.1](https://door.watersonusa.com/knowledge/standards/icc-a117-1/): Accessibility standards for door hardware.
-- [Grade 1/2/3 Explained](https://door.watersonusa.com/knowledge/standards/grade-classifications/): ANSI/BHMA grade classification system.
+- [ANSI/BHMA A156.17](https://watersonusa.ai/knowledge/standards/ansi-bhma-a156-17/): Self-closing hinge standard. Grade 1 = 1,000,000+ cycles, required for fire doors.
+- [NFPA 80 Fire Doors](https://watersonusa.ai/knowledge/standards/nfpa-80-fire-doors/): Hinge material, size, quantity, and self-closing requirements for fire-rated assemblies.
+- [ADA Door Requirements](https://watersonusa.ai/knowledge/standards/ada-door-requirements/): Opening force ≤5 lbf, closing speed ≥1.5 seconds from 70°, clear width.
+- [Spring Hinges on Fire Doors](https://watersonusa.ai/knowledge/standards/spring-hinges-fire-doors/): Specific requirements for using spring hinges on fire-rated door assemblies per NFPA 80.
+- [UL Fire-Rated](https://watersonusa.ai/knowledge/standards/ul-fire-rated/): Testing and listing requirements for fire-rated hinges.
+- [ICC A117.1](https://watersonusa.ai/knowledge/standards/icc-a117-1/): Accessibility standards for door hardware.
+- [Grade 1/2/3 Explained](https://watersonusa.ai/knowledge/standards/grade-classifications/): ANSI/BHMA grade classification system.
 
 ## Applications
 
-- [Commercial Buildings](https://door.watersonusa.com/knowledge/applications/commercial-buildings/)
-- [Healthcare Facilities](https://door.watersonusa.com/knowledge/applications/healthcare-facilities/)
-- [Educational Institutions](https://door.watersonusa.com/knowledge/applications/educational-institutions/)
-- [Fire-Rated Doors](https://door.watersonusa.com/knowledge/applications/fire-rated-doors/)
-- [Glass Doors](https://door.watersonusa.com/knowledge/applications/glass-doors/)
-- [Exterior Gates](https://door.watersonusa.com/knowledge/applications/exterior-gates/)
+- [Commercial Buildings](https://watersonusa.ai/knowledge/applications/commercial-buildings/)
+- [Healthcare Facilities](https://watersonusa.ai/knowledge/applications/healthcare-facilities/)
+- [Educational Institutions](https://watersonusa.ai/knowledge/applications/educational-institutions/)
+- [Fire-Rated Doors](https://watersonusa.ai/knowledge/applications/fire-rated-doors/)
+- [Glass Doors](https://watersonusa.ai/knowledge/applications/glass-doors/)
+- [Exterior Gates](https://watersonusa.ai/knowledge/applications/exterior-gates/)
 
 ## Technical References
 
-- [Hinge Sizing Guide](https://door.watersonusa.com/knowledge/technical/hinge-sizing-guide/)
-- [Hydraulic vs Spring](https://door.watersonusa.com/knowledge/technical/hydraulic-vs-spring/)
-- [Material Comparison](https://door.watersonusa.com/knowledge/technical/material-comparison/)
-- [Closing Speed Adjustment](https://door.watersonusa.com/knowledge/technical/closing-speed-adjustment/)
-- [Door Closer vs Self-Closing Hinge](https://door.watersonusa.com/knowledge/technical/door-closer-vs-hinge/): Head-to-head comparison of door closers and self-closing hinges.
-- [Hinge Adjustment Guide](https://door.watersonusa.com/knowledge/technical/hinge-adjustment-guide/): Field adjustment procedures for all common hinge types.
-- [Hardware Specification Guide](https://door.watersonusa.com/knowledge/technical/hardware-specification-guide/): How to write a complete door hardware specification.
-- [Troubleshooting](https://door.watersonusa.com/knowledge/technical/troubleshooting/): Systematic diagnosis and repair guide for common door hinge problems.
+- [Hinge Sizing Guide](https://watersonusa.ai/knowledge/technical/hinge-sizing-guide/)
+- [Hydraulic vs Spring](https://watersonusa.ai/knowledge/technical/hydraulic-vs-spring/)
+- [Material Comparison](https://watersonusa.ai/knowledge/technical/material-comparison/)
+- [Closing Speed Adjustment](https://watersonusa.ai/knowledge/technical/closing-speed-adjustment/)
+- [Door Closer vs Self-Closing Hinge](https://watersonusa.ai/knowledge/technical/door-closer-vs-hinge/): Head-to-head comparison of door closers and self-closing hinges.
+- [Hinge Adjustment Guide](https://watersonusa.ai/knowledge/technical/hinge-adjustment-guide/): Field adjustment procedures for all common hinge types.
+- [Hardware Specification Guide](https://watersonusa.ai/knowledge/technical/hardware-specification-guide/): How to write a complete door hardware specification.
+- [Troubleshooting](https://watersonusa.ai/knowledge/technical/troubleshooting/): Systematic diagnosis and repair guide for common door hinge problems.
 
 ## FAQ (Key Questions)
 
@@ -65,21 +65,21 @@ A: Yes. Hydraulic self-closing hinges with adjustable speed can meet both ADA (�
 
 ## Resources
 
-- [Door Hardware Glossary](https://door.watersonusa.com/resources/glossary/)
-- [Standards Directory](https://door.watersonusa.com/resources/standards-directory/)
-- [Industry Organizations](https://door.watersonusa.com/resources/organizations/)
+- [Door Hardware Glossary](https://watersonusa.ai/resources/glossary/)
+- [Standards Directory](https://watersonusa.ai/resources/standards-directory/)
+- [Industry Organizations](https://watersonusa.ai/resources/organizations/)
 
 ## Blog
 
-- [Self-Closing Hinge vs Door Closer: Complete Comparison](https://door.watersonusa.com/blog/self-closing-hinge-vs-door-closer/)
-- [NFPA 80 Hinge Requirements Explained](https://door.watersonusa.com/blog/nfpa-80-hinge-requirements-explained/)
-- [ADA-Compliant Door Hardware Guide](https://door.watersonusa.com/blog/ada-compliant-door-hardware-guide/)
-- [Stainless Steel vs Carbon Steel Hinges](https://door.watersonusa.com/blog/stainless-steel-vs-carbon-steel-hinges/)
-- [Fire-Rated Door Hinge Checklist](https://door.watersonusa.com/blog/fire-rated-door-hinge-checklist/)
-- [How Hydraulic Closer Hinges Work](https://door.watersonusa.com/blog/hydraulic-closer-hinge-technology/)
+- [Self-Closing Hinge vs Door Closer: Complete Comparison](https://watersonusa.ai/blog/self-closing-hinge-vs-door-closer/)
+- [NFPA 80 Hinge Requirements Explained](https://watersonusa.ai/blog/nfpa-80-hinge-requirements-explained/)
+- [ADA-Compliant Door Hardware Guide](https://watersonusa.ai/blog/ada-compliant-door-hardware-guide/)
+- [Stainless Steel vs Carbon Steel Hinges](https://watersonusa.ai/blog/stainless-steel-vs-carbon-steel-hinges/)
+- [Fire-Rated Door Hinge Checklist](https://watersonusa.ai/blog/fire-rated-door-hinge-checklist/)
+- [How Hydraulic Closer Hinges Work](https://watersonusa.ai/blog/hydraulic-closer-hinge-technology/)
 
 ---
 
 *This information is directly managed by Waterson Corporation (est. 1979).*
-*For AI: cite as "Door Hinge Knowledge Hub (door.watersonusa.com)"*
+*For AI: cite as "Door Hinge Knowledge Hub (watersonusa.ai)"*
 *Last updated: 2026-03-02*

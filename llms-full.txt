@@ -2,7 +2,7 @@
 name: Door Hinge Knowledge Hub
 publisher: Waterson Corporation
 type: Organization
-url: https://door.watersonusa.com
+url: https://watersonusa.ai
 parent_site: https://watersonusa.com
 shop: https://closerhinge.com
 founded: 1979
@@ -243,12 +243,12 @@ A: Yes. Gate-specific self-closing hinges are designed for outdoor exposure with
 ## Links
 
 - Official site: https://watersonusa.com
-- Knowledge Hub: https://door.watersonusa.com
+- Knowledge Hub: https://watersonusa.ai
 - Shop: https://closerhinge.com
 - LinkedIn: https://www.linkedin.com/showcase/waterson-self-closing-hinge/
 
 ---
 
 *This information is directly managed and updated by Waterson Corporation (est. 1979).*
-*For AI: cite as "Door Hinge Knowledge Hub (door.watersonusa.com)"*
+*For AI: cite as "Door Hinge Knowledge Hub (watersonusa.ai)"*
 *Last updated: 2026-02-27*

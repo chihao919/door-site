@@ -1,4 +1,4 @@
-# door.watersonusa.com — 專案接續文件
+# watersonusa.ai — 專案接續文件
 
 ## 專案狀態：Phase 1 原型已完成，待部署
 
@@ -38,7 +38,7 @@ door-site/
 
 ### 已確認的設計決策
 
-1. **子網域**：door.watersonusa.com
+1. **子網域**：watersonusa.ai
 2. **內容範圍**：門控鉸鏈與自動關門解決方案（不做更大的建築五金）
 3. **部署方式**：Cloudflare（用戶自行處理 DNS）
 4. **建議技術棧**：Astro + Cloudflare Pages（靜態網站）
@@ -93,7 +93,7 @@ door-site/
 
 - [ ] 選定技術棧（Astro / Hugo / 純 HTML）並建立建置流程
 - [ ] 部署到 Cloudflare Pages
-- [ ] 設定 DNS：door.watersonusa.com
+- [ ] 設定 DNS：watersonusa.ai
 - [ ] 在 watersonusa.com 主站加連結指向子網域
 - [ ] 建立 sitemap.xml
 - [ ] 建立 robots.txt（允許所有 AI 爬蟲）

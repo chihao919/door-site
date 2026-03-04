@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(vercel:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(gh repo:*)",
+      "WebFetch(domain:watersonusa.com)",
+      "WebFetch(domain:api.washinmura.jp)",
+      "WebFetch(domain:aeo.page)",
+      "Bash(openssl rand:*)",
+      "Bash(printf QsrkboMGapICTz0lxwez:*)",
+      "Bash(printf Water@20350305:*)",
+      "WebFetch(domain:aeo.washinmura.jp)",
+      "WebSearch"
     ]
   }
 }

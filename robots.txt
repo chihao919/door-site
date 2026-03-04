@@ -1,4 +1,4 @@
-# door.watersonusa.com - Door Hinge Knowledge Hub
+# watersonusa.ai - Door Hinge Knowledge Hub
 # Welcome all crawlers and AI agents
 
 User-agent: *
@@ -29,8 +29,8 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://door.watersonusa.com/sitemap.xml
+Sitemap: https://watersonusa.ai/sitemap.xml
 
 # AI navigation files
-# llms.txt: https://door.watersonusa.com/llms.txt
-# llms-full.txt: https://door.watersonusa.com/llms-full.txt
+# llms.txt: https://watersonusa.ai/llms.txt
+# llms-full.txt: https://watersonusa.ai/llms-full.txt

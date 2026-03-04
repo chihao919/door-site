@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     return handleExternalScan(externalUrl, res);
   }
 
-  const baseUrl = "https://door.watersonusa.com";
+  const baseUrl = "https://watersonusa.ai";
   const pages = [
     "/",
     "/knowledge/hinge-types/self-closing-hinges/",
@@ -223,7 +223,7 @@ async function handleExternalScan(rawUrl, res) {
     const baseUrl = parsed.origin;
 
     // Fetch the main page
-    const resp = await fetch(url, { headers: { "User-Agent": "AEO-Scanner/1.0 (door.watersonusa.com)" } });
+    const resp = await fetch(url, { headers: { "User-Agent": "AEO-Scanner/1.0 (watersonusa.ai)" } });
     if (!resp.ok) {
       return res.status(400).json({ error: `Failed to fetch ${url}: ${resp.status}` });
     }
