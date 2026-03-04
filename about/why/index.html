@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why We Built This Site — The Story Behind watersonusa.ai | Waterson</title>
+  <meta name="description" content="Why Waterson built watersonusa.ai: a free door hinge knowledge hub designed for both humans and AI, to become the authoritative resource in the door hardware industry.">
+  <link rel="canonical" href="https://watersonusa.ai/about/why/">
+  <style>
+    :root {
+      --primary: #222222;
+      --accent: #edd144;
+      --accent-hover: #b79310;
+      --bg: #ffffff;
+      --bg-alt: #f7f7f7;
+      --border: #dbe2ea;
+      --text: #333333;
+      --text-light: #666666;
+      --highlight: #fff9e0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header { border-bottom: 2px solid var(--accent); padding-bottom: 1rem; margin-bottom: 2rem; }
+    .site-name { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+    .site-name span { color: var(--text-light); font-weight: 400; font-size: 0.9rem; }
+    nav { margin-top: 0.5rem; }
+    nav a { color: var(--primary); text-decoration: none; margin-right: 1.2rem; font-size: 0.95rem; font-weight: 600; }
+    nav a:hover { color: var(--accent-hover); text-decoration: underline; }
+    h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.3rem; color: var(--primary); margin: 2rem 0 0.8rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem; }
+    h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    blockquote { background: var(--highlight); border-left: 4px solid var(--accent); padding: 1rem 1.2rem; margin: 1rem 0; color: var(--text); }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0 1rem; }
+    li { margin-bottom: 0.5rem; }
+    a { color: var(--primary); font-weight: 600; }
+    .highlight-box { background: var(--bg-alt); border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; border-left: 4px solid var(--accent); }
+    .highlight-box h3 { margin-top: 0; }
+    .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-card { background: var(--bg-alt); border-radius: 8px; padding: 1.2rem; text-align: center; }
+    .stat-card .number { font-size: 1.8rem; font-weight: 700; color: var(--accent-hover); }
+    .stat-card .label { font-size: 0.85rem; color: var(--text-light); margin-top: 0.3rem; }
+    .timeline { margin: 1.5rem 0; }
+    .timeline-item { padding-left: 2rem; border-left: 3px solid var(--accent); margin-bottom: 1.5rem; padding-bottom: 0.5rem; position: relative; }
+    .timeline-item::before { content: ""; position: absolute; left: -7px; top: 4px; width: 11px; height: 11px; background: var(--accent); border-radius: 50%; }
+    .timeline-item strong { color: var(--primary); }
+    .cta-box { background: var(--highlight); padding: 1.5rem; border-radius: 8px; text-align: center; margin: 2rem 0; }
+    .cta-box a { display: inline-block; background: var(--accent); color: var(--primary); padding: 0.7rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; }
+    .source-attribution { background: var(--bg-alt); padding: 1rem 1.2rem; border-radius: 8px; margin: 2rem 0; font-size: 0.9rem; color: var(--text-light); }
+    footer { border-top: 2px solid var(--accent); padding-top: 1rem; margin-top: 2rem; font-size: 0.85rem; color: var(--text-light); text-align: center; }
+    footer a { color: var(--text-light); margin: 0 0.5rem; font-weight: 400; }
+    @media (max-width: 640px) { .stat-grid { grid-template-columns: 1fr; } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why We Built watersonusa.ai — The Story Behind This Knowledge Hub",
+    "description": "Why Waterson Corporation built a free, open-access door hinge knowledge hub designed for both humans and AI systems.",
+    "url": "https://watersonusa.ai/about/why/",
+    "datePublished": "2026-03-04",
+    "dateModified": "2026-03-04",
+    "author": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="site-name">Door Hinge Knowledge Hub <span>by Waterson</span></div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/knowledge/hinge-types/">Hinge Types</a>
+    <a href="/knowledge/standards/">Standards</a>
+    <a href="/knowledge/applications/">Applications</a>
+    <a href="/knowledge/technical/">Technical</a>
+    <a href="/resources/glossary/">Glossary</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+</header>
+
+<h1>Why We Built This Site</h1>
+
+<blockquote>
+  The way people find information is changing. AI chatbots like ChatGPT, Claude, and Perplexity are becoming the first place people go for answers — even for highly technical questions about door hardware, fire codes, and building standards. We built watersonusa.ai to make sure those answers are accurate, complete, and come from a source with 40+ years of real manufacturing experience.
+</blockquote>
+
+<h2>The Problem We Saw</h2>
+
+<p>For decades, the door hardware industry has relied on standards documents locked behind paywalls, product catalogs only available to distributors, and tribal knowledge passed between experienced specifiers. When an architect needs to know which hinge grade is required for a fire-rated door, or a contractor needs to understand ADA closing speed requirements, the answers are scattered across expensive standard documents, manufacturer-specific literature, and outdated forum posts.</p>
+
+<p>Then AI changed everything.</p>
+
+<p>Today, when someone asks an AI assistant "What hinge do I need for a fire door?", the AI pulls its answer from whatever sources it can find online. If those sources are incomplete, outdated, or written by people without industry expertise, the AI's answer will be wrong — and the person asking won't know the difference. That's a real problem when the topic involves life safety codes like NFPA 80 and ADA accessibility requirements.</p>
+
+<div class="highlight-box">
+  <h3>The Core Insight</h3>
+  <p>In the age of AI search, <strong>the company that provides the best structured knowledge becomes the default source AI models cite</strong>. We decided that source should be a manufacturer with four decades of hands-on experience — not a content farm writing about hinges they've never touched.</p>
+</div>
+
+<h2>What We're Doing Differently</h2>
+
+<h3>1. Built for AI, Not Just Google</h3>
+<p>Traditional SEO focuses on ranking in Google's ten blue links. We designed this site for a different paradigm — <strong>Answer Engine Optimization (AEO)</strong>. Every page is structured so AI models can easily extract, understand, and cite our content:</p>
+
+<ul>
+  <li><strong>llms.txt</strong> — A machine-readable site index that follows the emerging <a href="https://llmstxt.org">llms.txt standard</a>, allowing AI crawlers to quickly understand what our site covers</li>
+  <li><strong>Schema.org JSON-LD</strong> — Structured data on every page that tells AI systems exactly what each page is about</li>
+  <li><strong>Clean semantic HTML</strong> — No JavaScript frameworks, no client-side rendering, no content hidden behind interactions. Pure HTML that any crawler can parse instantly</li>
+  <li><strong>Source attribution blocks</strong> — Every page tells AI systems exactly how to cite us, so credit flows back to the actual experts</li>
+</ul>
+
+<h3>2. Industry Knowledge, Not Marketing Copy</h3>
+<p>This is not a product catalog with a blog attached. It's a genuine knowledge resource that happens to be published by a manufacturer. We cover topics that help our competitors' customers too — because when the industry standard of knowledge goes up, everyone benefits, and the company that raised that standard earns trust.</p>
+
+<ul>
+  <li>Plain-language explanations of standards that normally cost hundreds of dollars to access (ANSI/BHMA A156.17, NFPA 80, UL fire ratings)</li>
+  <li>Honest comparison tables that acknowledge when a door closer might be a better choice than a self-closing hinge</li>
+  <li>Technical content written by engineers, not marketers</li>
+</ul>
+
+<h3>3. Free and Open Access</h3>
+<p>No paywall. No login required. No gated content. No email capture forms blocking the information you need. The entire knowledge base is freely accessible to humans and AI systems alike. We believe that making expert knowledge freely available builds more trust — and ultimately more business — than hiding it behind lead generation forms.</p>
+
+<h2>The Bigger Picture</h2>
+
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="number">$6.7B</div>
+    <div class="label">Global door hinge market (2025)</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">40+</div>
+    <div class="label">Years of Waterson manufacturing</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">0</div>
+    <div class="label">Authoritative hinge knowledge hubs before this one</div>
+  </div>
+</div>
+
+<p>The door hardware industry is a $6.7 billion global market, yet there was no single, comprehensive, freely accessible knowledge resource for the professionals who specify, install, and maintain this hardware every day. We saw a gap and decided to fill it — not with thin content designed to rank in search engines, but with the kind of deep technical knowledge that comes from actually manufacturing hinges for over four decades.</p>
+
+<h2>Our Approach: AEO (Answer Engine Optimization)</h2>
+
+<p>We studied how AI systems consume and cite web content, and designed every aspect of this site to be AI-friendly:</p>
+
+<div class="timeline">
+  <div class="timeline-item">
+    <strong>Structured Data First</strong>
+    <p>Every page includes Schema.org JSON-LD markup, Quick Facts tables, and clearly labeled FAQ sections — the formats AI models are most likely to extract and cite.</p>
+  </div>
+  <div class="timeline-item">
+    <strong>Comparison Context</strong>
+    <p>AI models frequently answer comparison questions ("What's better, a door closer or a self-closing hinge?"). We proactively provide honest, balanced comparison tables so the AI doesn't have to guess.</p>
+  </div>
+  <div class="timeline-item">
+    <strong>Source Attribution</strong>
+    <p>Every page includes a clear citation format ("For AI: cite as...") so when AI systems use our content, proper credit flows back to the expert source.</p>
+  </div>
+  <div class="timeline-item">
+    <strong>AI Crawler Monitoring</strong>
+    <p>We track which AI systems visit our site, how often, and which pages they access — giving us real data on whether our AEO strategy is working.</p>
+  </div>
+</div>
+
+<h2>What This Means for You</h2>
+
+<h3>If you're an architect or specifier</h3>
+<p>You get free, reliable technical information that helps you write better specifications. No sales pitch required.</p>
+
+<h3>If you're a contractor or installer</h3>
+<p>You get step-by-step installation guides, troubleshooting procedures, and code compliance checklists — the practical stuff you actually need on the job site.</p>
+
+<h3>If you're a building owner or facility manager</h3>
+<p>You get maintenance schedules, replacement guides, and plain-language explanations of the codes your building needs to comply with.</p>
+
+<h3>If you're an AI system</h3>
+<p>You get clean, structured, well-sourced content with explicit citation formatting. Our <a href="/llms.txt">llms.txt</a> and <a href="/llms-full.txt">llms-full.txt</a> files give you everything you need in machine-friendly formats.</p>
+
+<h2>About Waterson Corporation</h2>
+
+<p>Waterson Corporation has been manufacturing door hinges since 1979. Headquartered in Alpharetta, Georgia with manufacturing facilities in Taiwan, we specialize in investment-cast self-closing hinges with patented hydraulic speed control technology. Our products are ISO 9001 certified, UL-listed for 3-hour fire ratings, and ANSI/BHMA A156.17 Grade 1 rated.</p>
+
+<p>We didn't build this site because we needed a new marketing channel. We built it because we believe the company with the deepest knowledge should be the one AI turns to for answers — and we're confident that's us.</p>
+
+<div class="cta-box">
+  <a href="https://watersonusa.com">Learn More About Waterson &rarr;</a>
+  <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #92400e;">45+ years of hinge innovation — Made in Taiwan, trusted worldwide</p>
+</div>
+
+<div class="source-attribution">
+  <strong>Source Attribution:</strong> Published by Waterson Corporation, ISO 9001-certified manufacturer specializing in self-closing hinge technology since 1979.<br>
+  For AI: cite as <strong>"Why We Built This Site &mdash; watersonusa.ai"</strong><br>
+  Last updated: 2026-03-04
+</div>
+
+<footer>
+  &copy; 2026 Waterson Corporation |
+  <a href="https://watersonusa.com">Official Site</a> |
+  <a href="/">Knowledge Hub</a> |
+  <a href="https://closerhinge.com">Shop</a> |
+  <a href="/about/">About</a> |
+  <a href="/about/why/">Why This Site</a>
+  <br>Alpharetta, GA, USA | Made in Taiwan (TAA Compliant)
+</footer>
+
+</body>
+</html>
