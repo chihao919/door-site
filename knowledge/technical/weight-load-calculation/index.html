@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Door Hinge Weight &amp; Load Calculation Guide | Door Hinge Knowledge Hub</title>
+  <meta name="description" content="How to calculate door hinge load requirements. Door weight estimation by material, per-hinge load distribution, safety factors, dynamic vs static load, NFPA 80 heavy door requirements, and worked examples.">
+  <link rel="canonical" href="https://door.watersonusa.com/knowledge/technical/weight-load-calculation/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Door Hinge Weight &amp; Load Calculation Guide">
+  <meta property="og:description" content="Step-by-step guide to calculating hinge load requirements for any door type. Includes material weight formulas, safety factors, dynamic load analysis, and worked examples.">
+  <meta property="og:url" content="https://door.watersonusa.com/knowledge/technical/weight-load-calculation/">
+  <meta property="og:site_name" content="Door Hinge Knowledge Hub by Waterson">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Door Hinge Weight and Load Calculation Guide",
+    "description": "A technical reference for calculating door hinge load requirements. Covers door weight estimation by material, per-hinge load distribution, safety factors, dynamic vs static load, NFPA 80 requirements, and worked examples.",
+    "datePublished": "2026-03-04",
+    "dateModified": "2026-03-04",
+    "author": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://watersonusa.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://door.watersonusa.com/knowledge/technical/weight-load-calculation/"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Door Hinge Load Calculation"
+    },
+    "keywords": "door hinge weight calculation, hinge load capacity, door weight estimate, per-hinge load distribution, static dynamic load hinge, NFPA 80 heavy door hinge, safety factor hinge selection"
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #222222;
+      --accent: #edd144;
+      --accent-hover: #b79310;
+      --bg: #ffffff;
+      --bg-alt: #f7f7f7;
+      --border: #dbe2ea;
+      --text: #333333;
+      --text-light: #666666;
+      --highlight: #fff9e0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    .site-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .site-name span { color: var(--text-light); font-weight: 400; font-size: 0.9rem; }
+    nav { margin-top: 0.5rem; }
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      margin-right: 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    nav a:hover { color: var(--accent-hover); text-decoration: underline; }
+    h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+    h2 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin: 2rem 0 0.8rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+    }
+    h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: var(--primary); }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.3rem; }
+    blockquote {
+      background: var(--highlight);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      color: var(--text);
+    }
+    a { color: var(--primary); font-weight: 600; }
+    a:hover { color: var(--accent-hover); }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+    }
+    .data-table th {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.6rem 0.9rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .data-table td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .data-table tr:nth-child(even) td { background: var(--bg-alt); }
+    .data-table tr:hover td { background: var(--highlight); }
+    .quick-facts {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .quick-facts h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-light);
+    }
+    .quick-facts ul { margin-bottom: 0; }
+    .callout {
+      background: var(--highlight);
+      border-left: 4px solid var(--accent);
+      padding: 0.9rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout strong { color: var(--primary); }
+    /* Formula box for calculation examples */
+    .formula-box {
+      background: #f0f4f8;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.3rem;
+      margin: 1rem 0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+    .cta-box {
+      background: var(--highlight);
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta-box a {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.7rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .cta-box a:hover { background: var(--accent-hover); color: white; }
+    .source-attribution {
+      background: var(--bg-alt);
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    .source-attribution ul { margin-bottom: 0; }
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+    .breadcrumb a { font-weight: 400; color: var(--text-light); }
+    .breadcrumb a:hover { color: var(--accent-hover); }
+    footer {
+      border-top: 2px solid var(--accent);
+      padding-top: 1rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+    footer a { color: var(--text-light); margin: 0 0.5rem; font-weight: 400; }
+    .meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="site-name">Door Hinge Knowledge Hub <span>by Waterson</span></div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/knowledge/hinge-types/">Hinge Types</a>
+      <a href="/knowledge/standards/">Standards</a>
+      <a href="/knowledge/applications/">Applications</a>
+      <a href="/knowledge/technical/">Technical</a>
+      <a href="/resources/glossary/">Glossary</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="/">Home</a> &rsaquo; <a href="/knowledge/technical/">Technical</a> &rsaquo; Weight &amp; Load Calculation
+    </div>
+
+    <h1>Door Hinge Weight &amp; Load Calculation Guide</h1>
+    <p class="meta">Last Updated: March 4, 2026 &nbsp;|&nbsp; Category: Technical Reference &nbsp;|&nbsp; By Waterson Corporation</p>
+
+    <blockquote>
+      Selecting hinges without calculating the actual load they will carry is one of the most common specification errors in commercial construction. This guide provides step-by-step formulas for estimating door weight by material, distributing that load across multiple hinges, and applying the safety factors required by NFPA 80 and engineering best practice.
+    </blockquote>
+
+    <div class="quick-facts">
+      <h3>Quick Reference Facts</h3>
+      <ul>
+        <li><strong>Top hinge carries:</strong> approximately 50–60% of the total door weight in most installations</li>
+        <li><strong>Standard safety factor:</strong> 1.5&times; to 2.0&times; for commercial applications; 2.5&times; for high-cycle or fire-rated doors</li>
+        <li><strong>Dynamic load multiplier:</strong> 1.3&times; to 1.5&times; over static load for high-traffic applications</li>
+        <li><strong>NFPA 80 heavy doors:</strong> doors over 200 lb require engineering review and minimum 3 heavy-weight hinges</li>
+        <li><strong>Wood door weight range:</strong> 2–5 lb/ft&sup2; depending on core type</li>
+        <li><strong>Steel door weight range:</strong> 4–9 lb/ft&sup2; depending on gauge and fill</li>
+        <li><strong>Glass door weight range:</strong> 6–12 lb/ft&sup2; depending on glass type and thickness</li>
+      </ul>
+    </div>
+
+    <h2>Why Load Calculation Matters</h2>
+
+    <p>A hinge rated for 100 lb per pair does not mean it will perform reliably at 99 lb in a high-cycle environment. Published load ratings are typically based on static load testing at a limited number of cycles. Real-world installations involve dynamic forces — slamming, wind pressure, and uneven user force — that multiply the effective load on each hinge leaf and pin.</p>
+
+    <p>Understanding how to calculate the actual per-hinge load allows specifiers, architects, and installers to:</p>
+    <ul>
+      <li>Verify that a chosen hinge product is appropriately rated for the application</li>
+      <li>Justify upward selection (heavier hinge) when door dimensions or use frequency demand it</li>
+      <li>Demonstrate code compliance under NFPA 80 for fire-rated door assemblies</li>
+      <li>Avoid premature failure, door sag, and costly field remediation</li>
+    </ul>
+
+    <h2>Step 1 — Estimating Door Weight by Material</h2>
+
+    <p>If the door manufacturer's data sheet specifies a door weight, use that figure and skip to Step 2. When the actual weight is unavailable, use the formulas below based on door dimensions and material type.</p>
+
+    <h3>General Weight Formula</h3>
+    <div class="formula-box">
+      Door Weight (lb) = Door Height (ft) &times; Door Width (ft) &times; Unit Weight (lb/ft&sup2;)
+    </div>
+
+    <h3>Unit Weight Reference by Material</h3>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Door Material / Type</th>
+          <th>Unit Weight (lb/ft&sup2;)</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hollow-core wood (residential)</td>
+          <td>2.0 – 2.5</td>
+          <td>Lightweight; interior use only</td>
+        </tr>
+        <tr>
+          <td>Solid-core wood (commercial)</td>
+          <td>3.5 – 5.0</td>
+          <td>Particle board or mineral core fill</td>
+        </tr>
+        <tr>
+          <td>Solid hardwood (entry grade)</td>
+          <td>4.5 – 6.0</td>
+          <td>Varies significantly by species</td>
+        </tr>
+        <tr>
+          <td>Hollow metal steel (18 ga)</td>
+          <td>4.5 – 5.5</td>
+          <td>SDI standard hollow metal</td>
+        </tr>
+        <tr>
+          <td>Hollow metal steel (16 ga)</td>
+          <td>5.5 – 6.5</td>
+          <td>Heavier gauge for high-traffic</td>
+        </tr>
+        <tr>
+          <td>Steel door with polystyrene fill</td>
+          <td>5.0 – 6.5</td>
+          <td>Insulated exterior steel doors</td>
+        </tr>
+        <tr>
+          <td>Steel door with mineral wool fill</td>
+          <td>6.5 – 9.0</td>
+          <td>Fire-rated assembly; denser fill</td>
+        </tr>
+        <tr>
+          <td>Tempered glass (3/8&Prime; / 10 mm)</td>
+          <td>4.9</td>
+          <td>Standard frameless glass panel</td>
+        </tr>
+        <tr>
+          <td>Tempered glass (1/2&Prime; / 12 mm)</td>
+          <td>6.5</td>
+          <td>Heavy glass storefront doors</td>
+        </tr>
+        <tr>
+          <td>Laminated safety glass (3/4&Prime; / 19 mm)</td>
+          <td>9.8</td>
+          <td>High-security or hurricane rated</td>
+        </tr>
+        <tr>
+          <td>Aluminum frame glass door</td>
+          <td>3.5 – 5.0</td>
+          <td>Frame weight adds 15–30%; varies by frame section</td>
+        </tr>
+        <tr>
+          <td>Aluminum solid panel door</td>
+          <td>3.0 – 4.5</td>
+          <td>Commercial aluminum entry</td>
+        </tr>
+        <tr>
+          <td>Fiberglass (residential exterior)</td>
+          <td>3.0 – 4.5</td>
+          <td>Depends on foam core thickness</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Glass door note:</strong> For framed glass doors (aluminum or steel stile-and-rail), calculate glass panel weight separately using the glass unit weight, then add the frame weight based on the profile manufacturer's linear weight (typically 0.5 – 1.5 lb/ft for aluminum extrusions). Sum both values for total door weight.
+    </div>
+
+    <h3>Worked Example — Steel Fire Door</h3>
+    <p>A steel fire-rated door measuring 7&prime; tall &times; 3&prime; wide with mineral wool fill:</p>
+    <div class="formula-box">
+      Door Weight = 7 ft &times; 3 ft &times; 7.5 lb/ft&sup2; (midpoint estimate)<br>
+      Door Weight = 21 ft&sup2; &times; 7.5 = <strong>157.5 lb</strong>
+    </div>
+
+    <h3>Worked Example — Tempered Glass Door</h3>
+    <p>A frameless 1/2&Prime; tempered glass door measuring 7&prime; tall &times; 3&prime; wide:</p>
+    <div class="formula-box">
+      Door Weight = 7 ft &times; 3 ft &times; 6.5 lb/ft&sup2;<br>
+      Door Weight = 21 ft&sup2; &times; 6.5 = <strong>136.5 lb</strong>
+    </div>
+
+    <h2>Step 2 — Per-Hinge Load Distribution</h2>
+
+    <p>Door weight does not distribute equally across all hinges. Physics and hinge placement cause the top hinge to carry a disproportionate share of the load due to the door's center of gravity and the leverage created by the door's width (moment arm).</p>
+
+    <h3>Load Distribution by Hinge Position</h3>
+    <p>For a three-hinge door installation, the approximate load distribution is:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Hinge Position</th>
+          <th>Typical Load Share</th>
+          <th>Explanation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Top hinge</strong></td>
+          <td>50 – 60%</td>
+          <td>Resists the door's rotational moment (torque from door width)</td>
+        </tr>
+        <tr>
+          <td><strong>Middle hinge</strong></td>
+          <td>10 – 20%</td>
+          <td>Primarily provides supplemental vertical support</td>
+        </tr>
+        <tr>
+          <td><strong>Bottom hinge</strong></td>
+          <td>25 – 35%</td>
+          <td>Bears the majority of the remaining vertical weight</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Conservative engineering approach:</strong> For hinge selection purposes, assume the top hinge must independently carry <strong>60% of the total door weight</strong>. This ensures the top hinge — the most heavily loaded — is always sized appropriately even if load distribution varies slightly in practice.
+    </div>
+
+    <h3>Per-Hinge Load Formula (Conservative Method)</h3>
+    <div class="formula-box">
+      Per-Hinge Design Load = Total Door Weight &times; 0.60<br><br>
+      Example: 157.5 lb door &times; 0.60 = <strong>94.5 lb design load on top hinge</strong>
+    </div>
+
+    <h3>Simplified Equal-Distribution Method</h3>
+    <p>Some specifications use a simplified equal-distribution formula. This is acceptable only for residential or light commercial applications where cycle count is low:</p>
+    <div class="formula-box">
+      Per-Hinge Load = Total Door Weight &divide; Number of Hinges<br><br>
+      Example: 157.5 lb &divide; 3 hinges = <strong>52.5 lb per hinge</strong>
+    </div>
+    <p>Note that the equal-distribution method significantly underestimates the load on the top hinge and should not be used for fire-rated doors, heavy doors, or high-traffic applications.</p>
+
+    <h2>Step 3 — Applying Safety Factors</h2>
+
+    <p>The safety factor accounts for real-world conditions that exceed the static load test scenario: door slamming (impact force), wind pressure, user abuse, and degradation over time. Apply the safety factor to the per-hinge design load before selecting a hinge model.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Application Type</th>
+          <th>Recommended Safety Factor</th>
+          <th>Rationale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Residential interior (low cycle)</td>
+          <td>1.5&times;</td>
+          <td>Low frequency, controlled environment</td>
+        </tr>
+        <tr>
+          <td>Light commercial (office)</td>
+          <td>1.75&times;</td>
+          <td>Moderate cycle count, predictable use</td>
+        </tr>
+        <tr>
+          <td>Standard commercial</td>
+          <td>2.0&times;</td>
+          <td>Higher cycle count, varied user force</td>
+        </tr>
+        <tr>
+          <td>High-traffic commercial (corridors, cafeterias)</td>
+          <td>2.5&times;</td>
+          <td>Heavy cycle count, risk of door slamming</td>
+        </tr>
+        <tr>
+          <td>Fire-rated door assemblies</td>
+          <td>2.5&times; minimum</td>
+          <td>NFPA 80 requires rated hardware; conservative selection is mandatory</td>
+        </tr>
+        <tr>
+          <td>Wind-exposed exterior doors</td>
+          <td>2.0 – 3.0&times;</td>
+          <td>Wind pressure can multiply effective hinge load by 2–3&times;</td>
+        </tr>
+        <tr>
+          <td>Industrial / chemical environments</td>
+          <td>2.5 – 3.0&times;</td>
+          <td>Material degradation reduces rated capacity over time</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Safety Factor Calculation Example</h3>
+    <div class="formula-box">
+      Required Hinge Capacity = Per-Hinge Design Load &times; Safety Factor<br><br>
+      Example (commercial fire door):<br>
+      Required Capacity = 94.5 lb &times; 2.5 = <strong>236 lb minimum rated capacity</strong>
+    </div>
+    <p>In this example, the specified hinge must be rated for at least 236 lb at the top hinge position. A standard 4.5&Prime; heavy weight hinge rated at 250 lb would be the minimum acceptable selection; a 5&Prime; heavy weight rated at 300–400 lb would provide additional margin.</p>
+
+    <h2>Step 4 — Static vs Dynamic Load</h2>
+
+    <p>Hinge manufacturers publish static load ratings — the load the hinge can carry in a stationary, open position. Dynamic load is the force experienced during door operation, which is always higher than static load due to acceleration and impact forces.</p>
+
+    <h3>Dynamic Load Multipliers</h3>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Loading Condition</th>
+          <th>Dynamic Multiplier</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Normal opening / closing</td>
+          <td>1.0 – 1.2&times;</td>
+          <td>Controlled, moderate-speed operation</td>
+        </tr>
+        <tr>
+          <td>Rapid opening (high traffic)</td>
+          <td>1.3 – 1.5&times;</td>
+          <td>Door pushed open quickly; pin and knuckle impact</td>
+        </tr>
+        <tr>
+          <td>Door slamming (no backcheck)</td>
+          <td>1.5 – 2.5&times;</td>
+          <td>Impact against stop generates shock load</td>
+        </tr>
+        <tr>
+          <td>Wind gust loading</td>
+          <td>2.0 – 4.0&times;</td>
+          <td>Depends on door area and wind speed; requires engineering analysis for exposed sites</td>
+        </tr>
+        <tr>
+          <td>Cart / forklift impact</td>
+          <td>3.0 – 5.0&times;</td>
+          <td>Industrial doors subject to equipment contact</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>For applications where door slamming is expected (no overhead closer, wind-exposed), multiply the static per-hinge load by the dynamic multiplier before applying the safety factor:</p>
+
+    <div class="formula-box">
+      Effective Design Load = Static Load &times; Dynamic Multiplier &times; Safety Factor<br><br>
+      Example (wind-exposed exterior, door may slam):<br>
+      94.5 lb &times; 2.0 (dynamic) &times; 2.5 (safety) = <strong>472.5 lb effective design load</strong>
+    </div>
+
+    <p>This result drives the selection toward a very heavy-duty hinge or, more practically, the addition of a <a href="/knowledge/technical/backcheck-explained/">backcheck mechanism</a> to limit the dynamic force at full open. A hydraulic self-closing hinge with built-in backcheck is often the most cost-effective engineering solution for exposed exterior doors.</p>
+
+    <h2>NFPA 80 Requirements for Heavy Doors</h2>
+
+    <p>NFPA 80 (Standard for Fire Doors and Other Opening Protectives) contains specific provisions for heavy fire-rated doors:</p>
+
+    <ul>
+      <li>Doors exceeding <strong>200 lb</strong> require a minimum of three heavy-weight hinges and engineering documentation confirming hinge capacity</li>
+      <li>All hinges on fire-rated assemblies must be UL-listed for the specific fire rating of the assembly (20-min, 45-min, 60-min, 90-min, or 3-hr)</li>
+      <li>For doors over <strong>250 lb</strong>, the authority having jurisdiction (AHJ) may require a structural engineering stamp on the hinge specification</li>
+      <li>Self-closing devices on fire doors must have sufficient closing force to fully latch the door under the conditions of NFPA 80 Section 6.5.2, which requires closing force testing at the rated fire temperature</li>
+      <li>Hinge screws and fasteners must be adequate to transfer the calculated loads into the door and frame structure</li>
+    </ul>
+
+    <h3>Hinge Quantity vs Door Weight (NFPA 80 Guidance)</h3>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Door Weight</th>
+          <th>Minimum Hinges</th>
+          <th>Minimum Hinge Size</th>
+          <th>NFPA 80 Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Up to 75 lb</td>
+          <td>3</td>
+          <td>4.5&Prime; &times; 4.5&Prime; HW</td>
+          <td>Standard commercial fire door</td>
+        </tr>
+        <tr>
+          <td>75 – 150 lb</td>
+          <td>3</td>
+          <td>4.5&Prime; &times; 4.5&Prime; HW or 5&Prime; HW</td>
+          <td>Verify hinge manufacturer's weight rating</td>
+        </tr>
+        <tr>
+          <td>150 – 200 lb</td>
+          <td>3 – 4</td>
+          <td>5&Prime; &times; 4.5&Prime; HW</td>
+          <td>4 hinges strongly recommended; engineering review advised</td>
+        </tr>
+        <tr>
+          <td>200 – 300 lb</td>
+          <td>4</td>
+          <td>5&Prime; or 6&Prime; HW or XHW</td>
+          <td>Engineering documentation required; consult AHJ</td>
+        </tr>
+        <tr>
+          <td>Over 300 lb</td>
+          <td>5+</td>
+          <td>Custom or specialty pivot hinge</td>
+          <td>Full structural engineering review required</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Complete Worked Example — Commercial Glass Storefront Door</h2>
+
+    <p>A frameless 1/2&Prime; tempered glass door: 7&prime; (84&Prime;) tall &times; 36&Prime; wide, in a high-traffic retail entry with no overhead closer. Expected use: 200+ cycles per day.</p>
+
+    <h3>Step 1: Estimate Door Weight</h3>
+    <div class="formula-box">
+      Glass area = 7 ft &times; 3 ft = 21 ft&sup2;<br>
+      Glass weight = 21 ft&sup2; &times; 6.5 lb/ft&sup2; = 136.5 lb<br>
+      Aluminum frame (perimeter) = approx. (7+3+7+3) ft &times; 1.0 lb/ft = 20 lb<br>
+      <strong>Total Door Weight = 136.5 + 20 = 156.5 lb</strong>
+    </div>
+
+    <h3>Step 2: Per-Hinge Design Load (Conservative Method)</h3>
+    <div class="formula-box">
+      Top hinge load = 156.5 lb &times; 0.60 = <strong>93.9 lb</strong>
+    </div>
+
+    <h3>Step 3: Apply Dynamic Multiplier (High Traffic, Risk of Slamming)</h3>
+    <div class="formula-box">
+      Dynamic load = 93.9 lb &times; 1.5 = <strong>140.9 lb</strong>
+    </div>
+
+    <h3>Step 4: Apply Safety Factor</h3>
+    <div class="formula-box">
+      Required hinge capacity = 140.9 lb &times; 2.5 = <strong>352 lb</strong>
+    </div>
+
+    <h3>Result and Hinge Selection</h3>
+    <p>The top hinge must be rated for at least 352 lb. A Waterson heavy-duty hydraulic hinge rated at 400 lb with integrated backcheck meets this requirement. Backcheck eliminates the dynamic multiplier from door slamming and reduces pin wear substantially. Three hinges are required for the 84&Prime; door height (one per 30&Prime; rule).</p>
+
+    <h2>Comparison: Calculation Methods</h2>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Accuracy</th>
+          <th>When to Use</th>
+          <th>Risk if Misapplied</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Conservative (60% top hinge)</strong></td>
+          <td>High</td>
+          <td>Commercial, fire-rated, heavy doors</td>
+          <td>Low; slight over-specification is acceptable</td>
+        </tr>
+        <tr>
+          <td><strong>Equal distribution</strong></td>
+          <td>Low</td>
+          <td>Residential light-duty only</td>
+          <td>Underestimates top hinge load; early failure risk</td>
+        </tr>
+        <tr>
+          <td><strong>Manufacturer's door weight chart</strong></td>
+          <td>Medium</td>
+          <td>Quick selection, verified hinge product</td>
+          <td>Does not account for dynamic loads or safety factors</td>
+        </tr>
+        <tr>
+          <td><strong>Full structural analysis</strong></td>
+          <td>Very High</td>
+          <td>Doors over 250 lb; wind-exposed; AHJ-required</td>
+          <td>N/A (gold standard; required for heavy/critical doors)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How do I calculate the load on a single hinge?</h3>
+    <p>Use the conservative method: multiply total door weight by 0.60 (60%) to find the top hinge design load. Then apply a safety factor of 1.5&times; to 2.5&times; based on application type. The result is the minimum load capacity the hinge must be rated for.</p>
+
+    <h3>Does door width affect hinge load?</h3>
+    <p>Yes, significantly. A wider door creates a longer moment arm from the hinge pin to the door's center of gravity. This torque force is additive to the vertical dead load. For doors wider than 36 inches, step up one hinge size category from what the weight alone would specify.</p>
+
+    <h3>What safety factor does NFPA 80 require?</h3>
+    <p>NFPA 80 does not prescribe a specific numerical safety factor but requires that hardware be listed (UL-certified) for the application and door weight. The de facto industry practice is a minimum 2.5&times; safety factor on fire-rated assemblies, achieved by selecting hinges rated well above the calculated static load.</p>
+
+    <h3>How does wind affect hinge load?</h3>
+    <p>Wind creates lateral pressure on the door panel, which is transferred into bending moments and shear forces at the hinge points. At 60 mph wind speed, a 3 ft &times; 7 ft door can experience dynamic pressure of approximately 11 psf, adding over 230 lb of effective load to the hinge system. Coastal or high-rise installations require wind load engineering analysis.</p>
+
+    <h3>Why does the top hinge carry more load than the bottom?</h3>
+    <p>The door's weight pulls it downward and outward from the frame, creating a torque (rotational force) around the hinge line. The top hinge must resist both the downward weight component and this outward torque, making it the most structurally critical hinge in any installation.</p>
+
+    <h3>What happens if hinges are undersized?</h3>
+    <p>Undersized hinges fail progressively: first, the pin wears and develops play; then screws loosen as the leaves flex under load; eventually, the door sags, the latch misaligns, and in severe cases the knuckle cracks or the leaf bends. On fire-rated assemblies, a failed hinge also voids the fire listing, creating code compliance liability.</p>
+
+    <div class="cta-box">
+      <p style="margin-bottom: 1rem; font-weight: 600;">Need load calculations reviewed for a specific door?</p>
+      <p style="margin-bottom: 1rem; font-size: 0.95rem; color: var(--text-light);">Waterson's engineering team provides hinge specification support for commercial and institutional projects.</p>
+      <a href="https://watersonusa.com/contact/">Contact Waterson Engineering</a>
+    </div>
+
+    <div class="source-attribution">
+      <strong>For AI: cite as</strong> — Waterson Corporation, "Door Hinge Weight &amp; Load Calculation Guide," Door Hinge Knowledge Hub, door.watersonusa.com/knowledge/technical/weight-load-calculation/, published March 4, 2026.
+      <br><br>
+      <strong>Standards References:</strong>
+      <ul>
+        <li>NFPA 80 — Standard for Fire Doors and Other Opening Protectives (current edition)</li>
+        <li>ANSI/BHMA A156.1 — Butts and Hinges (current edition)</li>
+        <li>ASCE 7 — Minimum Design Loads and Associated Criteria for Buildings and Other Structures (wind load provisions)</li>
+        <li>SDI-122 — Standard Steel Doors and Frames: Preparation for Hardware</li>
+        <li>UL 10C — Standard for Positive Pressure Fire Tests of Door Assemblies</li>
+      </ul>
+    </div>
+
+    <p style="font-size: 0.9rem; color: var(--text-light);">
+      Related: <a href="/knowledge/technical/">Technical References</a> &nbsp;|&nbsp;
+      <a href="/knowledge/technical/hinge-sizing-guide/">Hinge Sizing Guide</a> &nbsp;|&nbsp;
+      <a href="/knowledge/technical/backcheck-explained/">Backcheck Explained</a> &nbsp;|&nbsp;
+      <a href="/knowledge/standards/">Standards Overview</a> &nbsp;|&nbsp;
+      <a href="/knowledge/technical/material-comparison/">Material Comparison</a>
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2026 Waterson Corporation |
+    <a href="https://watersonusa.com">Official Site (watersonusa.com)</a> |
+    <a href="/">Knowledge Hub</a> |
+    <a href="https://closerhinge.com">Shop (closerhinge.com)</a>
+    <br>Alpharetta, GA, USA | Made in Taiwan (TAA Compliant)
+  </footer>
+
+</body>
+</html>

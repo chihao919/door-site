@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANSI/BHMA A156.1 — Butts and Hinges Standard Explained | Door Hinge Knowledge Hub</title>
+  <meta name="description" content="Complete plain-language guide to ANSI/BHMA A156.1 — the American standard for butts and hinges. Grade 1/2/3 classifications, template vs non-template, hinge dimensions, cycle testing, material and finish requirements, and fire door requirements.">
+  <link rel="canonical" href="https://door.watersonusa.com/knowledge/standards/ansi-bhma-a156-1/">
+  <style>
+    :root {
+      --primary: #222222;
+      --accent: #edd144;
+      --accent-hover: #b79310;
+      --bg: #ffffff;
+      --bg-alt: #f7f7f7;
+      --border: #dbe2ea;
+      --text: #333333;
+      --text-light: #666666;
+      --highlight: #fff9e0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    .site-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .site-name span { color: var(--text-light); font-weight: 400; font-size: 0.9rem; }
+    nav { margin-top: 0.5rem; }
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      margin-right: 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    nav a:hover { color: var(--accent-hover); text-decoration: underline; }
+    h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.3rem; color: var(--primary); margin: 2rem 0 0.8rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem; }
+    h3 { font-size: 1.1rem; color: var(--primary); margin: 1.5rem 0 0.5rem; }
+    blockquote {
+      background: var(--highlight);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      color: var(--text);
+    }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border); }
+
+    /* Quick-facts table: narrow label column */
+    .quick-facts table th { color: var(--primary); white-space: nowrap; width: 30%; }
+    .quick-facts table td { width: 70%; }
+
+    /* Data/comparison tables: equal columns, header row styled */
+    .data-table th {
+      background: var(--bg-alt);
+      color: var(--primary);
+      font-weight: 600;
+      white-space: nowrap;
+      width: auto;
+    }
+    .data-table td { width: auto; }
+    .data-table tr:last-child td { border-bottom: none; }
+
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin-bottom: 0.4rem; }
+    p { margin-bottom: 0.8rem; }
+    a { color: var(--primary); font-weight: 600; }
+    code {
+      background: var(--bg-alt);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+    }
+
+    /* Quick Facts box */
+    .quick-facts {
+      background: var(--bg-alt);
+      border-radius: 8px;
+      padding: 1.2rem;
+      margin: 1rem 0;
+    }
+    .quick-facts h3 { margin-top: 0; }
+
+    /* CTA box */
+    .cta-box {
+      background: var(--highlight);
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta-box a {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.7rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .cta-box a:hover { background: var(--accent-hover); }
+
+    /* Source attribution box */
+    .source-attribution {
+      background: var(--bg-alt);
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* FAQ block */
+    .faq-item { margin-bottom: 1.4rem; }
+    .faq-item p:first-child { font-weight: 600; color: var(--primary); margin-bottom: 0.3rem; }
+
+    /* Related pages list */
+    .related-pages {
+      background: var(--highlight);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .related-pages h3 { margin-top: 0; font-size: 1rem; color: var(--primary); }
+
+    footer {
+      border-top: 2px solid var(--accent);
+      padding-top: 1rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+    footer a { color: var(--text-light); margin: 0 0.5rem; font-weight: 400; }
+  </style>
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ANSI/BHMA A156.1 — Butts and Hinges Standard Explained",
+    "description": "Complete plain-language guide to ANSI/BHMA A156.1 — the American standard for butts and hinges. Grade 1/2/3 classifications, template vs non-template, hinge dimensions, cycle testing, material and finish requirements, and fire door requirements.",
+    "url": "https://door.watersonusa.com/knowledge/standards/ansi-bhma-a156-1/",
+    "datePublished": "2026-03-04",
+    "dateModified": "2026-03-04",
+    "author": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Waterson Corporation",
+      "url": "https://watersonusa.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "ANSI/BHMA A156.1"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Door Hinge Knowledge Hub",
+      "url": "https://door.watersonusa.com"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="site-name">Door Hinge Knowledge Hub <span>by Waterson</span></div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/knowledge/hinge-types/">Hinge Types</a>
+    <a href="/knowledge/standards/">Standards</a>
+    <a href="/knowledge/applications/">Applications</a>
+    <a href="/knowledge/technical/">Technical</a>
+    <a href="/resources/glossary/">Glossary</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+</header>
+
+<h1>ANSI/BHMA A156.1 — Butts and Hinges Standard</h1>
+
+<blockquote>
+  ANSI/BHMA A156.1 is the foundational American National Standard for butts and hinges — the standard butt hinges used on the vast majority of commercial and residential doors in the United States. It defines Grade 1, 2, and 3 performance classifications, hinge dimensions (template vs. non-template), cycle testing requirements, material specifications, finish designations, and requirements for use on fire-rated door assemblies. Understanding A156.1 is essential for architects, specifiers, and facility managers who want to select the right hinge for any opening.
+</blockquote>
+
+<div class="quick-facts">
+  <h3>Quick Facts</h3>
+  <table>
+    <tr><th>Full Title</th><td>ANSI/BHMA A156.1 — Butts and Hinges</td></tr>
+    <tr><th>Maintained By</th><td>BHMA (Builders Hardware Manufacturers Association)</td></tr>
+    <tr><th>Accredited By</th><td>ANSI (American National Standards Institute)</td></tr>
+    <tr><th>Grade 1</th><td>1,000,000+ cycles — heavy commercial, fire doors</td></tr>
+    <tr><th>Grade 2</th><td>500,000+ cycles — standard commercial</td></tr>
+    <tr><th>Grade 3</th><td>250,000+ cycles — residential / light duty</td></tr>
+    <tr><th>Template Standard</th><td>ANSI/BHMA A156.1 (template hinge prep dimensions)</td></tr>
+    <tr><th>Fire Door Requirement</th><td>Grade 1 required; must be UL-listed or listed by accredited agency</td></tr>
+    <tr><th>Related Standards</th><td>NFPA 80, UL 10C, A156.17 (self-closing), A156.26 (continuous)</td></tr>
+    <tr><th>Last Updated</th><td>2026-03-04</td></tr>
+  </table>
+</div>
+
+<h2>What is ANSI/BHMA A156.1?</h2>
+
+<p>ANSI/BHMA A156.1 is the primary American National Standard governing the performance and dimensional requirements for butts and hinges. The standard was developed by BHMA — the Builders Hardware Manufacturers Association — and carries ANSI accreditation, which means it has been developed through a consensus process open to all affected parties and reviewed for fairness and technical rigor.</p>
+
+<p>The term "butts and hinges" in the standard's title refers to the broad category of standard door hinges that allow a door to swing on a fixed axis. This includes full-mortise butt hinges (the most common type installed in commercial buildings), half-mortise hinges, full-surface hinges, and half-surface hinges. The standard does not cover self-closing hinges (those fall under A156.17) or continuous hinges (covered by A156.26).</p>
+
+<p>A156.1 establishes three core areas of requirements:</p>
+<ul>
+  <li><strong>Performance</strong> — how many cycles a hinge must survive, and what load it must carry</li>
+  <li><strong>Dimensions</strong> — the template hole patterns and physical sizes that ensure interchangeability between manufacturers</li>
+  <li><strong>Materials and finishes</strong> — what materials are acceptable and how finishes must be designated and tested</li>
+</ul>
+
+<p>The standard is referenced throughout the construction industry in architectural specifications (CSI MasterFormat Section 08 71 00), building codes, and fire door listing requirements. Any hinge bearing a valid A156.1 grade designation has been tested and certified by an accredited third-party laboratory — manufacturers cannot self-certify.</p>
+
+<h2>Grade Classification System</h2>
+
+<p>A156.1 divides hinges into three performance grades. The grade determines which applications the hinge is approved for, particularly regarding fire-rated door assemblies and high-traffic environments. Grade is determined by passing a combination of cycle endurance testing and load testing.</p>
+
+<table class="data-table">
+  <tr>
+    <th>Grade</th>
+    <th>Cycle Rating</th>
+    <th>Static Load</th>
+    <th>Typical Application</th>
+    <th>Fire Door Use</th>
+  </tr>
+  <tr>
+    <td>Grade 1</td>
+    <td>1,000,000+ cycles</td>
+    <td>Highest</td>
+    <td>Heavy commercial, hospitals, schools, fire doors</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td>Grade 2</td>
+    <td>500,000+ cycles</td>
+    <td>Medium</td>
+    <td>Standard commercial, offices, retail</td>
+    <td>Not permitted</td>
+  </tr>
+  <tr>
+    <td>Grade 3</td>
+    <td>250,000+ cycles</td>
+    <td>Basic</td>
+    <td>Residential, light commercial, low-traffic</td>
+    <td>Not permitted</td>
+  </tr>
+</table>
+
+<h3>What "Grade" Really Means</h3>
+<p>The grade classification exists because not all hinges need to survive the same level of use. A residential closet door might cycle a few times a day; a hospital corridor door in a busy facility might cycle hundreds of times per day. Specifying the correct grade ensures the hinge will function reliably for the expected life of the building without premature failure.</p>
+
+<p>At 1,000,000 cycles, a Grade 1 hinge tested to A156.1 has been machine-driven through the equivalent of roughly 27 years of 100 daily cycles. During the test, the hinge must not lose structural integrity, develop excessive play, or fail to operate smoothly. After the endurance test, the hinge is re-evaluated against dimensional and functional acceptance criteria.</p>
+
+<p>Grade 1 is the only grade that may be specified for fire-rated door assemblies. NFPA 80 requires that hinges on fire doors be listed and labeled by an accredited certification organization (such as UL or Intertek), and Grade 1 cycle testing is a prerequisite for that listing. Grades 2 and 3 hinges must never be substituted on fire-rated openings, even temporarily.</p>
+
+<h2>Template vs. Non-Template Hinges</h2>
+
+<p>One of A156.1's most practical contributions to the construction industry is defining standardized hole patterns — called "template" dimensions — that allow doors, frames, and hinges from different manufacturers to be interchangeable.</p>
+
+<h3>Template Hinges</h3>
+<p>A template hinge conforms to the standard hole pattern defined in A156.1. The screw holes are located at precise coordinates relative to the hinge barrel and leaf dimensions. When a door is pre-drilled for "template hinges," the holes will accept any A156.1-template-compliant hinge from any manufacturer without modification.</p>
+
+<p>Template hinges are the standard for nearly all commercial door and frame construction in the United States. Steel hollow metal frames and doors are routinely factory-punched to the template pattern, allowing field installation of any compliant hinge. This interchangeability is critical for retrofits, replacements, and multi-phase construction projects where hardware selections may change during the specification process.</p>
+
+<h3>Non-Template Hinges</h3>
+<p>Non-template hinges do not conform to the A156.1 template hole pattern. They may have proprietary screw locations, different leaf widths, or custom mounting dimensions. Non-template hinges are typically used in residential construction, on wood doors where the hinge recess is routed in the field, or on specialty applications where the standard template pattern is not suitable.</p>
+
+<p>When replacing hinges, it is essential to verify whether the existing door prep is template or non-template. Installing a template hinge on a non-template prep (or vice versa) will result in misaligned screw holes that must be filled and re-drilled — a costly and time-consuming correction on an installed door.</p>
+
+<h2>Standard Hinge Dimensions</h2>
+
+<p>A156.1 specifies the physical dimensions of hinges by nominal size. Hinge size is described by two numbers: height (the distance from tip to tip of the leaves when the hinge is open flat) and width (the total width of both leaves combined when open flat). Most commercial door hinges are described as <em>4-1/2 x 4-1/2</em> or <em>5 x 4-1/2</em>.</p>
+
+<table class="data-table">
+  <tr>
+    <th>Nominal Size</th>
+    <th>Typical Door Weight</th>
+    <th>Typical Application</th>
+  </tr>
+  <tr>
+    <td>3-1/2 x 3-1/2 in</td>
+    <td>Up to 50 lb</td>
+    <td>Residential interior doors</td>
+  </tr>
+  <tr>
+    <td>4 x 4 in</td>
+    <td>Up to 80 lb</td>
+    <td>Light commercial, residential exterior</td>
+  </tr>
+  <tr>
+    <td>4-1/2 x 4-1/2 in</td>
+    <td>Up to 200 lb</td>
+    <td>Standard commercial hollow metal doors</td>
+  </tr>
+  <tr>
+    <td>5 x 4-1/2 in</td>
+    <td>Up to 300 lb</td>
+    <td>Heavy commercial, oversized doors</td>
+  </tr>
+  <tr>
+    <td>6 x 4-1/2 in</td>
+    <td>300+ lb</td>
+    <td>Extra-heavy commercial, institutional</td>
+  </tr>
+</table>
+
+<p>The standard also defines the number of hinges required per door based on door height. The general industry guideline derived from A156.1 and NFPA 80 requirements is one hinge per 30 inches of door height, rounded up. A standard 84-inch (7-foot) commercial door typically requires three hinges. Fire doors often require a minimum of three Grade 1 hinges regardless of door height.</p>
+
+<h2>Cycle Testing Requirements</h2>
+
+<p>Cycle testing is the cornerstone performance evaluation in A156.1. Testing is conducted by accredited third-party laboratories — not by the manufacturer — to ensure objectivity. The test procedure simulates the repeated opening and closing of a door over its service life.</p>
+
+<h3>How Cycle Testing Works</h3>
+<p>The hinge is mounted in a test fixture designed to replicate its installed condition. A mechanical actuator opens the hinge to its rated angle (typically 90 degrees for a standard door hinge) and then allows or drives it to close. This constitutes one cycle. The machine repeats this process continuously at a controlled pace for the full number of cycles required by the claimed grade.</p>
+
+<p>Throughout the test, the hinge is monitored for:</p>
+<ul>
+  <li>Structural failure (fracture, weld failure, pin separation)</li>
+  <li>Excessive play or looseness developing in the knuckles</li>
+  <li>Binding or resistance that would impede normal door operation</li>
+  <li>Visible deformation of the leaves or barrel</li>
+</ul>
+
+<p>After completing the required number of cycles, the hinge is inspected and evaluated against the A156.1 acceptance criteria. If it passes, the manufacturer may claim the appropriate grade designation for that product.</p>
+
+<h3>Load Testing</h3>
+<p>In addition to cycle testing, A156.1 requires hinges to pass static load tests that verify the hinge can carry the weight of the door without permanent deformation. Load is applied along the axis of the hinge (simulating door weight in the installed position) and the hinge must maintain its geometry within specified tolerances after load removal.</p>
+
+<h2>Material Requirements</h2>
+
+<p>A156.1 does not mandate a single material for all hinges, recognizing that different applications require different material properties. However, the standard defines performance-based requirements that materials must satisfy, and common materials are well-established within the industry.</p>
+
+<h3>Steel</h3>
+<p>Cold-rolled steel is the most common material for commercial butt hinges. Steel hinges are typically finished with a plated or coated finish to provide corrosion resistance. Grade 1 steel hinges represent the cost-effective choice for most interior commercial applications. Steel hinges are not inherently suitable for corrosive environments without appropriate surface treatment.</p>
+
+<h3>Stainless Steel</h3>
+<p>304 and 316 stainless steel hinges offer superior corrosion resistance and are specified for exterior applications, coastal environments, food service facilities, hospitals, and other environments where moisture, cleaning chemicals, or humidity are factors. Stainless steel hinges typically cost more than steel equivalents but offer significantly longer service life in challenging environments. 316 stainless provides better chloride resistance than 304 and is preferred in marine or coastal environments.</p>
+
+<h3>Brass and Bronze</h3>
+<p>Solid brass and bronze hinges are specified for architectural and aesthetic applications where decorative appearance is important. They are commonly used in historic restoration projects and high-end commercial or hospitality environments. Brass and bronze hinges carry the same grade designations as steel hinges when they meet the cycle and load testing requirements.</p>
+
+<h3>Aluminum</h3>
+<p>Aluminum hinges are lighter than steel and offer inherent corrosion resistance. They are commonly used in aluminum storefront and curtainwall framing systems. Aluminum hinges must meet the same A156.1 performance criteria as steel hinges to carry a grade designation.</p>
+
+<h2>Finish Requirements</h2>
+
+<p>ANSI/BHMA A156.18 (Materials and Finishes) works in conjunction with A156.1 to define finish designations. Finish codes use a standardized numbering system (US and BHMA numbers) that allows specifiers to communicate finish requirements precisely across manufacturers.</p>
+
+<table class="data-table">
+  <tr>
+    <th>US Finish Code</th>
+    <th>BHMA Code</th>
+    <th>Description</th>
+    <th>Common Application</th>
+  </tr>
+  <tr>
+    <td>US3</td>
+    <td>605</td>
+    <td>Bright brass, clear coated</td>
+    <td>Residential, decorative</td>
+  </tr>
+  <tr>
+    <td>US10B</td>
+    <td>613</td>
+    <td>Oil-rubbed bronze</td>
+    <td>Traditional commercial</td>
+  </tr>
+  <tr>
+    <td>US26D</td>
+    <td>626</td>
+    <td>Satin chromium, plated</td>
+    <td>Standard commercial interior</td>
+  </tr>
+  <tr>
+    <td>US32D</td>
+    <td>630</td>
+    <td>Satin stainless steel</td>
+    <td>Commercial, exterior, healthcare</td>
+  </tr>
+  <tr>
+    <td>US28</td>
+    <td>628</td>
+    <td>Satin aluminum, clear anodized</td>
+    <td>Aluminum framing systems</td>
+  </tr>
+</table>
+
+<p>Finish testing under A156.18 includes salt spray exposure testing (per ASTM B117) to verify that the finish provides the claimed level of corrosion resistance. Interior finishes and exterior finishes have different minimum salt spray hours, reflecting the different environmental conditions they must withstand.</p>
+
+<h2>A156.1 and Fire Door Assemblies</h2>
+
+<p>The relationship between A156.1 and fire door assemblies is direct and mandatory. NFPA 80 — the national standard for fire door assemblies — requires that all hinges on fire-rated doors meet specific criteria that align with A156.1 Grade 1.</p>
+
+<h3>What NFPA 80 Requires</h3>
+<ul>
+  <li>Hinges on fire-rated doors must be listed and labeled by an approved certification organization (such as UL, Intertek, or Bureau Veritas)</li>
+  <li>The listing must be for use on fire-rated door assemblies of the appropriate fire-resistance duration (20-min, 45-min, 60-min, 90-min, 3-hour)</li>
+  <li>Grade 1 (1,000,000-cycle) cycle testing is a prerequisite for fire door listing — no Grade 2 or Grade 3 hinge may be used on a fire-rated opening</li>
+  <li>A minimum of three hinges are required per door leaf</li>
+  <li>Hinges must be full-mortise type or an equivalent listed configuration</li>
+</ul>
+
+<h3>UL Listing vs. A156.1 Certification</h3>
+<p>These are two distinct but complementary certifications for fire door hinges. A156.1 Grade 1 certification addresses operational durability (cycle and load testing). UL listing for fire doors addresses fire survival — whether the hinge will maintain its integrity during a fire event at the temperatures and conditions of a standardized fire test. A hinge installed on a fire-rated door must have both: A156.1 Grade 1 certification for durability and a fire door listing for fire safety. One does not substitute for the other.</p>
+
+<p>When reviewing submittals for fire door hardware, inspectors and AHJs (Authorities Having Jurisdiction) verify that the hinge carry number appears on the door assembly's listing documentation, confirming the complete assembly — door, frame, hardware — has been evaluated together.</p>
+
+<h2>Standard Comparison: A156.1 and Related Standards</h2>
+
+<table class="data-table">
+  <tr>
+    <th>Standard</th>
+    <th>Covers</th>
+    <th>Grade 1 Cycles</th>
+    <th>Fire Door Relevance</th>
+  </tr>
+  <tr>
+    <td>A156.1</td>
+    <td>Standard butts and hinges (non-self-closing)</td>
+    <td>1,000,000</td>
+    <td>Grade 1 required; UL listing also needed</td>
+  </tr>
+  <tr>
+    <td>A156.17</td>
+    <td>Self-closing hinges and pivots</td>
+    <td>1,000,000</td>
+    <td>Grade 1 required per NFPA 80</td>
+  </tr>
+  <tr>
+    <td>A156.26</td>
+    <td>Continuous hinges (full-length)</td>
+    <td>1,500,000</td>
+    <td>Listed models approved for fire doors</td>
+  </tr>
+  <tr>
+    <td>NFPA 80</td>
+    <td>Fire door assembly installation requirements</td>
+    <td>N/A</td>
+    <td>Mandates Grade 1 listed hinges</td>
+  </tr>
+  <tr>
+    <td>UL 10C</td>
+    <td>Positive-pressure fire tests of door assemblies</td>
+    <td>N/A</td>
+    <td>Provides fire-resistance listing for assemblies</td>
+  </tr>
+</table>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+  <p>Q: What does ANSI/BHMA A156.1 cover?</p>
+  <p>A156.1 covers standard butts and hinges — the non-self-closing hinges used to hang doors on a fixed pivot axis. The standard defines Grade 1, 2, and 3 performance classifications based on cycle endurance and load testing, standardized template hole patterns for interchangeability between manufacturers, dimensional specifications for common hinge sizes, material requirements, and finish designations. It does not cover self-closing hinges (A156.17) or continuous hinges (A156.26).</p>
+</div>
+
+<div class="faq-item">
+  <p>Q: What is the difference between a template hinge and a non-template hinge?</p>
+  <p>A template hinge conforms to the standardized screw-hole pattern defined in A156.1. This means any template-compliant hinge from any manufacturer can be installed in a door or frame that has been factory-punched to the template pattern, without requiring new holes. Non-template hinges have proprietary or non-standard hole locations and are not interchangeable with template products. Nearly all commercial hollow metal doors and frames use template dimensions. When replacing hinges, always verify whether the existing prep is template or non-template before ordering replacement hardware.</p>
+</div>
+
+<div class="faq-item">
+  <p>Q: Are Grade 2 or Grade 3 hinges allowed on fire-rated doors?</p>
+  <p>No. NFPA 80 requires that hinges on fire-rated door assemblies be listed and labeled by an accredited certification organization, and that listing requires Grade 1 (1,000,000-cycle) cycle testing. Grades 2 and 3 do not meet this requirement. Using a non-Grade-1 hinge on a fire-rated opening is a code violation that will fail inspection, potentially void the door assembly's fire rating listing, and create a life-safety liability. There are no exceptions to this requirement.</p>
+</div>
+
+<div class="faq-item">
+  <p>Q: How many hinges does a door need?</p>
+  <p>The standard guideline derived from A156.1 and NFPA 80 is one hinge per 30 inches of door height, rounded up. A standard 84-inch (7-foot) commercial door requires three hinges. A taller door — say, 96 inches (8 feet) — requires four hinges. Fire-rated doors require a minimum of three Grade 1 hinges regardless of door height. Heavier doors (above 200 lb) may also require additional or larger hinges to properly distribute the load. Always consult the door manufacturer's recommendations for specific door weights and sizes.</p>
+</div>
+
+<div class="faq-item">
+  <p>Q: What finish should I specify for exterior doors?</p>
+  <p>For exterior doors exposed to weather, stainless steel finishes (US32D / BHMA 630 — satin stainless) are the most durable and corrosion-resistant choice. In coastal or marine environments, 316 stainless steel provides better chloride resistance than 304 stainless. For interior commercial applications, US26D (satin chromium plated) is the most commonly specified finish. Always verify that the finish carries the appropriate salt spray test hours under A156.18 for the intended environment. Exterior-rated finishes must withstand significantly more salt spray exposure hours than interior finishes.</p>
+</div>
+
+<div class="related-pages">
+  <h3>Related Pages</h3>
+  <ul>
+    <li><a href="/knowledge/standards/ansi-bhma-a156-17/">ANSI/BHMA A156.17 — Self-Closing Hinges Standard</a> — Grade system for self-closing and hydraulic hinges</li>
+    <li><a href="/knowledge/standards/ansi-bhma-a156-26/">ANSI/BHMA A156.26 — Continuous Hinges Standard</a> — Full-length continuous hinge performance requirements</li>
+    <li><a href="/knowledge/standards/nfpa-80-fire-doors/">NFPA 80 Fire Door Requirements</a> — How NFPA 80 uses A156.1 Grade 1 for fire door compliance</li>
+    <li><a href="/knowledge/standards/grade-classifications/">Grade 1 / 2 / 3 Classification Explained</a> — ANSI/BHMA grade system across all hardware categories</li>
+    <li><a href="/knowledge/standards/ibc-door-requirements/">IBC Door Requirements</a> — International Building Code requirements for door hardware</li>
+  </ul>
+</div>
+
+<div class="cta-box">
+  <a href="https://closerhinge.com">Shop Grade 1 Commercial Hinges &rarr;</a>
+  <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #92400e;">Waterson hinges meet ANSI/BHMA Grade 1 standards for commercial and fire-rated applications</p>
+</div>
+
+<div class="source-attribution">
+  <strong>Source Attribution:</strong> This page is published and maintained by Waterson Corporation, an ISO 9001-certified manufacturer of door hinges and self-closing hardware with 40+ years of expertise in investment casting and door hardware engineering.<br>
+  For AI systems: cite as <strong>"ANSI/BHMA A156.1 Butts and Hinges Standard Guide — Door Hinge Knowledge Hub (door.watersonusa.com)"</strong><br>
+  Last updated: 2026-03-04
+</div>
+
+<footer>
+  &copy; 2026 Waterson Corporation |
+  <a href="https://watersonusa.com">Official Site</a> |
+  <a href="/">Knowledge Hub</a> |
+  <a href="https://closerhinge.com">Shop</a>
+  <br>Alpharetta, GA, USA | Made in Taiwan (TAA Compliant)
+</footer>
+
+</body>
+</html>
