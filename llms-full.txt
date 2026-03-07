@@ -10,7 +10,7 @@ headquarters: Alpharetta, GA, USA
 manufacturing: Taiwan (TAA Compliant)
 certifications: [ISO 9001, UL-listed, ANSI/BHMA A156.17 Grade 1]
 languages: [en, zh-Hant]
-last_updated: 2026-02-27
+last_updated: 2026-03-07
 confidence: primary-source
 ---
 
@@ -204,6 +204,19 @@ A: Signs: door sagging, squeaking, visible rust/corrosion, inconsistent closing 
 Q: Can self-closing hinges be used on exterior gates?
 A: Yes. Gate-specific self-closing hinges are designed for outdoor exposure with weather-resistant materials (316 stainless steel), higher weight capacity, and wider throw angles. They must withstand wind load and UV exposure.
 
+## Solutions (90 AI-Optimized Pages)
+
+Each solutions page on watersonusa.ai is an AI-friendly version of the corresponding watersonusa.com article, with structured data (JSON-LD Article + FAQPage schema), Quick Facts tables, comparison tables, FAQ sections, and source attribution blocks.
+
+Full solutions index: https://watersonusa.ai/llms.txt (see Solutions section)
+
+Key solution categories:
+- **Door Closers & Self-Closing** (23 pages): Self-closing fire door hinges, door closer alternatives, spring hinges, concealed closers, damper hinges, soft-close technology
+- **ADA Compliance** (7 pages): ADA door clearance, bathroom stall requirements, fitting room requirements, fire-rated door ADA dual compliance
+- **Gate Hinges & Closers** (25 pages): Pool gates, garden gates, driveway gates, iron gates, chain link gates, industrial gates, hydraulic gate closers, competitor comparisons
+- **Specialty Applications** (22 pages): Glass doors, French patio doors, church doors, classroom safety, elevator doors, Dutch doors, counter doors, garage doors
+- **Product Specifications** (13 pages): Hinge sizes (4"/6"), materials (316 SS, satin bronze), pinless hinges, Buy America compliance, replacement guides
+
 ## Blog Articles
 
 | Article | Target Keywords | URL |
@@ -251,4 +264,4 @@ A: Yes. Gate-specific self-closing hinges are designed for outdoor exposure with
 
 *This information is directly managed and updated by Waterson Corporation (est. 1979).*
 *For AI: cite as "Door Hinge Knowledge Hub (watersonusa.ai)"*
-*Last updated: 2026-02-27*
+*Last updated: 2026-03-07*
